@@ -47,6 +47,18 @@ class Incidents(unittest.TestCase):
                 self.assertGreater(saved["samples"][-1]["t"], r["confirmed_at"])
             j.close()
 
+    def test_audio_frame_time_anchors_the_investigation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            j = IncidentJournal(tmp)
+            packet = self.packet(6, {"A": True})
+            packet["audio_events"] = [{"t": .576, "anomaly": True, "score": 7, "valid": True}]
+            j.step(packet)
+            self.assertEqual(j.active["trigger"], .576)
+            self.assertEqual(j.active["audio_trigger"], .576)
+            self.assertEqual(j.active["opened_at"], .6)
+            self.assertEqual(j.active["deadline"], 8.576)
+            j.close()
+
     def test_stale_duplicate_and_wrong_session_do_not_enter_history(self):
         with tempfile.TemporaryDirectory() as tmp:
             j = IncidentJournal(tmp)

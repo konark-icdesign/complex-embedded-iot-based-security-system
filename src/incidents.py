@@ -123,6 +123,7 @@ class IncidentJournal:
                                  + [{"channel": k, "t": t} for k in "VPMU" if flags[k]])
         if flags["A"] and not packet.get("audio_events"):
             packet["detections"].append({"channel": "A", "t": t})
+        audio_stamp = min((d["t"] for d in packet["detections"] if d["channel"] == "A"), default=t)
         packet["camera"] = view
         packet["health"] = bool(packet.get("health", False) or view["health"])
         fallback = bool(packet.get("fallback", False))
@@ -149,21 +150,22 @@ class IncidentJournal:
             payload = json.dumps(packet, allow_nan=False)
             self.db.execute("INSERT INTO history VALUES(?,?)", (t, payload))
             if self.active is None and suspicious and (not self.blocked or new_fallback):
-                self.active = {"id": str(uuid.uuid4()), "trigger": t,
-                               "deadline": t + self.POST, "state": "YELLOW",
+                trigger = audio_stamp if flags["A"] else t
+                self.active = {"id": str(uuid.uuid4()), "trigger": trigger, "opened_at": t,
+                               "deadline": trigger + self.POST, "state": "YELLOW",
                                "status": "open", "confirmed_at": None,
                                "channels": [], "score": 0.0, "reason": "collecting evidence",
-                               "fallback": False, "audio_trigger": t if flags["A"] else None}
+                               "fallback": False, "audio_trigger": audio_stamp if flags["A"] else None}
                 opened = True
                 self.db.execute("INSERT INTO evidence SELECT ?,stamp,payload FROM history "
-                                "WHERE stamp>=?", (self.active["id"], t - self.PRE))
+                                "WHERE stamp>=?", (self.active["id"], trigger - self.PRE))
             if self.active is not None:
                 a = self.active
                 if t <= a["deadline"] + 1e-8:
                     self.db.execute("INSERT OR IGNORE INTO evidence VALUES(?,?,?)",
                                     (a["id"], t, payload))
                 if flags["A"] and a["audio_trigger"] is None:
-                    a["audio_trigger"] = t
+                    a["audio_trigger"] = audio_stamp
                 a["fallback"] = a["fallback"] or new_fallback
                 rows = self.packets(a["id"])
                 # Retain the longer clip but require a four-second evidence cluster.
