@@ -8,6 +8,22 @@ on:
 permissions:
   contents: read
 jobs:
+  matlab-room:
+    needs: audio-quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: detection-quality
+          path: results/detection-quality
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: addpath('matlab'); verify_room_quality
   audio-quality:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -20,7 +36,14 @@ jobs:
       - run: make incident-build
       - name: Development comparison
         run: python experiments/detection_quality/run_quality.py --split development --c-library build/libdetection.so
+      - name: Frozen candidate on withheld waveforms
+        run: python experiments/detection_quality/run_quality.py --split heldout --c-library build/libdetection.so
+      - name: Previously seen public-audio transfer diagnostic
+        run: |
+          python scripts/fetch_real_audio.py
+          python experiments/detection_quality/real_diagnostic.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: detection-quality
           path: results/detection-quality/

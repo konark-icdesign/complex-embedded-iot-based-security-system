@@ -7,11 +7,13 @@ from pathlib import Path
 import sys
 
 import numpy as np
+from scipy.io import savemat
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from src.dsp import FS, Baseline, add_event, background, features
 from src.room_audio import fit_room, quiet_training
 from src.native import NativeCore
+from src.fusion import Fusion
 
 START, END, SECONDS = 3.0, 7.0, 10.0
 
@@ -59,7 +61,10 @@ def trials(split):
                 x[:] = 0
             elif kind == "clipping":
                 x[:] = np.resize([-1., 1.], len(x))
-            yield kind, seed, features(np.clip(x*gain, -1, 1))
+            # Clipping is at the ADC rails, after gain. Scaling it down first
+            # would instead test a valid full-band square wave.
+            wave = x if kind == "clipping" else np.clip(x*gain, -1, 1)
+            yield kind, seed, features(wave)
 
 
 def evaluate(model, data, native=None):
@@ -72,14 +77,22 @@ def evaluate(model, data, native=None):
             np.testing.assert_array_equal(flags, c_flags)
         inside = (f["t"] >= START) & (f["t"] <= END)
         hits = np.flatnonzero(flags & inside)
+        alone, coincident = Fusion(), Fusion()
+        for t, flag, active in zip(f["t"], flags, inside):
+            alone.update(t, {"A": flag})
+            coincident.update(t, {"A": flag, "P": active, "M": active})
         groups[kind].append({"seed": seed, "flagged": bool(flags.any()),
                              "event_hit": bool(len(hits)),
+                             "audio_only_red": bool(alone.alerts),
+                             "coincident_pm_red": bool(coincident.alerts),
                              "latency": float(f["t"][hits[0]]-START) if len(hits) else None,
                              "outside_frames": int((flags & ~inside).sum()),
                              "valid_frames": int(f["valid"].sum()),
                              "peak_ratio": float(scores.max()/model.threshold)})
     return {k: {"trials": len(rows), "flagged": sum(r["flagged"] for r in rows),
                 "event_hits": sum(r["event_hit"] for r in rows),
+                "audio_only_red": sum(r["audio_only_red"] for r in rows),
+                "coincident_pm_red": sum(r["coincident_pm_red"] for r in rows),
                 "median_latency": float(np.median([r["latency"] for r in rows if r["latency"] is not None]))
                     if any(r["latency"] is not None for r in rows) else None,
                 "rows": rows} for k, rows in groups.items()}
@@ -109,6 +122,26 @@ def main():
     root = Path(args.output)
     root.mkdir(parents=True, exist_ok=True)
     (root / (args.split+".json")).write_text(json.dumps(result, indent=2)+"\n")
+    if args.split == "heldout":
+        old, new = result["results"]["baseline"], result["results"]["room_0.1"]
+        checks = {
+            "soft_step_improvement": new["soft_steps"]["event_hits"] > old["soft_steps"]["event_hits"],
+            "normal_and_fault_inputs_no_flags": all(new[k]["flagged"] == 0 for k in
+                ("quiet", "gain_ramp", "fan_shift", "silence", "clipping")),
+            "strong_events_preserved": all(new[k]["event_hits"] >= old[k]["event_hits"] for k in ("steps", "impact")),
+            "audio_alone_never_red": all(v["audio_only_red"] == 0 for v in new.values()),
+        }
+        print("ACCEPTANCE", json.dumps(checks), flush=True)
+        (root / "acceptance.json").write_text(json.dumps(checks, indent=2)+"\n")
+        # Export independent clips separately: persistence must reset between clips.
+        model = models["room_0.1"]
+        savemat(root / "room_reference.mat", {"center": model.center, "scale": model.scale,
+            "threshold": model.threshold, "x": np.stack([f["x"] for _, _, f in data]),
+            "valid": np.stack([f["valid"] for _, _, f in data]),
+            "scores": np.stack([model.detect(f)[0] for _, _, f in data]),
+            "flags": np.stack([model.detect(f)[1] for _, _, f in data])})
+        if not all(checks.values()):
+            raise SystemExit("Candidate failed the predeclared acceptance checks")
 
 
 if __name__ == "__main__":
