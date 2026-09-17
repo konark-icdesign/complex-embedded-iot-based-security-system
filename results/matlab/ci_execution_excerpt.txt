@@ -1,0 +1,8 @@
+Source: GitHub Actions run 35247858074, job 105293128279
+Revision: 0ce080b1e9eabc30973e463ca1dde53b1ef16e39
+This is an excerpt from the job log, not the complete MATLAB diary.
+
+2026-09-17T16:42:08.6839756Z MATLAB execution: 26.1.0.3346908 (R2026a) Update 5
+2026-09-17T16:42:19.2961641Z PASS raw DSP, baseline fit, lighting kernels and 52 fusion trace replays.
+2026-09-17T16:42:19.2962182Z Max DSP feature discrepancy: 5.5e-15; anomalous windows: 21
+2026-09-17T16:42:19.2962655Z Physical microphone, camera, serial and Arduino tests remain separate.

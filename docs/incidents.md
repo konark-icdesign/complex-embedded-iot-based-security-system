@@ -50,6 +50,6 @@ GitHub Actions executes Python regressions, C/C++ warning and sanitizer checks, 
 
 The baseline is trained on quiet synthetic backgrounds without the older traffic component. It is frozen for a session and cannot be silently changed on restart. It has not been calibrated on the user's microphone. Soft-footstep failures still require data and investigation.
 
-The footage is synthetic grayscale, not validated infrared footage. Replaying it proves recording and timestamp plumbing, not real-night vision accuracy. Weather context, actual camera/serial acquisition, board-clock mapping, remote service authentication and physical verification remain unfinished. MATLAB execution is still pending.
+The footage is synthetic grayscale, not validated infrared footage. Replaying it proves recording and timestamp plumbing, not real-night vision accuracy. Weather context, actual camera/serial acquisition, board-clock mapping, remote service authentication and physical verification remain unfinished. The separate MATLAB job checks the original DSP/image kernels and fusion replay; see [validation](validation.md).
 
 The original `21_wifi_outage` now uses its outage flag to pause its local outbox. That older runner still has a different purpose: preserve the historical independent-scenario evaluation while the continuous runner checks integration.

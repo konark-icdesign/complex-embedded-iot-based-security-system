@@ -37,7 +37,7 @@ addpath('matlab');
 run_full_simulation
 ```
 
-MATLAB has not been executed in the recorded work. The function will create its own log when run.
+The GitHub MATLAB reference job runs this function in MATLAB R2026a and saves its execution log and parity outputs. It checks the original kernels and fusion traces, not a complete live MATLAB service. See `validation.md` for the recorded run.
 
 Open `firmware/night_security/night_security.ino` in Arduino IDE 2. Select UNO R4 WiFi; the recorded compilation used Renesas UNO core 1.6.0. Physical tests are still pending.
 
@@ -58,5 +58,7 @@ Open `firmware/night_security/night_security.ino` in Arduino IDE 2. Select UNO R
 Reruns replace derived outputs. The first ESC-50 download needs internet access. Missing audio files are reported as `NOT_RUN_INCOMPLETE_DATA`; they must not be confused with an executed real-audio check. FFmpeg is optional for MP4 output.
 
 The notebook in `notebooks/` runs the same steps and prints the Git revision. Hosted Colab execution is still unverified.
+
+The continuous incident and C-core commands are in [incidents.md](incidents.md). They use new output directories and do not replace the historical scenario results.
 
 For a PDF export, install `requirements-report.txt` and run `python scripts/build_report.py`. This also regenerates the experiment notes; the underlying measurements come from the saved result files.

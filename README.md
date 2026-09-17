@@ -10,7 +10,7 @@ The GitHub history records the September 2026 simulation and upload. Hardware te
 
 ## Current version
 
-The original scenario simulation is Python. The continuous incident runner can use a C core for audio features, anomaly scoring and corroboration; Python handles recording, incident state and HTTP delivery. Arduino C++ handles sensor filtering and the fallback alarm. MATLAB source is included, but has not been run.
+The original scenario simulation is Python. The continuous incident runner can use a C core for audio features, anomaly scoring and corroboration; Python handles recording, incident state and HTTP delivery. Arduino C++ handles sensor filtering and the fallback alarm. The MATLAB reference now has its own GitHub execution job. See the [validation record](docs/validation.md).
 
 An unusual sound puts the system into YELLOW. The fusion code checks detections within a rolling four-second window. Audio alone cannot trigger RED; audio together with PIR and radar can. Camera and sensor inputs run continuously, so earlier movement can contribute too.
 
@@ -63,9 +63,9 @@ For C++ host tests, MATLAB instructions and the smaller audio experiment, see [r
 ## Next work
 
 - Review the DSP and fusion code module by module.
-- Validate the continuous incident pipeline and C/Python numerical agreement in GitHub Actions.
+- Review the continuous incident traces and the C/Python numerical comparison.
 - Investigate quiet footsteps, warm-object false alarms and responses to activity outside the room.
-- Run MATLAB, then connect and test the actual devices.
+- Connect and test the actual devices, including the acquisition and clock adapters.
 - Connect a selected remote notification service. The continuous runner currently uses HTTP to a controlled local receiver; the older scenario runner retains its SQLite receiver demonstration.
 
 ## Notes
