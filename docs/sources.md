@@ -16,6 +16,7 @@ References used for the September 2026 prototype. Arduino board specifications a
 | [ESC-50 official dataset](https://github.com/karolpiczak/ESC-50) | Real sound files, categories, predefined folds and licensing |
 | [ESC paper DOI](https://doi.org/10.1145/2733373.2806390) | Dataset citation: K. J. Piczak, ACM Multimedia 2015 |
 | [Python downloads](https://www.python.org/downloads/) | Official Python installer |
+| [MathWorks setup action](https://github.com/matlab-actions/setup-matlab) and [command action](https://github.com/matlab-actions/run-command) | MATLAB R2026a execution in the public repository's GitHub workflow |
 
 The implemented equations are listed in `dsp_maths.md`. Detection results come from the project experiments.
 

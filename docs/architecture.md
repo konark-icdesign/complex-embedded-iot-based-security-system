@@ -1,4 +1,6 @@
-# System design
+# Original scenario-runner design
+
+This page describes `run_simulation.py` and the earlier independent-case evaluation. The newer continuous runner, `run_incidents.py`, adds persistent YELLOW investigations, per-incident recording, HTTP evidence delivery and the C numerical backend. Its state lifetime and recording policy are documented in [incidents.md](incidents.md); current execution evidence is in [validation.md](validation.md).
 
 The planned setup is one room, one microphone and one camera, with PIR, radar and ultrasonic sensors connected to an Arduino. The PC handles audio, images and the main decision. USB serial is the planned local link.
 
@@ -10,7 +12,7 @@ The current implementation simulates these inputs. It does not acquire live room
 |---|---|
 | Python on the host | Audio features, image changes, simulated sensor filtering, fusion and a local alert queue |
 | Arduino C++ | Sensor filtering, watchdog, heartbeat timeout and a latched local alarm |
-| MATLAB | Separate calculation and replay source, awaiting execution |
+| MATLAB | Separate calculation and replay source; execution is now checked in CI |
 
 PIR, radar and range readings provide different kinds of evidence, but can share a harmless cause. None identifies a person. The camera detects image changes; it has no person detector or infrared-specific model.
 

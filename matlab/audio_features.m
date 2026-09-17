@@ -2,6 +2,8 @@ function f = audio_features(audio, fs)
 % Base MATLAB only. Symmetric Hann, one-sided power, causal END timestamps.
 % Implemented independently from the Python numerical reference.
 N=2048; hop=1024; x=double(audio(:));
+fs=double(fs);
+assert(isscalar(fs) && isfinite(fs) && fs>0, 'Need a positive scalar sample rate');
 assert(numel(x)>=N && all(isfinite(x)), 'Need finite mono audio');
 count=floor((numel(x)-N)/hop)+1;
 frames=zeros(count,N);

@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import json
 import sqlite3
 import math
+import uuid
 
 
 @dataclass
@@ -82,7 +83,7 @@ class Fusion:
                 self.state = 2
                 self.changed = t
                 entered = True
-                self.active_id = f"event-{len(self.alerts)+1:04d}"
+                self.active_id = str(uuid.uuid4())
                 self.alerts.append(
                     dict(
                         id=self.active_id,

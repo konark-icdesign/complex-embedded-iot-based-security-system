@@ -2,7 +2,7 @@
 
 ## Run status
 
-The Python simulation and C++ host checks have run. The Arduino sketch has compiled. MATLAB execution and physical room tests are still pending.
+This report covers the earlier independent-scenario evaluation. Current incident-pipeline, board and MATLAB verification is recorded in `docs/validation.md`. Physical room tests remain pending.
 
 ## Recorded checks
 
@@ -21,7 +21,7 @@ The Python simulation and C++ host checks have run. The Arduino sketch has compi
 | Embedded cross-language replay | 12480 ticks, 0 mismatches |
 | Arduino target | UNO R4 WiFi, official Renesas core 1.6.0; compile succeeded |
 | Compiled firmware footprint | 53,724 bytes flash; 6,904 bytes global RAM |
-| MATLAB | Source provided; NOT RUN |
+| MATLAB | Not part of this historical run; see current validation record |
 | Hardware / HP throughput | NOT TESTED |
 | Remote alert | Local simulated receiver only; no human contacted |
 

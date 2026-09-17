@@ -1,0 +1,94 @@
+name: Incident pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  matlab-reference:
+    needs: integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: matlab-inputs
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: addpath('matlab'); run_full_simulation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: matlab-results
+          path: results/matlab/
+          retention-days: 14
+  arduino-target:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/bootstrap_arduino.py --core-version 1.6.0
+      - name: Compile UNO R4 WiFi target
+        run: ../arduino-tools/arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/night_security
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt pytest
+      - name: Python regression tests
+        run: python -m pytest -q
+      - name: Build C and Arduino host logic
+        run: make embedded sanitize incident-build c-sanitize
+      - name: Check C numerical parity
+        run: python scripts/verify_c_core.py | tee c-parity.json
+      - name: Continuous incidents with Python DSP
+        run: python run_incidents.py --output results/incidents-python
+      - name: Continuous incidents with C DSP and corroboration
+        run: python run_incidents.py --output results/incidents-c --c-library build/libdetection.so
+      - name: Compare incident decisions across languages
+        run: python scripts/compare_incidents.py results/incidents-python results/incidents-c
+      - name: Recheck original scenario and embedded replay
+        run: |
+          python run_simulation.py --seeds 1
+          python scripts/verify_embedded_replay.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: matlab-inputs
+          path: |
+            fixtures/matlab_reference.mat
+            results/traces/
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: incident-results
+          path: |
+            results/incidents-python/
+            results/incidents-c/
+            !results/incidents-*/**/*.sqlite*
+            !results/incidents-*/**/receiver/
+            results/summary.json
+            results/embedded_replay.json
+            c-parity.json
+          retention-days: 14

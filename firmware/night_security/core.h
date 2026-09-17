@@ -9,6 +9,8 @@ inline uint32_t elapsed(uint32_t now, uint32_t then) { return now - then; }
 struct Output {
     bool pir = false, radar = false, near = false, range_fault = true;
     bool degraded = true, alarm = false;
+    bool investigating = false;
+    bool fallback_alarm = false;
     float metres = NAN;
 };
 class Core {
@@ -16,6 +18,8 @@ class Core {
     uint8_t used_ = 0, cursor_ = 0, p_ = 0, m_ = 0, u_ = 0, agree_ = 0;
     uint32_t heartbeat_ = 0, last_tick_ = 0;
     bool heartbeat_seen_ = false, sampled_ = false, latch_ = false;
+    bool investigating_ = false;
+    bool fallback_latch_ = false;
 
   public:
     void heartbeat(uint32_t now) {
@@ -25,6 +29,7 @@ class Core {
     void serverAlarm() { latch_ = true; }
     void reset() {
         latch_ = false;
+        fallback_latch_ = false;
         agree_ = 0;
     }
     bool command(const char *line, uint32_t now) {
@@ -34,6 +39,10 @@ class Core {
         }
         if (strcmp(line, "ALARM") == 0) {
             serverAlarm();
+            return true;
+        }
+        if (strcmp(line, "YELLOW") == 0 || strcmp(line, "GREEN") == 0) {
+            investigating_ = strcmp(line, "YELLOW") == 0;
             return true;
         }
         // Alarm reset requires a physical reset button; no unauthenticated remote reset.
@@ -88,8 +97,11 @@ class Core {
         agree_ = fallback ? static_cast<uint8_t>(agree_ < 10U ? agree_ + 1U : 10U) : 0U;
         if (agree_ >= 10U) {
             latch_ = true;
+            fallback_latch_ = true;
         }
         o.alarm = armed && latch_;
+        o.investigating = investigating_ && !o.degraded;
+        o.fallback_alarm = armed && fallback_latch_;
         return o;
     }
 };

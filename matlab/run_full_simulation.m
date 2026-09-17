@@ -1,13 +1,15 @@
 function run_full_simulation()
 % MATLAB reference calculations and fusion replay. Uses base MATLAB.
 % Checks audio/image kernels and replays the central fusion traces.
-% MATLAB execution and physical I/O tests are still pending.
+% Executed by the MATLAB reference CI job. Physical I/O remains separate.
 root=fileparts(fileparts(mfilename('fullpath')));addpath(fullfile(root,'matlab'));
 fixture=load(fullfile(root,'fixtures','matlab_reference.mat'));
 outdir=fullfile(root,'results','matlab');if ~exist(outdir,'dir'),mkdir(outdir);end
 diary(fullfile(outdir,'execution_log.txt'));cleanup=onCleanup(@() diary('off'));
 fprintf('MATLAB execution: %s\n',version);
 f=audio_features(fixture.audio,fixture.fs);
+integerRate=audio_features(fixture.audio,int32(fixture.fs));
+assert(max(abs(integerRate.x-f.x),[],'all')<1e-12,'Integer sample-rate regression');
 featureError=max(abs(f.x-fixture.expected_features),[],'all');
 assert(featureError<1e-8,'Feature parity failed');
 assert(max(abs(f.t-fixture.expected_times(:)))<1e-10,'End-time parity failed');
@@ -24,6 +26,10 @@ for name={'dry','rain'}
     assert(abs(models.(mode).threshold-fixture.(['threshold_' mode]))<1e-8);
 end
 [score,flag]=audio_detect(f,models.dry);
+assert(max(abs(score-fixture.expected_scores(:)))<1e-8,'Audio score parity failed');
+assert(isequal(flag,logical(fixture.expected_flags(:))),'Audio decision parity failed');
+silent=audio_features(zeros(2048,1),16000);assert(~any(silent.valid));
+clipped=audio_features(repmat([-1;1],1024,1),16000);assert(~any(clipped.valid));
 figure('Visible','off');plot(f.t,score);hold on;yline(models.dry.threshold,'--');
 xlabel('Time (s)');ylabel('Deviation score');title('MATLAB DSP on synthetic raw audio');
 saveas(gcf,fullfile(outdir,'audio.png'));close(gcf);

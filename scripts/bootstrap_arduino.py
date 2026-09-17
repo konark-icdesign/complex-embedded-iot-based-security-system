@@ -1,6 +1,11 @@
 """Optional official Arduino CLI installation into scratch tool directory."""
 
+import argparse
 import urllib.request, tarfile, pathlib, subprocess
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--core-version", default="1.6.0")
+args = parser.parse_args()
 
 root = pathlib.Path(__file__).resolve().parents[2] / "arduino-tools"
 root.mkdir(exist_ok=True)
@@ -16,7 +21,7 @@ cli = str(root / "arduino-cli")
 for command in [
     [cli, "version"],
     [cli, "core", "update-index"],
-    [cli, "core", "install", "arduino:renesas_uno"],
+    [cli, "core", "install", "arduino:renesas_uno@" + args.core_version],
 ]:
     result = subprocess.run(command, text=True, capture_output=True, timeout=240)
     print(result.stdout, result.stderr, flush=True)

@@ -32,7 +32,7 @@ For first bench work, use USB power and explicitly accept that fallback ends whe
 - PIR and radar need three consecutive active samples.
 - Range uses a five-sample median plus three consecutive near results.
 - The first 60 seconds inhibit alarms while sensors settle.
-- `HB` renews the PC heartbeat; `ALARM` latches the local buzzer. Commands are newline-terminated and length-bounded.
+- `HB` renews the PC heartbeat; `ALARM` latches the local buzzer. `YELLOW` and `GREEN` set the host investigation indication without clearing an alarm. Commands are newline-terminated and length-bounded.
 - Missing heartbeat for more than two seconds enables physical fallback.
 - A sample gap above 250 ms clears accumulated persistence.
 - The official Renesas watchdog is enabled for four seconds and refreshed by the loop.
@@ -58,3 +58,5 @@ S,sequence,board_millis,pir_filtered,radar_filtered,range_metres,range_valid,ala
 8. Test board power loss separately. The RAM latch and history do not survive it; the current design cannot claim otherwise.
 
 The recorded target build used 53,724 bytes of flash and 6,904 bytes of global RAM. Stack usage, electrical behaviour, processing deadlines and watchdog recovery still need board measurements.
+
+Those byte counts belong to the earlier sketch. The Incident pipeline workflow compiles the revised sketch with core 1.6.0 and reports its current size. The continuous host simulation uses a C++ driver around `core.h`; it does not operate physical pins. The physical serial adapter still needs to carry the fallback-latch provenance now exposed by the core, as well as map board time into the host acquisition clock.
