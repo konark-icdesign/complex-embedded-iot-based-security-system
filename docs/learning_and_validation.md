@@ -16,7 +16,7 @@ Record any changes with the input used, the result before and after, and why the
 
 ## Problems to investigate
 
-**Soft footsteps:** the small synthetic footsteps were missed. The separate broad rain/engine background model also missed three public footstep clips. The score shows that they were accepted as background; the experiment does not establish one physical cause. Inspect per-feature deviations and vary signal-to-background ratio before changing thresholds.
+**Soft footsteps:** the original calibration missed the small synthetic footsteps. The later room profile improved soft-step hits from 0/20 to 20/20 in a separate synthetic evaluation, but still missed 19/20 very-soft cases. Both quiet-trained models flagged every public diagnostic clip, including normal proxies; the separate broad rain/engine model still missed three public footstep clips. See [detection quality](detection_quality.md). Next work needs actual room recordings and further sensitivity analysis, not a claim that the real-audio problem is solved.
 
 **Warm moving objects:** camera motion and PIR can share this cause. The current rule cannot distinguish it from some human movements.
 

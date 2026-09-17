@@ -1,0 +1,47 @@
+name: Archive engineering evidence
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/archive_runs.py
+      - .github/workflows/archive-evidence.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  archive:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - name: Archive existing run outputs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if test -f evidence/github/35250249454/manifest.json; then
+            python scripts/archive_runs.py --verify
+          else
+            python scripts/archive_runs.py
+          fi
+      - name: Commit the verified archive
+        env:
+          ARCHIVE_BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          git add evidence/github
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Preserve original failure and validation run evidence'
+            git push origin "HEAD:$ARCHIVE_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-archive-backup
+          path: evidence/github/
+          retention-days: 30

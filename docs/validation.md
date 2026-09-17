@@ -2,6 +2,8 @@
 
 The continuous incident checks ran on GitHub, not on the HP or physical sensors.
 
+The [debugging history](debugging_history.md) links the fixes to the preserved original run logs and artifact outputs in `evidence/github/`. Those committed files do not depend on Actions artifact retention.
+
 The later [detection-quality change](detection_quality.md) has its own comparison and recorded results. At commit `5bd05078df6b171632d88e8e7efde1f01fbf58a4`, 26 Python tests passed and all four continuous sessions still agreed between Python and C with the new room profile: [integration run 35250249408](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249408). The table below records the earlier incident-workflow change.
 
 Python/C integration and the Arduino target build passed at `bf0efac4fcc6e8a6d87d6298108e71cac9674438`: [run 35248260569](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35248260569).
@@ -35,6 +37,6 @@ The failed and successful runs remain linked in [the workflow notes](incidents.m
 
 ## Still unfinished
 
-Actual infrared/video and room-audio validation; quiet-footstep and shared-cause false-alarm work; weather context; physical camera/microphone/serial acquisition and clock mapping; remote endpoint authentication; sensor placement, power and HP performance tests. The C backend covers numerical detection, while Python still owns camera analysis and incident/I/O orchestration.
+Actual infrared/video and room-audio validation; very-quiet-footstep and shared-cause false-alarm work; weather context; physical camera/microphone/serial acquisition and clock mapping; remote endpoint authentication; sensor placement, power and HP performance tests. The later room calibration improves soft synthetic footsteps, as recorded in the quality report. The C backend covers numerical detection, while Python still owns camera analysis and incident/I/O orchestration.
 
 The old 520-trial results are a separate evaluation. Their 30 misses and 20 false alerts have not been fixed or replaced by the four new integration sessions.

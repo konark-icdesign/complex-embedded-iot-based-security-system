@@ -9,7 +9,7 @@ The intended PC is an HP t640 with 8 GB RAM, an NVMe SSD and Windows 10 22H2. No
 | Python 3.12, NumPy, SciPy and Matplotlib | Run the current simulation and plots |
 | Arduino IDE 2 | Compile and later upload the board sketch |
 | Arduino UNO R4 Boards core 1.6.0 | Reproduce the recorded target build |
-| MATLAB, with a suitable licence | Run the unverified MATLAB reference |
+| MATLAB, with a suitable licence | Reproduce the reference already verified on GitHub; HP performance is unmeasured |
 | GCC and Make | Run the native C++ checks; optional for the first Python run |
 | FFmpeg | Optional synthetic MP4 export |
 
