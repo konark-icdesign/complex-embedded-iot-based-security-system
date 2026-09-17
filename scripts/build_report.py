@@ -281,7 +281,7 @@ def page():
 
 
 def pdf_report():
-    add("ECE / SIMULATION STUDY / 16 SEPTEMBER 2026", "Small2")
+    add("ECE / HISTORICAL SIMULATION STUDY", "Small2")
     add("Multimodal<br/>night security", "Title2")
     add("Executed simulation, measured failures and a practical HP setup", "Sub2")
     add(

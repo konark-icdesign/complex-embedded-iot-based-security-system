@@ -28,9 +28,10 @@ inventory reasons. Downloaded ZIP digests are checked against GitHub metadata
 when supplied. Selected artifact bytes are preserved without rewriting.
 
 GitHub already masks workflow secrets. The archiver additionally redacts token
-patterns and signed-URL access parameters from log copies. Each file's manifest
-records the original downloaded-byte checksum, stored-byte checksum and number
-of these additional redactions. Logs are not described as byte-identical where
+patterns and signed-URL access parameters from log copies. Each log's manifest
+entry records the original downloaded-byte checksum, stored-byte checksum and
+number of these additional redactions. Metadata listings are serialized as JSON;
+artifact members retain their original bytes. Logs are not described as byte-identical where
 redactions occurred. This is not a security audit of arbitrary logs.
 
 Verify the stored files offline:
@@ -38,6 +39,11 @@ Verify the stored files offline:
 ```text
 python scripts/archive_runs.py --verify
 ```
+
+In a Git checkout, add `--tracked` to check that all manifested files and their
+manifests are also tracked by Git. The archival workflow performs this check
+before committing. It uses an explicit forced add within this archive directory
+because the project's general `c-parity.json` ignore rule also matches snapshots.
 
 The archiver refuses to overwrite a run directory. Missing downloads fail its
 check and are listed in the manifest. Future runs must be deliberately selected

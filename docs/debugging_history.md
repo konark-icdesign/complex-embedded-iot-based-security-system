@@ -52,6 +52,13 @@ simulation. The archive job instead downloads the existing artifacts inside
 GitHub Actions using its repository token. No original experiment is rerun to
 replace missing evidence.
 
+The first archive commit exposed another tooling issue: the repository's
+`c-parity.json` ignore rule excluded five copied C parity summaries. The files
+had passed the working-directory checksum check but were absent from the remote
+Git tree. Recovery downloads the exact original artifact members and verifies
+their recorded hashes. The archive workflow now explicitly stages its directory
+and checks every manifested file against the Git index before committing.
+
 ## Archive contents and limits
 
 Start at [the archive index](../evidence/github/README.md). Each selected run has

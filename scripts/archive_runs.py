@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import subprocess
 import urllib.error
 import urllib.request
 import zipfile
@@ -147,8 +148,35 @@ def archive(run_id):
     return not gaps
 
 
-def verify():
+def repair_missing():
+    """Recover omitted Git files from their original artifact, never regenerate."""
+    recovered = 0
+    for manifest_path in sorted(ROOT.glob("*/manifest.json")):
+        manifest = json.loads(manifest_path.read_text())
+        for row in manifest["files"]:
+            relative = PurePosixPath(row["path"])
+            if relative.is_absolute() or ".." in relative.parts:
+                raise RuntimeError("Unsafe manifest path")
+            dest = manifest_path.parent / relative
+            if dest.exists():
+                continue
+            match = re.fullmatch(re.escape(f"https://api.github.com/repos/{REPO}/")
+                                 + r"(actions/artifacts/\d+/zip)#(.+)", row["source"])
+            if not match:
+                raise RuntimeError(f"Missing non-artifact file needs explicit recovery: {dest}")
+            with zipfile.ZipFile(io.BytesIO(get(match[1]))) as zipped:
+                data = zipped.read(match[2])
+            if digest(data) != row["sha256"] or len(data) != row["bytes"]:
+                raise RuntimeError(f"Recovered bytes differ from manifest: {dest}")
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(data)
+            recovered += 1
+    print(f"ARCHIVE_RECOVERED files={recovered}", flush=True)
+
+
+def verify(tracked=False):
     count = size = 0
+    indexed = set(subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")) if tracked else None
     manifests = sorted(ROOT.glob("*/manifest.json"))
     if {int(p.parent.name) for p in manifests} != set(RUNS):
         raise RuntimeError("Expected exactly the seven selected run archives")
@@ -170,15 +198,23 @@ def verify():
         actual = {str(p.relative_to(path.parent)) for p in path.parent.rglob("*") if p.is_file()}
         if actual != expected:
             raise RuntimeError(f"Archive contains unindexed files: {path}")
-    print(f"ARCHIVE_VERIFIED runs={len(manifests)} files={count} bytes={size}", flush=True)
+        if tracked and any(str(path.parent / p) not in indexed for p in expected):
+            raise RuntimeError(f"Archive files missing from Git index: {path}")
+    print(f"ARCHIVE_VERIFIED runs={len(manifests)} files={count} bytes={size} git_tracked={tracked}", flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--verify", action="store_true")
+    parser.add_argument("--tracked", action="store_true")
+    parser.add_argument("--repair-missing", action="store_true")
     args = parser.parse_args()
+    if args.repair_missing:
+        repair_missing()
+        verify(args.tracked)
+        return
     if args.verify:
-        verify()
+        verify(args.tracked)
         return
     complete = [archive(run_id) for run_id in RUNS]
     if not all(complete):
