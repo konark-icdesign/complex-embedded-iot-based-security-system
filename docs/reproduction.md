@@ -57,6 +57,8 @@ Open `firmware/night_security/night_security.ino` in Arduino IDE 2. Select UNO R
 
 Reruns replace derived outputs. The first ESC-50 download needs internet access. Missing audio files are reported as `NOT_RUN_INCOMPLETE_DATA`; they must not be confused with an executed real-audio check. FFmpeg is optional for MP4 output.
 
+Historical GitHub evidence is separate: `evidence/github/` contains committed snapshots of selected original runs. `python scripts/archive_runs.py --verify` checks their file lengths and SHA-256 hashes without network access or a simulation rerun. See [debugging history](debugging_history.md) for the index and explicit archive omissions.
+
 The notebook in `notebooks/` runs the same steps and prints the Git revision. Hosted Colab execution is still unverified.
 
 The continuous incident and C-core commands are in [incidents.md](incidents.md). They use new output directories and do not replace the historical scenario results.

@@ -1,0 +1,22 @@
+{
+  "two_incidents": {
+    "passed": true,
+    "received": 2,
+    "failed_checks": []
+  },
+  "outage_restart": {
+    "passed": true,
+    "received": 2,
+    "failed_checks": []
+  },
+  "pc_failure": {
+    "passed": true,
+    "received": 2,
+    "failed_checks": []
+  },
+  "thunder_only": {
+    "passed": true,
+    "received": 0,
+    "failed_checks": []
+  }
+}

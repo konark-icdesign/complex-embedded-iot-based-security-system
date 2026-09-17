@@ -1,0 +1,272 @@
+﻿2026-09-17T16:34:20.8349885Z Current runner version: '2.337.0'
+2026-09-17T16:34:20.8370138Z ##[group]Runner Image Provisioner
+2026-09-17T16:34:20.8370977Z Hosted Compute Agent
+2026-09-17T16:34:20.8371489Z Version: 20260828.587
+2026-09-17T16:34:20.8372065Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-17T16:34:20.8372737Z Build Date: 2026-08-28T16:44:25Z
+2026-09-17T16:34:20.8373279Z Worker ID: {61e64c8a-90f5-4346-bb99-16775c479ac1}
+2026-09-17T16:34:20.8373951Z Azure Region: westus3
+2026-09-17T16:34:20.8374419Z ##[endgroup]
+2026-09-17T16:34:20.8375469Z ##[group]Operating System
+2026-09-17T16:34:20.8375988Z Ubuntu
+2026-09-17T16:34:20.8376422Z 24.04.5
+2026-09-17T16:34:20.8377042Z LTS
+2026-09-17T16:34:20.8377508Z ##[endgroup]
+2026-09-17T16:34:20.8377990Z ##[group]Runner Image
+2026-09-17T16:34:20.8378492Z Image: ubuntu-24.04
+2026-09-17T16:34:20.8378980Z Version: 20260907.300.1
+2026-09-17T16:34:20.8380064Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-17T16:34:20.8381336Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-17T16:34:20.8382153Z ##[endgroup]
+2026-09-17T16:34:20.8383044Z ##[group]GITHUB_TOKEN Permissions
+2026-09-17T16:34:20.8384635Z Contents: read
+2026-09-17T16:34:20.8385112Z Metadata: read
+2026-09-17T16:34:20.8385639Z ##[endgroup]
+2026-09-17T16:34:20.8387695Z Secret source: Actions
+2026-09-17T16:34:20.8388585Z Cache mode: write
+2026-09-17T16:34:20.8389154Z Prepare workflow directory
+2026-09-17T16:34:20.8707151Z Prepare all required actions
+2026-09-17T16:34:20.8746119Z Getting action download info
+2026-09-17T16:34:21.1686237Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-17T16:34:21.4026116Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-17T16:34:21.6235506Z Complete job name: arduino-target
+2026-09-17T16:34:21.6822300Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T16:34:21.6829320Z ##[group]Run actions/checkout@v4
+2026-09-17T16:34:21.6829879Z with:
+2026-09-17T16:34:21.6830390Z   repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T16:34:21.6833508Z   token: ***
+2026-09-17T16:34:21.6833856Z   ssh-strict: true
+2026-09-17T16:34:21.6834210Z   ssh-user: git
+2026-09-17T16:34:21.6834637Z   persist-credentials: true
+2026-09-17T16:34:21.6835025Z   clean: true
+2026-09-17T16:34:21.6835389Z   sparse-checkout-cone-mode: true
+2026-09-17T16:34:21.6835798Z   fetch-depth: 1
+2026-09-17T16:34:21.6836137Z   fetch-tags: false
+2026-09-17T16:34:21.6836492Z   show-progress: true
+2026-09-17T16:34:21.6837019Z   lfs: false
+2026-09-17T16:34:21.6837349Z   submodules: false
+2026-09-17T16:34:21.6837710Z   set-safe-directory: true
+2026-09-17T16:34:21.6838103Z   allow-unsafe-pr-checkout: false
+2026-09-17T16:34:21.6838675Z ##[endgroup]
+2026-09-17T16:34:21.7644678Z Syncing repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T16:34:21.7646270Z ##[group]Getting Git version info
+2026-09-17T16:34:21.7647459Z Working directory is '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T16:34:21.7648665Z [command]/usr/bin/git version
+2026-09-17T16:34:21.7823345Z git version 2.55.0
+2026-09-17T16:34:21.7840690Z ##[endgroup]
+2026-09-17T16:34:21.7853495Z Temporarily overriding HOME='/home/runner/work/_temp/8f717d62-b2bb-4e0a-9f62-2309977ed4dd' before making global git config changes
+2026-09-17T16:34:21.7855424Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T16:34:21.7859010Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T16:34:21.7905163Z Deleting the contents of '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T16:34:21.7909385Z ##[group]Initializing the repository
+2026-09-17T16:34:21.7913466Z [command]/usr/bin/git init /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T16:34:21.7991119Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T16:34:21.7994296Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T16:34:21.7995718Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T16:34:21.7996374Z hint: call:
+2026-09-17T16:34:21.7996747Z hint:
+2026-09-17T16:34:21.7997780Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T16:34:21.7998761Z hint:
+2026-09-17T16:34:21.7999920Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T16:34:21.8001447Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T16:34:21.8002437Z hint:
+2026-09-17T16:34:21.8003041Z hint: 	git branch -m <name>
+2026-09-17T16:34:21.8003886Z hint:
+2026-09-17T16:34:21.8004629Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T16:34:21.8005996Z Initialized empty Git repository in /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system/.git/
+2026-09-17T16:34:21.8008053Z [command]/usr/bin/git remote add origin https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T16:34:21.8043977Z ##[endgroup]
+2026-09-17T16:34:21.8044723Z ##[group]Disabling automatic garbage collection
+2026-09-17T16:34:21.8047401Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-17T16:34:21.8080054Z ##[endgroup]
+2026-09-17T16:34:21.8081621Z ##[group]Setting up auth
+2026-09-17T16:34:21.8089425Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T16:34:21.8125210Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T16:34:21.8531707Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T16:34:21.8563364Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T16:34:21.8751071Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T16:34:21.8783616Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T16:34:21.8992365Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-17T16:34:21.9929627Z ##[endgroup]
+2026-09-17T16:34:21.9930430Z ##[group]Fetching the repository
+2026-09-17T16:34:21.9937244Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +087b33bd37caa2ecb68661f0fcad3ba655048b2c:refs/remotes/pull/1/merge
+2026-09-17T16:34:22.7553878Z From https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T16:34:22.7555606Z  * [new ref]         087b33bd37caa2ecb68661f0fcad3ba655048b2c -> pull/1/merge
+2026-09-17T16:34:22.7558351Z ##[endgroup]
+2026-09-17T16:34:22.7559383Z ##[group]Determining the checkout info
+2026-09-17T16:34:22.7560517Z ##[endgroup]
+2026-09-17T16:34:22.7566733Z [command]/usr/bin/git sparse-checkout disable
+2026-09-17T16:34:22.7615001Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-17T16:34:22.7651965Z ##[group]Checking out the ref
+2026-09-17T16:34:22.7655313Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-09-17T16:34:22.7777291Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-09-17T16:34:22.7778630Z 
+2026-09-17T16:34:22.7779283Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-17T16:34:22.7780733Z changes and commit them, and you can discard any commits you make in this
+2026-09-17T16:34:22.7781725Z state without impacting any branches by switching back to a branch.
+2026-09-17T16:34:22.7782320Z 
+2026-09-17T16:34:22.7782784Z If you want to create a new branch to retain commits you create, you may
+2026-09-17T16:34:22.7783715Z do so (now or later) by using -c with the switch command. Example:
+2026-09-17T16:34:22.7784295Z 
+2026-09-17T16:34:22.7784560Z   git switch -c <new-branch-name>
+2026-09-17T16:34:22.7785007Z 
+2026-09-17T16:34:22.7785257Z Or undo this operation with:
+2026-09-17T16:34:22.7785676Z 
+2026-09-17T16:34:22.7785911Z   git switch -
+2026-09-17T16:34:22.7786287Z 
+2026-09-17T16:34:22.7787092Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-17T16:34:22.7787855Z 
+2026-09-17T16:34:22.7788743Z HEAD is now at 087b33b Merge c3ebb52af56f10d6f69ba40c42429454c0170d8e into 73ce21a9c7738f85ac4d19712db9531f16fac087
+2026-09-17T16:34:22.7805209Z ##[endgroup]
+2026-09-17T16:34:22.7847965Z [command]/usr/bin/git log -1 --format=%H
+2026-09-17T16:34:22.7869918Z 087b33bd37caa2ecb68661f0fcad3ba655048b2c
+2026-09-17T16:34:22.8161838Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T16:34:22.8166049Z ##[group]Run actions/setup-python@v5
+2026-09-17T16:34:22.8167073Z with:
+2026-09-17T16:34:22.8167710Z   python-version: 3.12
+2026-09-17T16:34:22.8168445Z   check-latest: false
+2026-09-17T16:34:22.8175290Z   token: ***
+2026-09-17T16:34:22.8175999Z   update-environment: true
+2026-09-17T16:34:22.8176974Z   allow-prereleases: false
+2026-09-17T16:34:22.8177761Z   freethreaded: false
+2026-09-17T16:34:22.8178466Z ##[endgroup]
+2026-09-17T16:34:22.9287167Z ##[group]Installed versions
+2026-09-17T16:34:23.0232050Z (node:2024) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T16:34:23.0233117Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T16:34:23.0233713Z Successfully set up CPython (3.12.14)
+2026-09-17T16:34:23.0234285Z ##[endgroup]
+2026-09-17T16:34:23.0401598Z ##[group]Run python scripts/bootstrap_arduino.py --core-version 1.6.0
+2026-09-17T16:34:23.0402309Z [36;1mpython scripts/bootstrap_arduino.py --core-version 1.6.0[0m
+2026-09-17T16:34:23.0450146Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T16:34:23.0450877Z env:
+2026-09-17T16:34:23.0451462Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:23.0452276Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T16:34:23.0453044Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:23.0453666Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:23.0454216Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:23.0454768Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T16:34:23.0455295Z ##[endgroup]
+2026-09-17T16:34:24.6499988Z arduino-cli  Version: 1.5.2-rc.1 Commit: fef6e48df Date: 2026-07-23T11:13:39Z
+2026-09-17T16:34:24.6500709Z  
+2026-09-17T16:34:29.4394206Z 
+2026-09-17T16:34:29.4394859Z Downloading index: library_index.tar.bz2 0 B / 4.27 MiB    0.00%
+2026-09-17T16:34:29.4395552Z Downloading index: library_index.tar.bz2 downloaded
+2026-09-17T16:34:29.4395882Z 
+2026-09-17T16:34:29.4396109Z Downloading index: package_index.tar.bz2 0 B / 109.52 KiB    0.00%
+2026-09-17T16:34:29.4396641Z Downloading index: package_index.tar.bz2 downloaded
+2026-09-17T16:34:29.4397702Z Downloading missing tool builtin:ctags@5.8-arduino11...
+2026-09-17T16:34:29.4397976Z 
+2026-09-17T16:34:29.4398220Z builtin:ctags@5.8-arduino11 0 B / 108.99 KiB    0.00%
+2026-09-17T16:34:29.4398693Z builtin:ctags@5.8-arduino11 downloaded
+2026-09-17T16:34:29.4399074Z Installing builtin:ctags@5.8-arduino11...
+2026-09-17T16:34:29.4399747Z Skipping tool configuration....
+2026-09-17T16:34:29.4400144Z builtin:ctags@5.8-arduino11 installed
+2026-09-17T16:34:29.4400640Z Downloading missing tool builtin:dfu-discovery@0.1.2...
+2026-09-17T16:34:29.4400958Z 
+2026-09-17T16:34:29.4401172Z builtin:dfu-discovery@0.1.2 0 B / 1.65 MiB    0.00%
+2026-09-17T16:34:29.4401608Z builtin:dfu-discovery@0.1.2 downloaded
+2026-09-17T16:34:29.4402023Z Installing builtin:dfu-discovery@0.1.2...
+2026-09-17T16:34:29.4402457Z Skipping tool configuration....
+2026-09-17T16:34:29.4402872Z builtin:dfu-discovery@0.1.2 installed
+2026-09-17T16:34:29.4403322Z Downloading missing tool builtin:mdns-discovery@1.1.0...
+2026-09-17T16:34:29.4403669Z 
+2026-09-17T16:34:29.4403857Z builtin:mdns-discovery@1.1.0 0 B / 3.07 MiB    0.00%
+2026-09-17T16:34:29.4404299Z builtin:mdns-discovery@1.1.0 downloaded
+2026-09-17T16:34:29.4404712Z Installing builtin:mdns-discovery@1.1.0...
+2026-09-17T16:34:29.4405128Z Skipping tool configuration....
+2026-09-17T16:34:29.4405510Z builtin:mdns-discovery@1.1.0 installed
+2026-09-17T16:34:29.4406083Z Downloading missing tool builtin:serial-discovery@1.5.2...
+2026-09-17T16:34:29.4406435Z 
+2026-09-17T16:34:29.4406646Z builtin:serial-discovery@1.5.2 0 B / 2.06 MiB    0.00%
+2026-09-17T16:34:29.4408212Z builtin:serial-discovery@1.5.2 downloaded
+2026-09-17T16:34:29.4408654Z Installing builtin:serial-discovery@1.5.2...
+2026-09-17T16:34:29.4409104Z Skipping tool configuration....
+2026-09-17T16:34:29.4410286Z builtin:serial-discovery@1.5.2 installed
+2026-09-17T16:34:29.4410804Z Downloading missing tool builtin:serial-monitor@0.15.0...
+2026-09-17T16:34:29.4411547Z 
+2026-09-17T16:34:29.4412111Z builtin:serial-monitor@0.15.0 0 B / 2.33 MiB    0.00%
+2026-09-17T16:34:29.4412575Z builtin:serial-monitor@0.15.0 downloaded
+2026-09-17T16:34:29.4413568Z Installing builtin:serial-monitor@0.15.0...
+2026-09-17T16:34:29.4413986Z Skipping tool configuration....
+2026-09-17T16:34:29.4414373Z builtin:serial-monitor@0.15.0 installed
+2026-09-17T16:34:29.4414678Z 
+2026-09-17T16:34:29.4415496Z Downloading index: package_index.tar.bz2 0 B / 109.52 KiB    0.00%
+2026-09-17T16:34:29.4416019Z Downloading index: package_index.tar.bz2 downloaded
+2026-09-17T16:34:29.4417539Z  
+2026-09-17T16:34:47.9861008Z Tool builtin:dfu-discovery@0.1.2 already installed
+2026-09-17T16:34:47.9861462Z Downloading packages...
+2026-09-17T16:34:47.9861641Z 
+2026-09-17T16:34:47.9861824Z arduino:arm-none-eabi-gcc@7-2017q4 0 B / 95.23 MiB    0.00%
+2026-09-17T16:34:47.9862282Z arduino:arm-none-eabi-gcc@7-2017q4 0 B / 95.23 MiB    0.00%
+2026-09-17T16:34:47.9862767Z arduino:arm-none-eabi-gcc@7-2017q4 26.05 MiB / 95.23 MiB   27.36% 00m01s
+2026-09-17T16:34:47.9863266Z arduino:arm-none-eabi-gcc@7-2017q4 38.06 MiB / 95.23 MiB   39.96%
+2026-09-17T16:34:47.9863743Z arduino:arm-none-eabi-gcc@7-2017q4 46.32 MiB / 95.23 MiB   48.64%
+2026-09-17T16:34:47.9864201Z arduino:arm-none-eabi-gcc@7-2017q4 46.32 MiB / 95.23 MiB   48.64%
+2026-09-17T16:34:47.9864672Z arduino:arm-none-eabi-gcc@7-2017q4 56.95 MiB / 95.23 MiB   59.80%
+2026-09-17T16:34:47.9865124Z arduino:arm-none-eabi-gcc@7-2017q4 67.03 MiB / 95.23 MiB   70.39%
+2026-09-17T16:34:47.9865585Z arduino:arm-none-eabi-gcc@7-2017q4 77.46 MiB / 95.23 MiB   81.34%
+2026-09-17T16:34:47.9866049Z arduino:arm-none-eabi-gcc@7-2017q4 88.49 MiB / 95.23 MiB   92.92%
+2026-09-17T16:34:47.9866448Z arduino:arm-none-eabi-gcc@7-2017q4 downloaded
+2026-09-17T16:34:47.9866679Z 
+2026-09-17T16:34:47.9866982Z arduino:bossac@1.9.1-arduino5 0 B / 390.31 KiB    0.00%
+2026-09-17T16:34:47.9867349Z arduino:bossac@1.9.1-arduino5 downloaded
+2026-09-17T16:34:47.9867541Z 
+2026-09-17T16:34:47.9867704Z arduino:dfu-util@0.11.0-arduino5 0 B / 2.18 MiB    0.00%
+2026-09-17T16:34:47.9868259Z arduino:dfu-util@0.11.0-arduino5 downloaded
+2026-09-17T16:34:47.9868461Z 
+2026-09-17T16:34:47.9868628Z arduino:openocd@0.11.0-arduino2 0 B / 1.96 MiB    0.00%
+2026-09-17T16:34:47.9868981Z arduino:openocd@0.11.0-arduino2 downloaded
+2026-09-17T16:34:47.9869189Z 
+2026-09-17T16:34:47.9869313Z arduino:renesas_uno@1.6.0 0 B / 13.49 MiB    0.00%
+2026-09-17T16:34:47.9869644Z arduino:renesas_uno@1.6.0 downloaded
+2026-09-17T16:34:47.9869967Z Installing arduino:arm-none-eabi-gcc@7-2017q4...
+2026-09-17T16:34:47.9870313Z Skipping tool configuration....
+2026-09-17T16:34:47.9870611Z arduino:arm-none-eabi-gcc@7-2017q4 installed
+2026-09-17T16:34:47.9870968Z Installing arduino:bossac@1.9.1-arduino5...
+2026-09-17T16:34:47.9871288Z Skipping tool configuration....
+2026-09-17T16:34:47.9871578Z arduino:bossac@1.9.1-arduino5 installed
+2026-09-17T16:34:47.9871897Z Installing arduino:dfu-util@0.11.0-arduino5...
+2026-09-17T16:34:47.9872224Z Skipping tool configuration....
+2026-09-17T16:34:47.9872505Z arduino:dfu-util@0.11.0-arduino5 installed
+2026-09-17T16:34:47.9872841Z Installing arduino:openocd@0.11.0-arduino2...
+2026-09-17T16:34:47.9873157Z Skipping tool configuration....
+2026-09-17T16:34:47.9873444Z arduino:openocd@0.11.0-arduino2 installed
+2026-09-17T16:34:47.9873784Z Installing platform arduino:renesas_uno@1.6.0...
+2026-09-17T16:34:47.9874139Z Skipping platform configuration....
+2026-09-17T16:34:47.9874455Z Platform arduino:renesas_uno@1.6.0 installed
+2026-09-17T16:34:47.9874760Z  
+2026-09-17T16:34:47.9991174Z ##[group]Run ../arduino-tools/arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/night_security
+2026-09-17T16:34:47.9991808Z [36;1m../arduino-tools/arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/night_security[0m
+2026-09-17T16:34:48.0026307Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T16:34:48.0026577Z env:
+2026-09-17T16:34:48.0026793Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:48.0027212Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T16:34:48.0027548Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:48.0027841Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:48.0028149Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T16:34:48.0028444Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T16:34:48.0028697Z ##[endgroup]
+2026-09-17T16:34:48.3909102Z WARNING: library WDT claims to run on renesas architecture(s) and may be incompatible with your current board which runs on renesas_uno architecture(s).
+2026-09-17T16:34:58.1699769Z Sketch uses 53852 bytes (20%) of program storage space. Maximum is 262144 bytes.
+2026-09-17T16:34:58.1700515Z Global variables use 6908 bytes (21%) of dynamic memory, leaving 25860 bytes for local variables. Maximum is 32768 bytes.
+2026-09-17T16:34:58.3335959Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T16:34:58.3337099Z Post job cleanup.
+2026-09-17T16:34:58.4284130Z (node:2358) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T16:34:58.4284752Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T16:34:58.4459445Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T16:34:58.4460359Z Post job cleanup.
+2026-09-17T16:34:58.5161306Z [command]/usr/bin/git version
+2026-09-17T16:34:58.5197459Z git version 2.55.0
+2026-09-17T16:34:58.5225842Z Temporarily overriding HOME='/home/runner/work/_temp/84730c53-29e6-4110-9fd1-58f995b64924' before making global git config changes
+2026-09-17T16:34:58.5227022Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T16:34:58.5230821Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T16:34:58.5262670Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T16:34:58.5290916Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T16:34:58.5516279Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T16:34:58.5538946Z http.https://github.com/.extraheader
+2026-09-17T16:34:58.5548414Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-17T16:34:58.5587260Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T16:34:58.5793362Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T16:34:58.5832074Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T16:34:58.6175853Z Cleaning up orphan processes
+2026-09-17T16:34:58.6427672Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

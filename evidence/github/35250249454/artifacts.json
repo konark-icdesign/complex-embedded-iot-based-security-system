@@ -1,0 +1,52 @@
+[
+  {
+    "metadata": {
+      "id": 10508942621,
+      "node_id": "MDg6QXJ0aWZhY3QxMDUwODk0MjYyMQ==",
+      "name": "detection-quality",
+      "size_in_bytes": 1186289,
+      "url": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621",
+      "archive_download_url": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip",
+      "expired": false,
+      "digest": "sha256:ce45b4eddbd596f23884166e386d51c0cefa05a3e3491b5c7049c3bd94d87d02",
+      "created_at": "2026-09-17T17:02:58Z",
+      "updated_at": "2026-09-17T17:02:58Z",
+      "expires_at": "2026-10-17T17:02:56Z",
+      "workflow_run": {
+        "id": 35250249454,
+        "repository_id": 1373764087,
+        "head_repository_id": 1373764087,
+        "head_branch": "detection-quality",
+        "head_sha": "5bd05078df6b171632d88e8e7efde1f01fbf58a4"
+      }
+    },
+    "members": [
+      {
+        "path": "acceptance.json",
+        "bytes": 148,
+        "saved": "artifacts/10508942621/acceptance.json"
+      },
+      {
+        "path": "development.json",
+        "bytes": 217269,
+        "saved": "artifacts/10508942621/development.json"
+      },
+      {
+        "path": "heldout.json",
+        "bytes": 167508,
+        "saved": "artifacts/10508942621/heldout.json"
+      },
+      {
+        "path": "real_transfer.json",
+        "bytes": 1327,
+        "saved": "artifacts/10508942621/real_transfer.json"
+      },
+      {
+        "path": "room_reference.mat",
+        "bytes": 3051136,
+        "saved": "artifacts/10508942621/room_reference.mat"
+      }
+    ],
+    "download_sha256": "ce45b4eddbd596f23884166e386d51c0cefa05a3e3491b5c7049c3bd94d87d02"
+  }
+]

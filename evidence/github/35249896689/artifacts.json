@@ -1,0 +1,32 @@
+[
+  {
+    "metadata": {
+      "id": 10509546456,
+      "node_id": "MDg6QXJ0aWZhY3QxMDUwOTU0NjQ1Ng==",
+      "name": "detection-quality",
+      "size_in_bytes": 9187,
+      "url": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10509546456",
+      "archive_download_url": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10509546456/zip",
+      "expired": false,
+      "digest": "sha256:18a358b2ded2047be6991ba39e75d246a2b424a9fac3b74ababba2dde6949d2f",
+      "created_at": "2026-09-17T16:59:20Z",
+      "updated_at": "2026-09-17T16:59:20Z",
+      "expires_at": "2026-10-17T16:59:19Z",
+      "workflow_run": {
+        "id": 35249896689,
+        "repository_id": 1373764087,
+        "head_repository_id": 1373764087,
+        "head_branch": "detection-quality",
+        "head_sha": "d1928ce5d032f7685abe8fd5ad1401cb484db8ea"
+      }
+    },
+    "members": [
+      {
+        "path": "development.json",
+        "bytes": 167895,
+        "saved": "artifacts/10509546456/development.json"
+      }
+    ],
+    "download_sha256": "18a358b2ded2047be6991ba39e75d246a2b424a9fac3b74ababba2dde6949d2f"
+  }
+]

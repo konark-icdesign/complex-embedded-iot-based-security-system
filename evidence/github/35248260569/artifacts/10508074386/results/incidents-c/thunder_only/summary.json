@@ -1,0 +1,89 @@
+{
+  "checks": {
+    "expected_confirmed_incidents": true,
+    "distinct_ids": true,
+    "receiver_matches_red": true,
+    "queue_drained": true,
+    "all_closed": true,
+    "outage_queued": true,
+    "retry_after_lost_ack": true,
+    "local_fallback": true,
+    "yellow_reaches_board": true
+  },
+  "passed": true,
+  "incidents": [
+    {
+      "id": "d9309711-cf22-4c8c-997b-55225b67ad4d",
+      "trigger": 8.128000000000005,
+      "opened_at": 8.2,
+      "deadline": 16.128000000000007,
+      "state": "YELLOW",
+      "status": "closed",
+      "confirmed_at": null,
+      "channels": [],
+      "score": 0.0,
+      "reason": "insufficient corroborating evidence",
+      "fallback": false,
+      "audio_trigger": 8.128000000000005,
+      "closed_at": 16.2,
+      "review": {
+        "method": "classical grayscale frame replay; no person/thermal classifier",
+        "motion_times": [],
+        "fault_times": [
+          3.2
+        ]
+      }
+    },
+    {
+      "id": "6041af6c-d81a-4322-b68a-c85880189d8f",
+      "trigger": 32.12800000000002,
+      "opened_at": 32.2,
+      "deadline": 40.12800000000002,
+      "state": "YELLOW",
+      "status": "closed",
+      "confirmed_at": null,
+      "channels": [],
+      "score": 0.0,
+      "reason": "insufficient corroborating evidence",
+      "fallback": false,
+      "audio_trigger": 32.12800000000002,
+      "closed_at": 40.2,
+      "review": {
+        "method": "classical grayscale frame replay; no person/thermal classifier",
+        "motion_times": [],
+        "fault_times": [
+          27.2
+        ]
+      }
+    }
+  ],
+  "received": 0,
+  "attempts": 0,
+  "max_pending": 0,
+  "model": {
+    "center": [
+      0.5950084529725939,
+      0.08166863615697541,
+      0.14575255411267507,
+      0.1756410873040784,
+      0.18937099518347014,
+      0.23767290770710492,
+      0.2510991695163654,
+      1.1754953784341966,
+      0.06272381632518671
+    ],
+    "scale": [
+      0.031698201986823646,
+      0.025,
+      0.025,
+      0.025,
+      0.02,
+      0.08,
+      0.025,
+      0.1,
+      0.1
+    ],
+    "threshold": 3.5
+  },
+  "scope": "synthetic raw audio/images, compiled C++ board, loopback HTTP; board pre-armed"
+}

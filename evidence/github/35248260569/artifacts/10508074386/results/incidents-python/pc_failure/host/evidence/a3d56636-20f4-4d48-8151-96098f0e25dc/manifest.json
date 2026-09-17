@@ -1,0 +1,5088 @@
+{
+  "id": "a3d56636-20f4-4d48-8151-96098f0e25dc",
+  "trigger": 32.10000000000001,
+  "opened_at": 32.1,
+  "deadline": 40.10000000000001,
+  "state": "RED",
+  "status": "closed",
+  "confirmed_at": 33.2,
+  "channels": [
+    "A",
+    "M",
+    "P"
+  ],
+  "score": 5.5,
+  "reason": "corroborated activity within four seconds",
+  "fallback": false,
+  "audio_trigger": 32.10000000000001,
+  "closed_at": 40.2,
+  "review": {
+    "method": "classical grayscale frame replay; no person/thermal classifier",
+    "motion_times": [
+      34.1,
+      34.5,
+      34.7,
+      34.9,
+      35.3,
+      35.5,
+      35.7,
+      36.1,
+      36.3,
+      36.5,
+      36.9,
+      37.1
+    ],
+    "fault_times": [
+      27.2
+    ]
+  },
+  "media_sha256": "0247241a8a9e19e020c0a2e8bb5d163c975a8ab13a92c80b9cd41ccb5b0181bb",
+  "sample_rate": 16000,
+  "coverage": {
+    "requested_start": 27.10000000000001,
+    "available_start": 27.2,
+    "available_end": 40.1,
+    "prebuffer_incomplete": false,
+    "gaps": []
+  },
+  "samples": [
+    {
+      "seq": 272,
+      "t": 27.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.108000000000004,
+          "score": 0.40960192552255476,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 27.172000000000004,
+          "score": 0.21831057970236603,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 273,
+      "t": 27.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.236000000000004,
+          "score": 0.3621905696691632,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 27.300000000000004,
+          "score": 0.6069725988385117,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 274,
+      "t": 27.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.364000000000004,
+          "score": 0.5432750326948232,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 275,
+      "t": 27.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.428000000000004,
+          "score": 0.673040896606517,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 27.492000000000004,
+          "score": 0.513836275096738,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 276,
+      "t": 27.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.556000000000004,
+          "score": 0.49069128306689935,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 277,
+      "t": 27.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.620000000000005,
+          "score": 0.47904883213492866,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 27.684000000000005,
+          "score": 0.327050875577244,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 278,
+      "t": 27.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.748000000000005,
+          "score": 0.6875980595490396,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 279,
+      "t": 27.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.812000000000005,
+          "score": 0.3203989570036254,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 27.876000000000005,
+          "score": 0.6357470582136513,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 280,
+      "t": 28.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 27.940000000000005,
+          "score": 0.248266744087226,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 281,
+      "t": 28.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.004000000000005,
+          "score": 0.5925902143877465,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.068000000000005,
+          "score": 0.293428228567149,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 282,
+      "t": 28.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.132000000000005,
+          "score": 0.600042154685249,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.196000000000005,
+          "score": 0.4126822259288186,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 283,
+      "t": 28.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.260000000000005,
+          "score": 0.17301911184102067,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 284,
+      "t": 28.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.324000000000005,
+          "score": 0.786665335585215,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.388000000000005,
+          "score": 0.5802185689627563,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 285,
+      "t": 28.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.452000000000005,
+          "score": 0.24810051595678326,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 286,
+      "t": 28.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.516000000000005,
+          "score": 0.6552706254274606,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.580000000000005,
+          "score": 0.33403521278046105,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 287,
+      "t": 28.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.644000000000005,
+          "score": 0.22389819074741443,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 288,
+      "t": 28.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.708000000000006,
+          "score": 0.36281761177174476,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.772000000000006,
+          "score": 0.5260767809646725,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 289,
+      "t": 28.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.836000000000006,
+          "score": 0.42679859013510385,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 28.900000000000006,
+          "score": 0.32165509788041446,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 290,
+      "t": 29.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 28.964000000000006,
+          "score": 0.46250236793153693,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 291,
+      "t": 29.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.028000000000006,
+          "score": 0.38522339376836817,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.092000000000006,
+          "score": 0.5604401675110435,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 292,
+      "t": 29.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.156000000000006,
+          "score": 0.41044228330151844,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 293,
+      "t": 29.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.220000000000006,
+          "score": 0.6996591093129718,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.284000000000006,
+          "score": 0.4513055766556584,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 294,
+      "t": 29.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.348000000000006,
+          "score": 0.3138722156745408,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 295,
+      "t": 29.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.412000000000006,
+          "score": 0.4534294974097119,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.476000000000006,
+          "score": 0.35267661054321536,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 296,
+      "t": 29.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.540000000000006,
+          "score": 0.4842027521153821,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 297,
+      "t": 29.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.604000000000006,
+          "score": 0.7488201967233004,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.668000000000006,
+          "score": 0.540089614547436,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 298,
+      "t": 29.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.732000000000006,
+          "score": 0.9513821324119811,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.796000000000006,
+          "score": 0.3318258417742338,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 299,
+      "t": 29.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.860000000000007,
+          "score": 0.3737956594144514,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": true,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 300,
+      "t": 30.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 29.924000000000007,
+          "score": 0.27222725304950307,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 29.988000000000007,
+          "score": 0.18791490981522263,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 301,
+      "t": 30.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.052000000000007,
+          "score": 0.43835276776295257,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 302,
+      "t": 30.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.116000000000007,
+          "score": 0.24488108467896955,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 30.180000000000007,
+          "score": 0.29229184380445605,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 303,
+      "t": 30.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.244000000000007,
+          "score": 0.3858548468691339,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 304,
+      "t": 30.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.308000000000007,
+          "score": 0.8045274489511248,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 30.372000000000007,
+          "score": 0.3725629995889424,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 305,
+      "t": 30.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.436000000000007,
+          "score": 0.34918890194840263,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 30.500000000000007,
+          "score": 0.34133334313557734,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 306,
+      "t": 30.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.564000000000007,
+          "score": 0.7101936896389713,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 307,
+      "t": 30.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.628000000000007,
+          "score": 0.3949482652237967,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 30.692000000000007,
+          "score": 0.28765212752950986,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 308,
+      "t": 30.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.756000000000007,
+          "score": 0.38000972170726915,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 309,
+      "t": 30.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.820000000000007,
+          "score": 0.3624183033540452,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 30.884000000000007,
+          "score": 0.4787715539534458,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 310,
+      "t": 31.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 30.948000000000008,
+          "score": 0.9242508189314029,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 311,
+      "t": 31.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.012000000000008,
+          "score": 0.4260788350075761,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.076000000000008,
+          "score": 0.5883396562238722,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 312,
+      "t": 31.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.140000000000008,
+          "score": 0.4839224749827092,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 313,
+      "t": 31.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.204000000000008,
+          "score": 0.44361375228888084,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.268000000000008,
+          "score": 0.8672277967698488,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 314,
+      "t": 31.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.332000000000008,
+          "score": 0.7620752575116881,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.396000000000008,
+          "score": 0.8454949220772264,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 315,
+      "t": 31.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.460000000000008,
+          "score": 0.9147276977207579,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 316,
+      "t": 31.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.524000000000008,
+          "score": 0.5713441310366677,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.588000000000008,
+          "score": 0.2888934696051591,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 317,
+      "t": 31.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.652000000000008,
+          "score": 0.6674776323329622,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 318,
+      "t": 31.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.716000000000008,
+          "score": 0.558820427160257,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.78000000000001,
+          "score": 0.2585353131228915,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 319,
+      "t": 31.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.84400000000001,
+          "score": 0.29481655234994586,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 320,
+      "t": 32.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 31.90800000000001,
+          "score": 0.8539982581240497,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 31.97200000000001,
+          "score": 0.7715163634707325,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 321,
+      "t": 32.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.03600000000001,
+          "score": 4.81455878126144,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 32.10000000000001,
+          "score": 4.839671570511679,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.10000000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 322,
+      "t": 32.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.16400000000001,
+          "score": 3.664794902073236,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.16400000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 323,
+      "t": 32.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.22800000000001,
+          "score": 0.9857889650059038,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 32.29200000000001,
+          "score": 0.4697354473373006,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.22800000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 324,
+      "t": 32.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.35600000000001,
+          "score": 0.19666114398803597,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 325,
+      "t": 32.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.42000000000001,
+          "score": 0.3821173443016707,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 32.48400000000001,
+          "score": 0.4284821704487514,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 326,
+      "t": 32.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.54800000000001,
+          "score": 0.4701936359277319,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 327,
+      "t": 32.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.61200000000001,
+          "score": 4.937193346779921,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 32.67600000000001,
+          "score": 5.189138003192097,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.67600000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 328,
+      "t": 32.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.74000000000001,
+          "score": 3.6136127271825895,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.74000000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 329,
+      "t": 32.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.80400000000001,
+          "score": 0.5946517639466598,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 32.86800000000001,
+          "score": 0.37413898758647324,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 32.80400000000001
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 330,
+      "t": 33.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 32.93200000000001,
+          "score": 0.7366802723818711,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 32.99600000000001,
+          "score": 0.4419443748000541,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 331,
+      "t": 33.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.06000000000001,
+          "score": 0.7991056376260297,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 332,
+      "t": 33.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.12400000000001,
+          "score": 0.21468129290234833,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 33.18800000000001,
+          "score": 4.219168735757169,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 33.2
+        },
+        {
+          "channel": "M",
+          "t": 33.2
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 333,
+      "t": 33.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.25200000000001,
+          "score": 5.135501218852419,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 33.25200000000001
+        },
+        {
+          "channel": "P",
+          "t": 33.3
+        },
+        {
+          "channel": "M",
+          "t": 33.3
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 334,
+      "t": 33.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.31600000000001,
+          "score": 3.9311500758602094,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 33.38000000000001,
+          "score": 1.2808274762208662,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 33.31600000000001
+        },
+        {
+          "channel": "A",
+          "t": 33.38000000000001
+        },
+        {
+          "channel": "P",
+          "t": 33.4
+        },
+        {
+          "channel": "M",
+          "t": 33.4
+        },
+        {
+          "channel": "U",
+          "t": 33.4
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 335,
+      "t": 33.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.44400000000001,
+          "score": 0.3144052192395377,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 33.5
+        },
+        {
+          "channel": "M",
+          "t": 33.5
+        },
+        {
+          "channel": "U",
+          "t": 33.5
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 336,
+      "t": 33.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.50800000000001,
+          "score": 0.4158206169118641,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 33.57200000000001,
+          "score": 0.3106967594724337,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 33.6
+        },
+        {
+          "channel": "M",
+          "t": 33.6
+        },
+        {
+          "channel": "U",
+          "t": 33.6
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 337,
+      "t": 33.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.63600000000001,
+          "score": 0.27991984578856616,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 33.70000000000001,
+          "score": 0.40679402730943776,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 33.7
+        },
+        {
+          "channel": "M",
+          "t": 33.7
+        },
+        {
+          "channel": "U",
+          "t": 33.7
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 338,
+      "t": 33.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.76400000000001,
+          "score": 4.301383444355778,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 33.8
+        },
+        {
+          "channel": "M",
+          "t": 33.8
+        },
+        {
+          "channel": "U",
+          "t": 33.8
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 339,
+      "t": 33.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.82800000000001,
+          "score": 5.192055336482018,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 33.89200000000001,
+          "score": 4.281968755547181,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 33.82800000000001
+        },
+        {
+          "channel": "A",
+          "t": 33.89200000000001
+        },
+        {
+          "channel": "P",
+          "t": 33.9
+        },
+        {
+          "channel": "M",
+          "t": 33.9
+        },
+        {
+          "channel": "U",
+          "t": 33.9
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 340,
+      "t": 34.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 33.95600000000001,
+          "score": 1.1698569711967215,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 33.95600000000001
+        },
+        {
+          "channel": "P",
+          "t": 34.0
+        },
+        {
+          "channel": "M",
+          "t": 34.0
+        },
+        {
+          "channel": "U",
+          "t": 34.0
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 341,
+      "t": 34.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.02000000000001,
+          "score": 0.8380489439519363,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 34.08400000000001,
+          "score": 0.9261436847177478,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 34.1
+        },
+        {
+          "channel": "P",
+          "t": 34.1
+        },
+        {
+          "channel": "M",
+          "t": 34.1
+        },
+        {
+          "channel": "U",
+          "t": 34.1
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.078125,
+        "naive": 0.078125,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 342,
+      "t": 34.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.14800000000001,
+          "score": 0.6084201587543911,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 34.2
+        },
+        {
+          "channel": "M",
+          "t": 34.2
+        },
+        {
+          "channel": "U",
+          "t": 34.2
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 343,
+      "t": 34.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.21200000000001,
+          "score": 1.092293415622711,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 34.27600000000001,
+          "score": 0.5847353455041485,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 34.3
+        },
+        {
+          "channel": "M",
+          "t": 34.3
+        },
+        {
+          "channel": "U",
+          "t": 34.3
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.005208333333333333,
+        "naive": 0.005208333333333333,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 344,
+      "t": 34.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.34000000000001,
+          "score": 4.063226321391395,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 34.4
+        },
+        {
+          "channel": "M",
+          "t": 34.4
+        },
+        {
+          "channel": "U",
+          "t": 34.4
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 345,
+      "t": 34.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.40400000000001,
+          "score": 5.269486782243491,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 34.46800000000001,
+          "score": 4.766462410520316,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 34.40400000000001
+        },
+        {
+          "channel": "A",
+          "t": 34.46800000000001
+        },
+        {
+          "channel": "V",
+          "t": 34.5
+        },
+        {
+          "channel": "P",
+          "t": 34.5
+        },
+        {
+          "channel": "M",
+          "t": 34.5
+        },
+        {
+          "channel": "U",
+          "t": 34.5
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.046875,
+        "naive": 0.046875,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 346,
+      "t": 34.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.53200000000001,
+          "score": 1.1991503504103393,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 34.59600000000001,
+          "score": 0.39833293109041673,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 34.53200000000001
+        },
+        {
+          "channel": "P",
+          "t": 34.6
+        },
+        {
+          "channel": "M",
+          "t": 34.6
+        },
+        {
+          "channel": "U",
+          "t": 34.6
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 347,
+      "t": 34.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.66000000000001,
+          "score": 0.5120999541631017,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 34.7
+        },
+        {
+          "channel": "P",
+          "t": 34.7
+        },
+        {
+          "channel": "M",
+          "t": 34.7
+        },
+        {
+          "channel": "U",
+          "t": 34.7
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.052083333333333336,
+        "naive": 0.052083333333333336,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 348,
+      "t": 34.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.72400000000001,
+          "score": 0.6776580538994609,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 34.78800000000001,
+          "score": 0.8316959387369658,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 34.8
+        },
+        {
+          "channel": "M",
+          "t": 34.8
+        },
+        {
+          "channel": "U",
+          "t": 34.8
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 349,
+      "t": 34.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.85200000000001,
+          "score": 0.28158997418461,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 34.9
+        },
+        {
+          "channel": "P",
+          "t": 34.9
+        },
+        {
+          "channel": "M",
+          "t": 34.9
+        },
+        {
+          "channel": "U",
+          "t": 34.9
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.03125,
+        "naive": 0.03125,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 350,
+      "t": 35.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 34.91600000000001,
+          "score": 4.916139912437563,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 34.98000000000001,
+          "score": 5.269288535704993,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 34.98000000000001
+        },
+        {
+          "channel": "P",
+          "t": 35.0
+        },
+        {
+          "channel": "M",
+          "t": 35.0
+        },
+        {
+          "channel": "U",
+          "t": 35.0
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 351,
+      "t": 35.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.04400000000001,
+          "score": 4.50900745280163,
+          "anomaly": true,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 35.04400000000001
+        },
+        {
+          "channel": "P",
+          "t": 35.1
+        },
+        {
+          "channel": "M",
+          "t": 35.1
+        },
+        {
+          "channel": "U",
+          "t": 35.1
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.010416666666666666,
+        "naive": 0.010416666666666666,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 352,
+      "t": 35.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.10800000000001,
+          "score": 1.192217510493538,
+          "anomaly": true,
+          "valid": true
+        },
+        {
+          "t": 35.17200000000001,
+          "score": 0.8974334103301397,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": true,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "A",
+          "t": 35.10800000000001
+        },
+        {
+          "channel": "P",
+          "t": 35.2
+        },
+        {
+          "channel": "M",
+          "t": 35.2
+        },
+        {
+          "channel": "U",
+          "t": 35.2
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 353,
+      "t": 35.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.23600000000001,
+          "score": 0.5675324338372159,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 35.30000000000001,
+          "score": 0.6395494138900167,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 35.3
+        },
+        {
+          "channel": "P",
+          "t": 35.3
+        },
+        {
+          "channel": "M",
+          "t": 35.3
+        },
+        {
+          "channel": "U",
+          "t": 35.3
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.046875,
+        "naive": 0.046875,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 354,
+      "t": 35.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.36400000000001,
+          "score": 0.5567045852053073,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 35.4
+        },
+        {
+          "channel": "M",
+          "t": 35.4
+        },
+        {
+          "channel": "U",
+          "t": 35.4
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 355,
+      "t": 35.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.42800000000001,
+          "score": 0.7120534323052177,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 35.49200000000001,
+          "score": 0.26365329539325555,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 35.5
+        },
+        {
+          "channel": "P",
+          "t": 35.5
+        },
+        {
+          "channel": "M",
+          "t": 35.5
+        },
+        {
+          "channel": "U",
+          "t": 35.5
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.052083333333333336,
+        "naive": 0.052083333333333336,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 356,
+      "t": 35.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.55600000000001,
+          "score": 0.5424464654270634,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 35.6
+        },
+        {
+          "channel": "M",
+          "t": 35.6
+        },
+        {
+          "channel": "U",
+          "t": 35.6
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 357,
+      "t": 35.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.62000000000001,
+          "score": 0.5447538747737516,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 35.68400000000001,
+          "score": 0.6688847765209536,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 35.7
+        },
+        {
+          "channel": "P",
+          "t": 35.7
+        },
+        {
+          "channel": "M",
+          "t": 35.7
+        },
+        {
+          "channel": "U",
+          "t": 35.7
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.026041666666666668,
+        "naive": 0.026041666666666668,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 358,
+      "t": 35.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.74800000000001,
+          "score": 0.2521412145558953,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 35.8
+        },
+        {
+          "channel": "M",
+          "t": 35.8
+        },
+        {
+          "channel": "U",
+          "t": 35.8
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 359,
+      "t": 35.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.81200000000001,
+          "score": 0.5775139049907104,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 35.87600000000001,
+          "score": 0.28318800729622556,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": true,
+        "M": true,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "P",
+          "t": 35.9
+        },
+        {
+          "channel": "M",
+          "t": 35.9
+        },
+        {
+          "channel": "U",
+          "t": 35.9
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.010416666666666666,
+        "naive": 0.010416666666666666,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 360,
+      "t": 36.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 35.94000000000001,
+          "score": 0.3266044370644361,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": true,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "U",
+          "t": 36.0
+        }
+      ],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 361,
+      "t": 36.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.00400000000001,
+          "score": 0.5222148892249494,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.06800000000001,
+          "score": 0.5374218449778516,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": true,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 36.1
+        },
+        {
+          "channel": "U",
+          "t": 36.1
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.052083333333333336,
+        "naive": 0.052083333333333336,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 362,
+      "t": 36.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.13200000000001,
+          "score": 0.43531827164294395,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.19600000000001,
+          "score": 0.43948344783763743,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 363,
+      "t": 36.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.26000000000001,
+          "score": 0.3292726416323906,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 36.3
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.046875,
+        "naive": 0.046875,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 364,
+      "t": 36.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.32400000000001,
+          "score": 0.22668263184554197,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.38800000000001,
+          "score": 0.6112405866364591,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 365,
+      "t": 36.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.45200000000001,
+          "score": 0.6812765498466854,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 36.5
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.026041666666666668,
+        "naive": 0.026041666666666668,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 366,
+      "t": 36.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.51600000000001,
+          "score": 0.23935606396744238,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.58000000000001,
+          "score": 0.4130190770505507,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 367,
+      "t": 36.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.64400000000001,
+          "score": 0.4769518625262346,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.015625,
+        "naive": 0.015625,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 368,
+      "t": 36.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.70800000000001,
+          "score": 0.5882041497460154,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.77200000000001,
+          "score": 0.7689721885998486,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 369,
+      "t": 36.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.83600000000001,
+          "score": 0.6639490825443519,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 36.90000000000001,
+          "score": 0.3507704324358881,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 36.9
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.052083333333333336,
+        "naive": 0.052083333333333336,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 370,
+      "t": 37.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 36.96400000000001,
+          "score": 0.349196761809172,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 371,
+      "t": 37.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.02800000000001,
+          "score": 0.4374809270214123,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.09200000000001,
+          "score": 1.029969943096171,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": true
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [
+        {
+          "channel": "V",
+          "t": 37.1
+        }
+      ],
+      "camera": {
+        "motion": true,
+        "fraction": 0.078125,
+        "naive": 0.078125,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 372,
+      "t": 37.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.15600000000001,
+          "score": 0.7082136461968592,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 373,
+      "t": 37.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.22000000000001,
+          "score": 0.9178603879337341,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.28400000000001,
+          "score": 0.5521581717410393,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 374,
+      "t": 37.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.34800000000001,
+          "score": 0.7026150233092926,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 375,
+      "t": 37.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.41200000000001,
+          "score": 0.7611785070688623,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.47600000000001,
+          "score": 0.6058628513217548,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 376,
+      "t": 37.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.54000000000001,
+          "score": 0.6132206157079477,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 377,
+      "t": 37.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.60400000000001,
+          "score": 0.4388591408683559,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.66800000000001,
+          "score": 0.4253304513208153,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 378,
+      "t": 37.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.73200000000001,
+          "score": 0.4845111419015898,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.796000000000014,
+          "score": 0.43252868444734116,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 379,
+      "t": 37.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.860000000000014,
+          "score": 0.868310468088535,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 380,
+      "t": 38.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 37.924000000000014,
+          "score": 0.4689063762305192,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 37.988000000000014,
+          "score": 0.5753414215343551,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 381,
+      "t": 38.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.052000000000014,
+          "score": 0.45724531891015985,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 382,
+      "t": 38.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.116000000000014,
+          "score": 0.6606961677985338,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 38.180000000000014,
+          "score": 0.6874170705634229,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 383,
+      "t": 38.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.244000000000014,
+          "score": 0.7201484990129492,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 384,
+      "t": 38.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.308000000000014,
+          "score": 0.7341079732703759,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 38.372000000000014,
+          "score": 0.5892496319700268,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 385,
+      "t": 38.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.436000000000014,
+          "score": 0.7825218366475816,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 38.500000000000014,
+          "score": 0.6303597069253789,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 386,
+      "t": 38.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.564000000000014,
+          "score": 0.5354244734227114,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 387,
+      "t": 38.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.628000000000014,
+          "score": 0.5561844491462296,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 38.692000000000014,
+          "score": 0.2123856359843617,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 388,
+      "t": 38.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.756000000000014,
+          "score": 0.26243956541929336,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 389,
+      "t": 38.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.820000000000014,
+          "score": 0.30404337984086816,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 38.884000000000015,
+          "score": 0.4174970108607581,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 390,
+      "t": 39.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 38.948000000000015,
+          "score": 0.509356255766153,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 391,
+      "t": 39.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.012000000000015,
+          "score": 0.473321608380522,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.076000000000015,
+          "score": 0.4668455381349008,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 392,
+      "t": 39.2,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.140000000000015,
+          "score": 0.9447348741602525,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 393,
+      "t": 39.3,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.204000000000015,
+          "score": 0.5953661593655848,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.268000000000015,
+          "score": 0.46941048480528924,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 394,
+      "t": 39.4,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.332000000000015,
+          "score": 0.8005042366183522,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.396000000000015,
+          "score": 0.49499448938133056,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 395,
+      "t": 39.5,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.460000000000015,
+          "score": 0.5896171976746175,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 396,
+      "t": 39.6,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.524000000000015,
+          "score": 0.4491836683571285,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.588000000000015,
+          "score": 0.7692019426822836,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 397,
+      "t": 39.7,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.652000000000015,
+          "score": 0.5500556493997831,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 398,
+      "t": 39.8,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.716000000000015,
+          "score": 0.42163675333018735,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.780000000000015,
+          "score": 0.3588110024572978,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 399,
+      "t": 39.9,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.844000000000015,
+          "score": 0.2477238248964687,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    },
+    {
+      "seq": 400,
+      "t": 40.0,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 39.908000000000015,
+          "score": 0.36737385118427635,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 39.972000000000016,
+          "score": 0.5349964697507333,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "missing"
+      }
+    },
+    {
+      "seq": 401,
+      "t": 40.1,
+      "session": "replay",
+      "audio_events": [
+        {
+          "t": 40.036000000000016,
+          "score": 0.5580082352191914,
+          "anomaly": false,
+          "valid": true
+        },
+        {
+          "t": 40.100000000000016,
+          "score": 0.6749790769369358,
+          "anomaly": false,
+          "valid": true
+        }
+      ],
+      "flags": {
+        "A": false,
+        "P": false,
+        "M": false,
+        "U": false,
+        "V": false
+      },
+      "health": false,
+      "fallback": false,
+      "detections": [],
+      "camera": {
+        "motion": false,
+        "fraction": 0.0,
+        "naive": 0.0,
+        "health": false,
+        "reason": "ok"
+      }
+    }
+  ],
+  "media_keys": [
+    "audio_0",
+    "audio_1",
+    "frame_1",
+    "audio_2",
+    "audio_3",
+    "frame_3",
+    "audio_4",
+    "audio_5",
+    "frame_5",
+    "audio_6",
+    "audio_7",
+    "frame_7",
+    "audio_8",
+    "audio_9",
+    "frame_9",
+    "audio_10",
+    "audio_11",
+    "frame_11",
+    "audio_12",
+    "audio_13",
+    "frame_13",
+    "audio_14",
+    "audio_15",
+    "frame_15",
+    "audio_16",
+    "audio_17",
+    "frame_17",
+    "audio_18",
+    "audio_19",
+    "frame_19",
+    "audio_20",
+    "audio_21",
+    "frame_21",
+    "audio_22",
+    "audio_23",
+    "frame_23",
+    "audio_24",
+    "audio_25",
+    "frame_25",
+    "audio_26",
+    "audio_27",
+    "frame_27",
+    "audio_28",
+    "audio_29",
+    "frame_29",
+    "audio_30",
+    "audio_31",
+    "frame_31",
+    "audio_32",
+    "audio_33",
+    "frame_33",
+    "audio_34",
+    "audio_35",
+    "frame_35",
+    "audio_36",
+    "audio_37",
+    "frame_37",
+    "audio_38",
+    "audio_39",
+    "frame_39",
+    "audio_40",
+    "audio_41",
+    "frame_41",
+    "audio_42",
+    "audio_43",
+    "frame_43",
+    "audio_44",
+    "audio_45",
+    "frame_45",
+    "audio_46",
+    "audio_47",
+    "frame_47",
+    "audio_48",
+    "audio_49",
+    "frame_49",
+    "audio_50",
+    "audio_51",
+    "frame_51",
+    "audio_52",
+    "audio_53",
+    "frame_53",
+    "audio_54",
+    "audio_55",
+    "frame_55",
+    "audio_56",
+    "audio_57",
+    "frame_57",
+    "audio_58",
+    "audio_59",
+    "frame_59",
+    "audio_60",
+    "audio_61",
+    "frame_61",
+    "audio_62",
+    "audio_63",
+    "frame_63",
+    "audio_64",
+    "audio_65",
+    "frame_65",
+    "audio_66",
+    "audio_67",
+    "frame_67",
+    "audio_68",
+    "audio_69",
+    "frame_69",
+    "audio_70",
+    "audio_71",
+    "frame_71",
+    "audio_72",
+    "audio_73",
+    "frame_73",
+    "audio_74",
+    "audio_75",
+    "frame_75",
+    "audio_76",
+    "audio_77",
+    "frame_77",
+    "audio_78",
+    "audio_79",
+    "frame_79",
+    "audio_80",
+    "audio_81",
+    "frame_81",
+    "audio_82",
+    "audio_83",
+    "frame_83",
+    "audio_84",
+    "audio_85",
+    "frame_85",
+    "audio_86",
+    "audio_87",
+    "frame_87",
+    "audio_88",
+    "audio_89",
+    "frame_89",
+    "audio_90",
+    "audio_91",
+    "frame_91",
+    "audio_92",
+    "audio_93",
+    "frame_93",
+    "audio_94",
+    "audio_95",
+    "frame_95",
+    "audio_96",
+    "audio_97",
+    "frame_97",
+    "audio_98",
+    "audio_99",
+    "frame_99",
+    "audio_100",
+    "audio_101",
+    "frame_101",
+    "audio_102",
+    "audio_103",
+    "frame_103",
+    "audio_104",
+    "audio_105",
+    "frame_105",
+    "audio_106",
+    "audio_107",
+    "frame_107",
+    "audio_108",
+    "audio_109",
+    "frame_109",
+    "audio_110",
+    "audio_111",
+    "frame_111",
+    "audio_112",
+    "audio_113",
+    "frame_113",
+    "audio_114",
+    "audio_115",
+    "frame_115",
+    "audio_116",
+    "audio_117",
+    "frame_117",
+    "audio_118",
+    "audio_119",
+    "frame_119",
+    "audio_120",
+    "audio_121",
+    "frame_121",
+    "audio_122",
+    "audio_123",
+    "frame_123",
+    "audio_124",
+    "audio_125",
+    "frame_125",
+    "audio_126",
+    "audio_127",
+    "frame_127",
+    "audio_128",
+    "audio_129",
+    "frame_129"
+  ],
+  "camera_type": "grayscale; IR interpretation unvalidated"
+}

@@ -1,0 +1,306 @@
+﻿2026-09-17T17:02:20.7809676Z Current runner version: '2.337.0'
+2026-09-17T17:02:20.7835714Z ##[group]Runner Image Provisioner
+2026-09-17T17:02:20.7836624Z Hosted Compute Agent
+2026-09-17T17:02:20.7837320Z Version: 20260828.587
+2026-09-17T17:02:20.7837981Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-17T17:02:20.7838948Z Build Date: 2026-08-28T16:44:25Z
+2026-09-17T17:02:20.7839735Z Worker ID: {9e2bac24-7f6f-4a1a-9096-834cc682cde2}
+2026-09-17T17:02:20.7840441Z Azure Region: westus
+2026-09-17T17:02:20.7840994Z ##[endgroup]
+2026-09-17T17:02:20.7842578Z ##[group]Operating System
+2026-09-17T17:02:20.7843222Z Ubuntu
+2026-09-17T17:02:20.7843811Z 24.04.5
+2026-09-17T17:02:20.7844374Z LTS
+2026-09-17T17:02:20.7844896Z ##[endgroup]
+2026-09-17T17:02:20.7845528Z ##[group]Runner Image
+2026-09-17T17:02:20.7846159Z Image: ubuntu-24.04
+2026-09-17T17:02:20.7846767Z Version: 20260907.300.1
+2026-09-17T17:02:20.7848129Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-17T17:02:20.7850555Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-17T17:02:20.7851565Z ##[endgroup]
+2026-09-17T17:02:20.7852818Z ##[group]GITHUB_TOKEN Permissions
+2026-09-17T17:02:20.7855092Z Contents: read
+2026-09-17T17:02:20.7855895Z Metadata: read
+2026-09-17T17:02:20.7856518Z ##[endgroup]
+2026-09-17T17:02:20.7859548Z Secret source: Actions
+2026-09-17T17:02:20.7860649Z Cache mode: write
+2026-09-17T17:02:20.7861469Z Prepare workflow directory
+2026-09-17T17:02:20.8292397Z Prepare all required actions
+2026-09-17T17:02:20.8341397Z Getting action download info
+2026-09-17T17:02:21.2023868Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-17T17:02:21.3427891Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-17T17:02:21.4212279Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-17T17:02:21.6469411Z Complete job name: audio-quality
+2026-09-17T17:02:21.7395287Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:21.7406051Z ##[group]Run actions/checkout@v4
+2026-09-17T17:02:21.7406781Z with:
+2026-09-17T17:02:21.7407435Z   repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.7412035Z   token: ***
+2026-09-17T17:02:21.7412472Z   ssh-strict: true
+2026-09-17T17:02:21.7412902Z   ssh-user: git
+2026-09-17T17:02:21.7413358Z   persist-credentials: true
+2026-09-17T17:02:21.7413856Z   clean: true
+2026-09-17T17:02:21.7414309Z   sparse-checkout-cone-mode: true
+2026-09-17T17:02:21.7414840Z   fetch-depth: 1
+2026-09-17T17:02:21.7415275Z   fetch-tags: false
+2026-09-17T17:02:21.7415724Z   show-progress: true
+2026-09-17T17:02:21.7416253Z   lfs: false
+2026-09-17T17:02:21.7416669Z   submodules: false
+2026-09-17T17:02:21.7417116Z   set-safe-directory: true
+2026-09-17T17:02:21.7417632Z   allow-unsafe-pr-checkout: false
+2026-09-17T17:02:21.7418627Z ##[endgroup]
+2026-09-17T17:02:21.8573235Z Syncing repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.8576347Z ##[group]Getting Git version info
+2026-09-17T17:02:21.8578702Z Working directory is '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:02:21.8581404Z [command]/usr/bin/git version
+2026-09-17T17:02:21.8659757Z git version 2.55.0
+2026-09-17T17:02:21.8702474Z ##[endgroup]
+2026-09-17T17:02:21.8732137Z Temporarily overriding HOME='/home/runner/work/_temp/25096591-af45-4603-9782-abc22b3965ac' before making global git config changes
+2026-09-17T17:02:21.8740572Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:02:21.8744303Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.8791245Z Deleting the contents of '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:02:21.8794637Z ##[group]Initializing the repository
+2026-09-17T17:02:21.8796746Z [command]/usr/bin/git init /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.8977189Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T17:02:21.8978484Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T17:02:21.8979456Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T17:02:21.8980395Z hint: call:
+2026-09-17T17:02:21.8980848Z hint:
+2026-09-17T17:02:21.8981648Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T17:02:21.8982820Z hint:
+2026-09-17T17:02:21.8983464Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T17:02:21.8984521Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T17:02:21.8985799Z hint:
+2026-09-17T17:02:21.8986328Z hint: 	git branch -m <name>
+2026-09-17T17:02:21.8986841Z hint:
+2026-09-17T17:02:21.8987492Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T17:02:21.8989784Z Initialized empty Git repository in /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system/.git/
+2026-09-17T17:02:21.9004643Z [command]/usr/bin/git remote add origin https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.9095513Z ##[endgroup]
+2026-09-17T17:02:21.9097879Z ##[group]Disabling automatic garbage collection
+2026-09-17T17:02:21.9099946Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-17T17:02:21.9127786Z ##[endgroup]
+2026-09-17T17:02:21.9130700Z ##[group]Setting up auth
+2026-09-17T17:02:21.9137915Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:02:21.9180204Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:02:21.9592053Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:02:21.9632213Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:02:21.9863935Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:02:21.9902583Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:02:22.0126385Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-17T17:02:22.0165384Z ##[endgroup]
+2026-09-17T17:02:22.0166397Z ##[group]Fetching the repository
+2026-09-17T17:02:22.0176370Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +93b9885058050f6a8ae259495d76098657cd34d9:refs/remotes/pull/2/merge
+2026-09-17T17:02:22.7883391Z From https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:22.7914527Z  * [new ref]         93b9885058050f6a8ae259495d76098657cd34d9 -> pull/2/merge
+2026-09-17T17:02:22.7922145Z ##[endgroup]
+2026-09-17T17:02:22.7923945Z ##[group]Determining the checkout info
+2026-09-17T17:02:22.7925896Z ##[endgroup]
+2026-09-17T17:02:22.7927067Z [command]/usr/bin/git sparse-checkout disable
+2026-09-17T17:02:22.7969344Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-17T17:02:22.8019434Z ##[group]Checking out the ref
+2026-09-17T17:02:22.8024724Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-09-17T17:02:22.8194129Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-09-17T17:02:22.8195607Z 
+2026-09-17T17:02:22.8196679Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-17T17:02:22.8199233Z changes and commit them, and you can discard any commits you make in this
+2026-09-17T17:02:22.8201133Z state without impacting any branches by switching back to a branch.
+2026-09-17T17:02:22.8201969Z 
+2026-09-17T17:02:22.8202573Z If you want to create a new branch to retain commits you create, you may
+2026-09-17T17:02:22.8204367Z do so (now or later) by using -c with the switch command. Example:
+2026-09-17T17:02:22.8205171Z 
+2026-09-17T17:02:22.8205531Z   git switch -c <new-branch-name>
+2026-09-17T17:02:22.8206106Z 
+2026-09-17T17:02:22.8206436Z Or undo this operation with:
+2026-09-17T17:02:22.8206958Z 
+2026-09-17T17:02:22.8207313Z   git switch -
+2026-09-17T17:02:22.8207749Z 
+2026-09-17T17:02:22.8208795Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-17T17:02:22.8210123Z 
+2026-09-17T17:02:22.8211313Z HEAD is now at 93b9885 Merge 5bd05078df6b171632d88e8e7efde1f01fbf58a4 into 2092371051f78bdec194c8adffd083b626593c51
+2026-09-17T17:02:22.8214938Z ##[endgroup]
+2026-09-17T17:02:22.8338098Z [command]/usr/bin/git log -1 --format=%H
+2026-09-17T17:02:22.8349811Z 93b9885058050f6a8ae259495d76098657cd34d9
+2026-09-17T17:02:22.8697215Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:22.8703304Z ##[group]Run actions/setup-python@v5
+2026-09-17T17:02:22.8704455Z with:
+2026-09-17T17:02:22.8705261Z   python-version: 3.12
+2026-09-17T17:02:22.8706233Z   check-latest: false
+2026-09-17T17:02:22.8717157Z   token: ***
+2026-09-17T17:02:22.8718034Z   update-environment: true
+2026-09-17T17:02:22.8719201Z   allow-prereleases: false
+2026-09-17T17:02:22.8720211Z   freethreaded: false
+2026-09-17T17:02:22.8721125Z ##[endgroup]
+2026-09-17T17:02:23.0066752Z ##[group]Installed versions
+2026-09-17T17:02:23.0188113Z (node:2192) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:02:23.0192788Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:02:23.0195747Z Successfully set up CPython (3.12.14)
+2026-09-17T17:02:23.0199117Z ##[endgroup]
+2026-09-17T17:02:23.0398821Z ##[group]Run python -m pip install -r requirements.txt
+2026-09-17T17:02:23.0400630Z [36;1mpython -m pip install -r requirements.txt[0m
+2026-09-17T17:02:23.0470150Z shell: /usr/bin/bash -e {0}
+2026-09-17T17:02:23.0471336Z env:
+2026-09-17T17:02:23.0472486Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:23.0474406Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:23.0476338Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:23.0478987Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:23.0481024Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:23.0482826Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:23.0484330Z ##[endgroup]
+2026-09-17T17:02:24.2500279Z Collecting numpy<3,>=1.26 (from -r requirements.txt (line 1))
+2026-09-17T17:02:24.2976748Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-09-17T17:02:24.4236137Z Collecting scipy<2,>=1.11 (from -r requirements.txt (line 2))
+2026-09-17T17:02:24.4274130Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-17T17:02:24.5795506Z Collecting matplotlib<4,>=3.8 (from -r requirements.txt (line 3))
+2026-09-17T17:02:24.5836124Z   Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+2026-09-17T17:02:24.6610607Z Collecting contourpy>=1.0.1 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:24.6646006Z   Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-09-17T17:02:24.6764132Z Collecting cycler>=0.10 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:24.6798061Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-09-17T17:02:24.8175024Z Collecting fonttools>=4.28.2 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:24.8215758Z   Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (125 kB)
+2026-09-17T17:02:24.8974001Z Collecting kiwisolver>=1.3.1 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:24.9015329Z   Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+2026-09-17T17:02:24.9271182Z Collecting packaging>=20.0 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:24.9317751Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-09-17T17:02:25.1178051Z Collecting pillow>=9 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:25.1215658Z   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-09-17T17:02:25.1476206Z Collecting pyparsing>=3 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:25.1519553Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-09-17T17:02:25.1667966Z Collecting python-dateutil>=2.7 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:25.1700438Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-09-17T17:02:25.1860377Z Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:25.1891459Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-09-17T17:02:25.1974900Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-09-17T17:02:25.2678667Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 249.3 MB/s  0:00:00
+2026-09-17T17:02:25.2718006Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-09-17T17:02:25.3971962Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 287.1 MB/s  0:00:00
+2026-09-17T17:02:25.4012988Z Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+2026-09-17T17:02:25.4364505Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 300.0 MB/s  0:00:00
+2026-09-17T17:02:25.4411178Z Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+2026-09-17T17:02:25.4485429Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-09-17T17:02:25.4547285Z Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+2026-09-17T17:02:25.4780757Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 256.5 MB/s  0:00:00
+2026-09-17T17:02:25.4826133Z Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+2026-09-17T17:02:25.4921061Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 199.2 MB/s  0:00:00
+2026-09-17T17:02:25.4959167Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-09-17T17:02:25.5022653Z Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-09-17T17:02:25.5310996Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 259.6 MB/s  0:00:00
+2026-09-17T17:02:25.5344839Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-09-17T17:02:25.5405238Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-09-17T17:02:25.5466614Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-09-17T17:02:25.7782661Z Installing collected packages: six, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, scipy, python-dateutil, contourpy, matplotlib
+2026-09-17T17:02:35.2662015Z 
+2026-09-17T17:02:35.2681079Z Successfully installed contourpy-1.4.0 cycler-0.12.1 fonttools-4.65.0 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.3 packaging-26.3 pillow-12.3.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scipy-1.18.1 six-1.17.0
+2026-09-17T17:02:35.3589564Z ##[group]Run make incident-build
+2026-09-17T17:02:35.3589920Z [36;1mmake incident-build[0m
+2026-09-17T17:02:35.3629398Z shell: /usr/bin/bash -e {0}
+2026-09-17T17:02:35.3629668Z env:
+2026-09-17T17:02:35.3629958Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:35.3630435Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:35.3630945Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:35.3631370Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:35.3631773Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:35.3632183Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:35.3632529Z ##[endgroup]
+2026-09-17T17:02:35.3724564Z mkdir -p build
+2026-09-17T17:02:35.3736823Z g++ -std=c++17 -Wall -Wextra -Werror -Wpedantic tests/board_stream.cpp -o build/board-stream
+2026-09-17T17:02:35.9585704Z cc -std=c11 -Wall -Wextra -Werror -Wpedantic -O2 -fPIC -shared csrc/detection.c -lm -o build/libdetection.so
+2026-09-17T17:02:36.1971400Z ##[group]Run python experiments/detection_quality/run_quality.py --split development --c-library build/libdetection.so
+2026-09-17T17:02:36.1972307Z [36;1mpython experiments/detection_quality/run_quality.py --split development --c-library build/libdetection.so[0m
+2026-09-17T17:02:36.2010236Z shell: /usr/bin/bash -e {0}
+2026-09-17T17:02:36.2010502Z env:
+2026-09-17T17:02:36.2010804Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.2011290Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:36.2011791Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.2012231Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.2012674Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.2013107Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:36.2013471Z ##[endgroup]
+2026-09-17T17:02:41.2617126Z QUALITY baseline {"quiet": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "very_soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "impact": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "thunder": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.07200000000000006}, "click": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.20000000000000018}, "silence": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:41.4146263Z QUALITY room_0.1 {"quiet": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 10, "flagged": 9, "event_hits": 9, "audio_only_red": 0, "coincident_pm_red": 9, "median_latency": 1.992}, "very_soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "impact": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "thunder": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.07200000000000006}, "click": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "silence": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:41.5690810Z QUALITY room_0.25 {"quiet": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 10, "flagged": 2, "event_hits": 2, "audio_only_red": 0, "coincident_pm_red": 2, "median_latency": 2.088}, "very_soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "impact": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "thunder": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.07200000000000006}, "click": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "silence": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:41.7218906Z QUALITY room_0.5 {"quiet": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "very_soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "impact": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "thunder": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.07200000000000006}, "click": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "silence": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:41.8748685Z QUALITY room_1.0 {"quiet": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "very_soft_steps": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "impact": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "thunder": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.07200000000000006}, "click": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 10, "flagged": 10, "event_hits": 10, "audio_only_red": 0, "coincident_pm_red": 10, "median_latency": 0.13600000000000012}, "silence": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 10, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:41.9506306Z ##[group]Run python experiments/detection_quality/run_quality.py --split heldout --c-library build/libdetection.so
+2026-09-17T17:02:41.9507266Z [36;1mpython experiments/detection_quality/run_quality.py --split heldout --c-library build/libdetection.so[0m
+2026-09-17T17:02:41.9544913Z shell: /usr/bin/bash -e {0}
+2026-09-17T17:02:41.9545186Z env:
+2026-09-17T17:02:41.9545477Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:41.9545976Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:41.9546472Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:41.9546905Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:41.9547345Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:41.9547782Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:41.9548432Z ##[endgroup]
+2026-09-17T17:02:51.3075734Z QUALITY baseline {"quiet": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "very_soft_steps": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "steps": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.13600000000000012}, "impact": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.008000000000000007}, "thunder": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.07200000000000006}, "click": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.13600000000000012}, "silence": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:51.6188549Z QUALITY room_0.1 {"quiet": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "gain_ramp": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "soft_steps": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.6160000000000001}, "very_soft_steps": {"trials": 20, "flagged": 1, "event_hits": 1, "audio_only_red": 0, "coincident_pm_red": 1, "median_latency": 2.4400000000000004}, "steps": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.13600000000000012}, "impact": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.008000000000000007}, "thunder": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.07200000000000006}, "click": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.008000000000000007}, "fan_shift": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "wind": {"trials": 20, "flagged": 20, "event_hits": 20, "audio_only_red": 0, "coincident_pm_red": 20, "median_latency": 0.13600000000000012}, "silence": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}, "clipping": {"trials": 20, "flagged": 0, "event_hits": 0, "audio_only_red": 0, "coincident_pm_red": 0, "median_latency": null}}
+2026-09-17T17:02:51.6241932Z ACCEPTANCE {"soft_step_improvement": true, "normal_and_fault_inputs_no_flags": true, "strong_events_preserved": true, "audio_alone_never_red": true}
+2026-09-17T17:02:51.7299176Z ##[group]Run python scripts/fetch_real_audio.py
+2026-09-17T17:02:51.7299626Z [36;1mpython scripts/fetch_real_audio.py[0m
+2026-09-17T17:02:51.7300033Z [36;1mpython experiments/detection_quality/real_diagnostic.py[0m
+2026-09-17T17:02:51.7336357Z shell: /usr/bin/bash -e {0}
+2026-09-17T17:02:51.7336632Z env:
+2026-09-17T17:02:51.7336924Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:51.7337434Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:51.7337925Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:51.7338575Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:51.7339022Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:51.7339458Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:51.7340009Z ##[endgroup]
+2026-09-17T17:02:55.0513814Z {"selected": 40, "downloaded": 40}
+2026-09-17T17:02:56.5311969Z REAL_TRANSFER baseline_quiet {"rain": {"clips": 3, "flagged": 3}, "engine": {"clips": 3, "flagged": 3}, "footsteps": {"clips": 3, "flagged": 3}, "glass_breaking": {"clips": 3, "flagged": 3}, "door_wood_knock": {"clips": 3, "flagged": 3}, "door_wood_creaks": {"clips": 3, "flagged": 3}, "thunderstorm": {"clips": 3, "flagged": 3}, "wind": {"clips": 3, "flagged": 3}, "clock_tick": {"clips": 3, "flagged": 3}, "coughing": {"clips": 3, "flagged": 3}}
+2026-09-17T17:02:56.7383565Z REAL_TRANSFER room_quiet {"rain": {"clips": 3, "flagged": 3}, "engine": {"clips": 3, "flagged": 3}, "footsteps": {"clips": 3, "flagged": 3}, "glass_breaking": {"clips": 3, "flagged": 3}, "door_wood_knock": {"clips": 3, "flagged": 3}, "door_wood_creaks": {"clips": 3, "flagged": 3}, "thunderstorm": {"clips": 3, "flagged": 3}, "wind": {"clips": 3, "flagged": 3}, "clock_tick": {"clips": 3, "flagged": 3}, "coughing": {"clips": 3, "flagged": 3}}
+2026-09-17T17:02:56.8124469Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:56.8125763Z ##[group]Run actions/upload-artifact@v4
+2026-09-17T17:02:56.8126036Z with:
+2026-09-17T17:02:56.8126235Z   name: detection-quality
+2026-09-17T17:02:56.8126487Z   path: results/detection-quality/
+2026-09-17T17:02:56.8126745Z   retention-days: 30
+2026-09-17T17:02:56.8126965Z   if-no-files-found: warn
+2026-09-17T17:02:56.8127191Z   compression-level: 6
+2026-09-17T17:02:56.8127403Z   overwrite: false
+2026-09-17T17:02:56.8127620Z   include-hidden-files: false
+2026-09-17T17:02:56.8127850Z env:
+2026-09-17T17:02:56.8128099Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:56.8128846Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:56.8129289Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:56.8129671Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:56.8130054Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:56.8130441Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:56.8130778Z ##[endgroup]
+2026-09-17T17:02:56.9768762Z (node:2277) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:02:56.9769910Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:02:56.9852229Z With the provided path, there will be 5 files uploaded
+2026-09-17T17:02:56.9856074Z Artifact name is valid!
+2026-09-17T17:02:56.9857159Z Root directory input is valid!
+2026-09-17T17:02:57.3702131Z Beginning upload of artifact content to blob storage
+2026-09-17T17:02:57.4624307Z (node:2277) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-17T17:02:58.1590105Z Uploaded bytes 1186289
+2026-09-17T17:02:58.2383476Z Finished uploading artifact content to blob storage!
+2026-09-17T17:02:58.2384465Z SHA256 digest of uploaded artifact zip is ce45b4eddbd596f23884166e386d51c0cefa05a3e3491b5c7049c3bd94d87d02
+2026-09-17T17:02:58.2386535Z Finalizing artifact upload
+2026-09-17T17:02:58.8041407Z Artifact detection-quality.zip successfully finalized. Artifact ID 10508942621
+2026-09-17T17:02:58.8043459Z Artifact detection-quality has been successfully uploaded! Final size is 1186289 bytes. Artifact ID is 10508942621
+2026-09-17T17:02:58.8048745Z Artifact download URL: https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454/artifacts/10508942621
+2026-09-17T17:02:58.8227139Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:58.8228893Z Post job cleanup.
+2026-09-17T17:02:58.9411782Z (node:2290) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:02:58.9412974Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:02:58.9588461Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:58.9589855Z Post job cleanup.
+2026-09-17T17:02:59.0556172Z [command]/usr/bin/git version
+2026-09-17T17:02:59.0602565Z git version 2.55.0
+2026-09-17T17:02:59.0647504Z Temporarily overriding HOME='/home/runner/work/_temp/7b40dad3-bda9-44dd-8e7d-10e670f08096' before making global git config changes
+2026-09-17T17:02:59.0649552Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:02:59.0669853Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:02:59.0709896Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:02:59.0738498Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:02:59.1015310Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:02:59.1048762Z http.https://github.com/.extraheader
+2026-09-17T17:02:59.1065943Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-17T17:02:59.1106131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:02:59.1416664Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:02:59.1457250Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:02:59.1858000Z Cleaning up orphan processes
+2026-09-17T17:02:59.2274479Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

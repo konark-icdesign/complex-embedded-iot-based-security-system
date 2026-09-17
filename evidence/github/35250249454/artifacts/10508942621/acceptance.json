@@ -1,0 +1,6 @@
+{
+  "soft_step_improvement": true,
+  "normal_and_fault_inputs_no_flags": true,
+  "strong_events_preserved": true,
+  "audio_alone_never_red": true
+}

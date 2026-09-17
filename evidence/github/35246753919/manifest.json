@@ -1,0 +1,243 @@
+{
+  "run_id": 35246753919,
+  "head_sha": "36334ce21f2442bb6a9e5cff0bc419fa63537870",
+  "conclusion": "failure",
+  "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35246753919",
+  "archived_at": "2026-09-17T17:20:01.967599+00:00",
+  "files": [
+    {
+      "path": "run.json",
+      "bytes": 17640,
+      "sha256": "d3fc9ec5e15d29044ea5339c736e789138008591cdfe77bd7a7a51dbe6cb7753",
+      "source_sha256": "d3fc9ec5e15d29044ea5339c736e789138008591cdfe77bd7a7a51dbe6cb7753",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35246753919",
+      "redactions": 0
+    },
+    {
+      "path": "jobs.json",
+      "bytes": 4922,
+      "sha256": "aa467ff954a305c8f9b9e17e0d70d25bd71d0cb060e4c808456da1c493c0da44",
+      "source_sha256": "aa467ff954a305c8f9b9e17e0d70d25bd71d0cb060e4c808456da1c493c0da44",
+      "source": "actions/runs/35246753919/jobs",
+      "redactions": 0
+    },
+    {
+      "path": "logs/105288788567.txt",
+      "bytes": 30809,
+      "sha256": "bc8991fb13081811d3f7183048789e4ddb2d3f7503a418f8f6c6b33fdc9c0256",
+      "source_sha256": "bc8991fb13081811d3f7183048789e4ddb2d3f7503a418f8f6c6b33fdc9c0256",
+      "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35246753919/job/105288788567",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/host/evidence/cefd3156-9067-4164-a52c-e376fe16e0e9/manifest.json",
+      "bytes": 101770,
+      "sha256": "56fa0ba96cffd90a0c11cd987d23fee7cb67190dd56d88ea9e220bfdd03a5f8e",
+      "source_sha256": "56fa0ba96cffd90a0c11cd987d23fee7cb67190dd56d88ea9e220bfdd03a5f8e",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/host/evidence/cefd3156-9067-4164-a52c-e376fe16e0e9/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/host/evidence/1df2037b-4e74-479c-bc52-1ad859cbf1f7/manifest.json",
+      "bytes": 101101,
+      "sha256": "ac8c728a7cfd521e65199a0cdcf004c9037de2e86b33801f61e3fa474440fff1",
+      "source_sha256": "ac8c728a7cfd521e65199a0cdcf004c9037de2e86b33801f61e3fa474440fff1",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/host/evidence/1df2037b-4e74-479c-bc52-1ad859cbf1f7/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/receiver/1df2037b-4e74-479c-bc52-1ad859cbf1f7/manifest.json",
+      "bytes": 101101,
+      "sha256": "417c9ee32eec09cf25c9d38f8561ad0505da87ec2e0cbcc1f5e763b468adba94",
+      "source_sha256": "417c9ee32eec09cf25c9d38f8561ad0505da87ec2e0cbcc1f5e763b468adba94",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/receiver/1df2037b-4e74-479c-bc52-1ad859cbf1f7/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/receiver/cefd3156-9067-4164-a52c-e376fe16e0e9/manifest.json",
+      "bytes": 101770,
+      "sha256": "8a0b8f15813de556cf4f3125f48d2a58e73a904a2027b01b15c2ed6b255643d4",
+      "source_sha256": "8a0b8f15813de556cf4f3125f48d2a58e73a904a2027b01b15c2ed6b255643d4",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/receiver/cefd3156-9067-4164-a52c-e376fe16e0e9/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/summary.json",
+      "bytes": 2755,
+      "sha256": "a61968d3c9c9a17b91d4b487787c3183bef891f20c500ba9b7d2e9d214353a86",
+      "source_sha256": "a61968d3c9c9a17b91d4b487787c3183bef891f20c500ba9b7d2e9d214353a86",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/outage_restart/trace.json",
+      "bytes": 77086,
+      "sha256": "3a5675caedb0413c08bae453165e7a3860f7c71adacf14d50ba167097641c8a7",
+      "source_sha256": "3a5675caedb0413c08bae453165e7a3860f7c71adacf14d50ba167097641c8a7",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/outage_restart/trace.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/pc_failure/host/evidence/5c541f72-dc8d-447f-b00e-0dbb6f001ec6/manifest.json",
+      "bytes": 57328,
+      "sha256": "cee94d6a1933e7af2b7b403c60441551a3b7ec63dc0d01afe4a901b8e24dce2e",
+      "source_sha256": "cee94d6a1933e7af2b7b403c60441551a3b7ec63dc0d01afe4a901b8e24dce2e",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/pc_failure/host/evidence/5c541f72-dc8d-447f-b00e-0dbb6f001ec6/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/pc_failure/host/evidence/de217a55-803e-4cbf-945d-232538ed8651/manifest.json",
+      "bytes": 41831,
+      "sha256": "192b83bf44fb42c5704be52be23cb5436fe089b728d2f05855786cd3cf439de8",
+      "source_sha256": "192b83bf44fb42c5704be52be23cb5436fe089b728d2f05855786cd3cf439de8",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/pc_failure/host/evidence/de217a55-803e-4cbf-945d-232538ed8651/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/pc_failure/receiver/5c541f72-dc8d-447f-b00e-0dbb6f001ec6/manifest.json",
+      "bytes": 57328,
+      "sha256": "d7affd58cb08a40d1e7f5c0c35229e7e88e2811fe2d1a0cfe4266876ca5b3fd7",
+      "source_sha256": "d7affd58cb08a40d1e7f5c0c35229e7e88e2811fe2d1a0cfe4266876ca5b3fd7",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/pc_failure/receiver/5c541f72-dc8d-447f-b00e-0dbb6f001ec6/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/pc_failure/summary.json",
+      "bytes": 2153,
+      "sha256": "d7a0be9e5ca1581f7d3439f673980aa69d55c8c338b22ac30d5c8cceb5b172ea",
+      "source_sha256": "d7a0be9e5ca1581f7d3439f673980aa69d55c8c338b22ac30d5c8cceb5b172ea",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/pc_failure/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/summary.json",
+      "bytes": 454,
+      "sha256": "f9727ba79280142d4bb53f19714412e7036980989ec102ba116a8b31147523fe",
+      "source_sha256": "f9727ba79280142d4bb53f19714412e7036980989ec102ba116a8b31147523fe",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/thunder_only/host/evidence/280a5099-f9d5-443a-b044-404992aa3019/manifest.json",
+      "bytes": 94711,
+      "sha256": "abd4098793c2342d6c3e987f60556d613e2e63231f36a6c4c07f89b89455dde4",
+      "source_sha256": "abd4098793c2342d6c3e987f60556d613e2e63231f36a6c4c07f89b89455dde4",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/thunder_only/host/evidence/280a5099-f9d5-443a-b044-404992aa3019/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/pc_failure/trace.json",
+      "bytes": 77394,
+      "sha256": "ab1d010819255cd2568baaff234a4ac6ccaed60c296f4399b19f4766de9d47d8",
+      "source_sha256": "ab1d010819255cd2568baaff234a4ac6ccaed60c296f4399b19f4766de9d47d8",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/pc_failure/trace.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/thunder_only/host/evidence/e0759576-dc12-47ca-b927-6a706cf0288a/manifest.json",
+      "bytes": 94900,
+      "sha256": "cc5317e86cc7040b7b238a62e42fc9109bfc0a4d6b40be63a0dc8fb52d73092b",
+      "source_sha256": "cc5317e86cc7040b7b238a62e42fc9109bfc0a4d6b40be63a0dc8fb52d73092b",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/thunder_only/host/evidence/e0759576-dc12-47ca-b927-6a706cf0288a/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/thunder_only/summary.json",
+      "bytes": 2012,
+      "sha256": "4998b5714a3a4903c78560203519ca6d18137f5801d427d61d622d58a194062a",
+      "source_sha256": "4998b5714a3a4903c78560203519ca6d18137f5801d427d61d622d58a194062a",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/thunder_only/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/thunder_only/trace.json",
+      "bytes": 77343,
+      "sha256": "34918e971429e6334df61f431ea4bdeb9c366636a3a0c2200cae077547a7e0aa",
+      "source_sha256": "34918e971429e6334df61f431ea4bdeb9c366636a3a0c2200cae077547a7e0aa",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/thunder_only/trace.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/host/evidence/9e71a7fd-676a-4f55-8c47-6b196453bd66/manifest.json",
+      "bytes": 101770,
+      "sha256": "84e14c282147e7bb82e40bb4b1a0eb7f3285deeee1d866961b6991dcb35afcaa",
+      "source_sha256": "84e14c282147e7bb82e40bb4b1a0eb7f3285deeee1d866961b6991dcb35afcaa",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/host/evidence/9e71a7fd-676a-4f55-8c47-6b196453bd66/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/host/evidence/ff9620e7-e8f5-436b-a05b-29d00512d8fc/manifest.json",
+      "bytes": 101101,
+      "sha256": "120cbe337ffb258daa782a77605900f6a5290bb9b42e8aca18b2b6f2815d91db",
+      "source_sha256": "120cbe337ffb258daa782a77605900f6a5290bb9b42e8aca18b2b6f2815d91db",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/host/evidence/ff9620e7-e8f5-436b-a05b-29d00512d8fc/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/receiver/9e71a7fd-676a-4f55-8c47-6b196453bd66/manifest.json",
+      "bytes": 101770,
+      "sha256": "0ead3f86a5c511a61e38d8a053c0561882c5cd020a47cb92f94aba01b0b11057",
+      "source_sha256": "0ead3f86a5c511a61e38d8a053c0561882c5cd020a47cb92f94aba01b0b11057",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/receiver/9e71a7fd-676a-4f55-8c47-6b196453bd66/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/receiver/ff9620e7-e8f5-436b-a05b-29d00512d8fc/manifest.json",
+      "bytes": 101101,
+      "sha256": "a22e9e5bcc5ad4c9cc69386ccc8f74bc8f08812ef72136d946d07c867c71d7fb",
+      "source_sha256": "a22e9e5bcc5ad4c9cc69386ccc8f74bc8f08812ef72136d946d07c867c71d7fb",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/receiver/ff9620e7-e8f5-436b-a05b-29d00512d8fc/manifest.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/summary.json",
+      "bytes": 2755,
+      "sha256": "8c14c41ff1fba1507d4d31af0c3e2f535d3f3216bb8b077068850c169b57df5f",
+      "source_sha256": "8c14c41ff1fba1507d4d31af0c3e2f535d3f3216bb8b077068850c169b57df5f",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/incidents-python/two_incidents/trace.json",
+      "bytes": 76926,
+      "sha256": "9b8bfaba46e8a49581c6008a2b87ce642cb6135d09265626d9ee2dcc37662580",
+      "source_sha256": "9b8bfaba46e8a49581c6008a2b87ce642cb6135d09265626d9ee2dcc37662580",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/incidents-python/two_incidents/trace.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/summary.json",
+      "bytes": 2465,
+      "sha256": "b4ba3f5dcdc613cb2aff0c1a5c3377f26275f204a666b4ba553a659a82a81e09",
+      "source_sha256": "b4ba3f5dcdc613cb2aff0c1a5c3377f26275f204a666b4ba553a659a82a81e09",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/summary.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/results/embedded_replay.json",
+      "bytes": 183,
+      "sha256": "0ad66ddee3bc70353df23bd56f1fd4a538b7c327219321d3d24f3abb7ba351cd",
+      "source_sha256": "0ad66ddee3bc70353df23bd56f1fd4a538b7c327219321d3d24f3abb7ba351cd",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#results/embedded_replay.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10507642863/c-parity.json",
+      "bytes": 120,
+      "sha256": "5219d1206cf62aae71fc58de5c617e255dfa51eb1f60b34557275de311e19183",
+      "source_sha256": "5219d1206cf62aae71fc58de5c617e255dfa51eb1f60b34557275de311e19183",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10507642863/zip#c-parity.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts.json",
+      "bytes": 11892,
+      "sha256": "58a9a59583fd4246aca4641893d6ca5c38e9dde6f8a5ba6a09d047b7fdfcb314",
+      "source_sha256": "58a9a59583fd4246aca4641893d6ca5c38e9dde6f8a5ba6a09d047b7fdfcb314",
+      "source": "actions/runs/35246753919/artifacts",
+      "redactions": 0
+    }
+  ],
+  "unavailable": [],
+  "scope": "Completed-job logs and selected artifact members; omissions in artifacts.json"
+}

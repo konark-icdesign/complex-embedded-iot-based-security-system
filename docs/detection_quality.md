@@ -16,7 +16,7 @@ split, choices and acceptance checks are in the [protocol](../experiments/detect
 [GitHub run 35250249454](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454)
 executed commit `5bd05078df6b171632d88e8e7efde1f01fbf58a4`.
 The [recorded summary](../results/detection-quality/recorded_summary.json) preserves
-the aggregate output; the workflow artifact contains each trial and the model.
+the aggregate output; [the committed run archive](../evidence/github/35250249454/) contains the per-trial results, frozen model parameters, MATLAB replay input and job logs copied from the original workflow.
 Python/C scores and flags agreed across the tested synthetic inputs. MATLAB
 R2026a replayed all 240 final clips with identical flags and a largest score
 difference of 1.78e-15. The connected pipeline also passed 26 Python tests,

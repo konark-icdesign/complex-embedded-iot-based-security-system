@@ -76,6 +76,8 @@ For C++ host tests, MATLAB instructions and the smaller audio experiment, see [r
 
 ## Notes
 
+[Debugging history and archived run evidence](docs/debugging_history.md) records the observed failures, fixes, remaining problems and links to preserved outputs. Selected Actions logs and results are committed under `evidence/github/`, with checksums and source run IDs.
+
 [System design](docs/architecture.md) · [DSP calculations](docs/dsp_maths.md) · [Hardware plan](docs/hardware.md) · [HP setup](docs/hp_setup.md) · [Development tasks](docs/learning_and_validation.md) · [Sources](docs/sources.md)
 
 The audio tests use [ESC-50](https://github.com/karolpiczak/ESC-50). Its licence and recording attributions are in `fixtures/esc50/LICENSE`; the WAV files are downloaded separately. No project-wide licence has been selected for the original code.

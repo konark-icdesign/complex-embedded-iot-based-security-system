@@ -1,0 +1,97 @@
+{
+  "primary": {
+    "trials": 52,
+    "intrusion_trials": 19,
+    "nonintrusion_trials": 33,
+    "detected": 16,
+    "missed": 3,
+    "false_alerts": 2,
+    "naive_false_alerts": 17,
+    "median_latency": 0.25,
+    "max_latency": 3.2,
+    "nonintrusion_simulated_hours": 0.22,
+    "note": "Scenario-weighted synthetic trials; not a real security accuracy or false-alarms/hour estimate."
+  },
+  "monte_carlo": {
+    "trials": 52,
+    "intrusion_trials": 19,
+    "nonintrusion_trials": 33,
+    "detected": 16,
+    "missed": 3,
+    "false_alerts": 2,
+    "naive_false_alerts": 17,
+    "median_latency": 0.25,
+    "max_latency": 3.2,
+    "nonintrusion_simulated_hours": 0.22,
+    "note": "Scenario-weighted synthetic trials; not a real security accuracy or false-alarms/hour estimate."
+  },
+  "network": {
+    "queued_during_outage": 1,
+    "unique_receiver_alerts": 1,
+    "remaining": 0,
+    "restart_test": true,
+    "lost_ack_test": true,
+    "transport_attempts": 2,
+    "delivery": "Local SQLite receiver only; no person was contacted"
+  },
+  "audio_models": {
+    "dry": {
+      "center": [
+        0.6004907320604496,
+        0.08386701171245056,
+        0.14341479355249598,
+        0.1700900632241748,
+        0.1849424472309445,
+        0.23520205380915438,
+        0.2501221299462628,
+        1.1715897427039066,
+        0.07092139865691285
+      ],
+      "scale": [
+        0.031952093737612895,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.08,
+        0.025,
+        0.1,
+        0.1
+      ],
+      "threshold": 3.5
+    },
+    "rain": {
+      "center": [
+        0.027648120144576124,
+        0.01175938650860589,
+        0.1871047710968537,
+        0.772146861610624,
+        0.6676378271297776,
+        0.4008456149975813,
+        0.6375183194919394,
+        1.2802610472012237,
+        0.047860708688764964
+      ],
+      "scale": [
+        0.025,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.08,
+        0.025,
+        0.1,
+        0.1
+      ],
+      "threshold": 3.5
+    }
+  },
+  "real_audio_status": "NOT_RUN_INCOMPLETE_DATA",
+  "wall_seconds": 19.503,
+  "python": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+  "numpy": "2.5.3",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "seed_policy": "11-14 training; 101-102 calibration; 1000 onward evaluation; same case with independent noise seeds",
+  "matlab_execution": "NOT_RUN; runtime not installed",
+  "physical_hardware": "NOT_TESTED"
+}
