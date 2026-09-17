@@ -1,0 +1,27 @@
+name: Detection quality
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audio-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: make incident-build
+      - name: Development comparison
+        run: python experiments/detection_quality/run_quality.py --split development --c-library build/libdetection.so
+      - uses: actions/upload-artifact@v4
+        with:
+          name: detection-quality
+          path: results/detection-quality/
+          retention-days: 30
