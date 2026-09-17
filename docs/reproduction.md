@@ -1,31 +1,62 @@
-# Reproducing and interpreting this project
+# Running the checks
 
-## Scope
+The README gives the Python setup and full simulation command. `requirements-tested.txt` records the numerical package versions used in the earlier run.
 
-One repository contains the whole offline security-system simulation: audio, camera, PIR/radar/range filtering, fusion, Arduino fallback logic and a durable local alert receiver. The quiet-room audio experiment is an additional module check using the same source code.
+## Smaller audio experiment
 
-## Online route
+After installing the root requirements:
 
-Open `notebooks/run_project.ipynb` through the Colab link in the README. The notebook installs dependencies and runs the stages in order. It prints the Git revision being evaluated. Its code cells have been syntax-checked; Colab itself has not been exercised in this development environment.
+```text
+cd experiments/audio_room
+python run_audio.py
+python -m unittest test_audio -v
+```
 
-## Local route
+This imports the root DSP implementation. Its results are separate from the 52-scenario system test.
 
-Use the commands in the README. Download the declared ESC-50 subset before the integrated run. The audio is downloaded separately to keep Git history small; its attribution and manifest are tracked. If files are missing, the real-audio result explicitly says NOT_RUN_INCOMPLETE_DATA. The synthetic scenarios can still run.
+## C++ host checks
 
-`python run_simulation.py --seeds 10` regenerates the 520 trial results, plots, MATLAB fixtures and example media. FFmpeg is optional for video export. `--seeds 1` generates a smaller demonstration, not the published 520-trial count.
+From the repository root, with GCC and Make installed:
 
-The MATLAB reference consumes fixtures from the Python simulation and has not been run here. The Arduino board compilation log comes from the prior build of unchanged firmware. Current C++ host tests and the 12,480-tick replay are separate from that target build and from any physical validation.
+```text
+make embedded
+make sanitize
+python scripts/verify_embedded_replay.py
+```
 
-## Evidence
+In the recorded hosted environment, LeakSanitizer was unable to operate under process tracing. That run used `ASAN_OPTIONS=detect_leaks=0` for `make sanitize` and `--no-leak-check` for the replay script. AddressSanitizer and UndefinedBehaviorSanitizer remained enabled. Use normal leak checking where supported.
 
-- `results/integrated_run.log`: latest full synthetic execution.
-- `results/integrated_regressions.log`: current Python regression checks.
-- `results/integrated_embedded.log`: current native C++ logic checks.
-- `results/integrated_replay.log`: current sanitized C++/Python replay.
-- `results/summary.json`: aggregate trial counts and execution status.
-- `results/scenario_results.csv` and `results/traces/`: inspect individual decisions.
-- `results/real_audio_results.json`: public-recording proxy challenge.
-- `experiments/audio_room/results/`: quiet-room synthetic sound checks.
-- `results/arduino_compile_log.txt`: prior actual UNO R4 WiFi compilation.
+The replay compares physical sensor filters and fallback behaviour, not the entire Python detector. The Arduino target compilation is recorded separately in `results/arduino_compile_log.txt`.
 
-A regression pass does not mean every intrusion was detected. Preserve the missed intrusions and false alarms when discussing results. No measured HP throughput, actual room accuracy, real notification transport or physical sensor validation is claimed.
+## MATLAB and board
+
+First run the Python simulation to generate `fixtures/matlab_reference.mat` and the traces. In MATLAB:
+
+```matlab
+addpath('matlab');
+run_full_simulation
+```
+
+MATLAB has not been executed in the recorded work. The function will create its own log when run.
+
+Open `firmware/night_security/night_security.ino` in Arduino IDE 2. Select UNO R4 WiFi; the recorded compilation used Renesas UNO core 1.6.0. Physical tests are still pending.
+
+## Outputs
+
+| File | Contents |
+|---|---|
+| `results/summary.json` | Aggregate synthetic results and execution information |
+| `results/scenario_results.csv` | One row for each of the 52 scenarios |
+| `results/monte_carlo_results.csv` | All noise-seed repetitions |
+| `results/traces/` | Individual sensor and state histories |
+| `results/real_audio_results.json` | Public-recording evaluation |
+| `results/integrated_regressions.log` | Python regression run |
+| `results/integrated_embedded.log` | Native C++ logic checks |
+| `results/integrated_replay.log` | C++/Python replay |
+| `experiments/audio_room/results/` | Quiet-room audio experiment |
+
+Reruns replace derived outputs. The first ESC-50 download needs internet access. Missing audio files are reported as `NOT_RUN_INCOMPLETE_DATA`; they must not be confused with an executed real-audio check. FFmpeg is optional for MP4 output.
+
+The notebook in `notebooks/` runs the same steps and prints the Git revision. Hosted Colab execution is still unverified.
+
+For a PDF export, install `requirements-report.txt` and run `python scripts/build_report.py`. This also regenerates the experiment notes; the underlying measurements come from the saved result files.

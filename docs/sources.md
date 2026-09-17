@@ -1,6 +1,6 @@
-# Official sources checked during this work
+# References
 
-Accessed 16 September 2026. Public pages can change; the measurements in `results/` come from the included code and data, not from these pages.
+References used for the September 2026 prototype. Arduino board specifications and MathWorks system requirements were rechecked during the documentation review. Simulation measurements are stored separately in `results/`.
 
 | Source | Used for |
 |---|---|
@@ -17,6 +17,6 @@ Accessed 16 September 2026. Public pages can change; the measurements in `result
 | [ESC paper DOI](https://doi.org/10.1145/2733373.2806390) | Dataset citation: K. J. Piczak, ACM Multimedia 2015 |
 | [Python downloads](https://www.python.org/downloads/) | Official Python installer |
 
-DSP equations in this project are stated explicitly in `dsp_maths.md`; the algorithm is a small original implementation for this experiment. It is not a reproduction of a published security classifier, and no published detection rate is borrowed for it.
+The implemented equations are listed in `dsp_maths.md`. Detection results come from the project experiments.
 
 Online notebook support: [Google Colab FAQ](https://research.google.com/colaboratory/faq.html). Colab supports notebooks loaded from GitHub; hosted resources and session duration are limited. The provided notebook has not been executed on Colab.

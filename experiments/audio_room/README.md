@@ -1,4 +1,4 @@
-# Quiet-room audio experiment
+# Quiet-room audio check
 
 Focused check within the integrated security project: test an audio anomaly detector for a quiet room with steady PC noise.
 
@@ -23,7 +23,7 @@ python run_audio.py
 python -m unittest test_audio -v
 ```
 
-Results are written to `results/audio_trials.csv` and `results/summary.json`. Read the measured misses as well as the successful detections. Training, calibration and test noise seeds are separate, but the generated events share simple templates.
+Results are written to `results/audio_trials.csv` and `results/summary.json`. The output includes detections and misses. Training, calibration and test noise seeds are separate, but the generated events share simple templates.
 
 ## Method
 
@@ -33,6 +33,6 @@ Constant-gain normalization does not solve clipping, time-varying automatic gain
 
 ## Relationship to the whole project
 
-The earlier whole-system experiment exposed false alarms from common causes and audio transfer problems on real recordings. This smaller stage isolates the audio calculation. Narrowing the assumed room background does not erase the earlier real-audio failures or establish field accuracy.
+The earlier whole-system experiment exposed false alarms from common causes and audio transfer problems on real recordings. This smaller stage isolates the audio calculation. This check uses a narrower synthetic background than the public-audio experiment.
 
 Next audio investigation: vary background spectrum and event-to-background ratio. Camera, physical sensors, fusion, notifications and MATLAB source are included at the repository root. This experiment imports the root DSP implementation; it is not a separate project. MATLAB execution and physical measurements remain outstanding.

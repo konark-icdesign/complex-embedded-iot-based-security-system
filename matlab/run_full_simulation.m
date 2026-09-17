@@ -1,7 +1,7 @@
 function run_full_simulation()
-% Execute on the user's MATLAB installation. No paid DSP/vision toolbox needed.
-% This checks raw audio/image kernels and replays ALL central fusion traces.
-% It does not turn a Python run into a MATLAB pass, nor validate physical I/O.
+% MATLAB reference calculations and fusion replay. Uses base MATLAB.
+% Checks audio/image kernels and replays the central fusion traces.
+% MATLAB execution and physical I/O tests are still pending.
 root=fileparts(fileparts(mfilename('fullpath')));addpath(fullfile(root,'matlab'));
 fixture=load(fullfile(root,'fixtures','matlab_reference.mat'));
 outdir=fullfile(root,'results','matlab');if ~exist(outdir,'dir'),mkdir(outdir);end

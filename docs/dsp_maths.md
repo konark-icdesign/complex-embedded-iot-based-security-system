@@ -1,10 +1,10 @@
-# DSP mathematics, from samples to an investigation
+# DSP calculations
 
 ## 1. A microphone produces samples
 
 At 16,000 samples per second, the program sees 16,000 numbers every second. These are digital signal values, not calibrated sound pressure. RMS expressed as dBFS is relative to digital full scale, **not dB SPL**.
 
-One frame has 2048 samples, so it spans 2048/16000 = 0.128 seconds. A new frame begins after 1024 samples, or 0.064 seconds. The frames overlap. Their detections are statistically dependent; two overlapping abnormal frames are persistence, not two independent witnesses.
+One frame has 2048 samples, so it spans 2048/16000 = 0.128 seconds. A new frame begins after 1024 samples, or 0.064 seconds. The frames overlap. Overlapping frames are dependent; requiring several detections adds persistence.
 
 ## 2. Remove the DC offset
 
@@ -14,7 +14,7 @@ A microphone offset should not appear as room sound. The remaining values fluctu
 
 RMS = sqrt(sum(y[n]^2)/N). It measures amplitude. If microphone gain becomes three times larger, RMS also becomes three times larger. A detector based only on RMS confuses gain adjustment with a new event.
 
-Crest factor = max(abs(y))/RMS. A short impact can have a large peak compared with average energy. The implementation uses its natural logarithm as one bounded-scale feature.
+Crest factor = max(abs(y))/RMS. A short impact can have a large peak compared with average energy. The implementation uses its natural logarithm as a feature.
 
 ## 3. Window and FFT
 
@@ -47,7 +47,7 @@ scale_i = max(1.4826 * median(abs(feature i - center_i)), floor_i)
 
 The median and median absolute deviation reduce the influence of isolated outliers. The floor prevents division by a nearly zero scale. The 1.4826 factor is a conventional Gaussian consistency scaling; the data are not claimed Gaussian.
 
-Separate training and calibration recordings are used. Synthetic training seeds are 11-14; calibration seeds are 101-102; evaluation seeds start at 1000. No evaluation traces train the deployed model. Dry and rain models are kept separate, with a supplied context label in the synthetic experiment. There is no weather API in this version.
+Separate training and calibration recordings are used. Synthetic training seeds are 11-14; calibration seeds are 101-102; evaluation seeds start at 1000. Evaluation traces are kept out of model fitting. Dry and rain models are kept separate, with a supplied context label in the synthetic experiment. There is no weather API in this version.
 
 ## 6. Score a new frame
 
@@ -55,11 +55,11 @@ z_i = (new_feature_i - center_i) / scale_i
 
 D = sqrt(mean(min(z_i^2, 400)))
 
-Each standardized deviation is capped in magnitude at 20 before averaging its squared value. A single extreme numerical feature therefore cannot become unbounded. This score does not account for feature covariance: the four band fractions sum to one and are correlated. Do not call it a calibrated statistical likelihood or count each feature as separate evidence.
+Each standardized deviation is capped in magnitude at 20 before averaging its squared value. A single extreme numerical feature therefore cannot become unbounded. This score does not account for feature covariance: the four band fractions sum to one and are correlated. The score is a feature-distance measure, without probability calibration.
 
 The threshold is max(3.5, 1.2 * calibration 99.5th percentile). The synthetic dry and rain models both used 3.5 in the executed experiment. Different real background recordings produced different thresholds. Two of the last three frames must exceed the threshold. A valid frame with D above twice the threshold and crest factor above 8 can start YELLOW immediately.
 
-Illustrative arithmetic, not a measured recording: if center = 0.20, scale = 0.05 and a new band fraction = 0.40, then z = (0.40-0.20)/0.05 = 4. That is a large deviation in that feature; it still is not proof of a human.
+Worked example: if center = 0.20, scale = 0.05 and a new band fraction = 0.40, then z = (0.40-0.20)/0.05 = 4. That is a large deviation for this feature.
 
 ## 7. Median filtering on the Arduino
 
@@ -76,15 +76,3 @@ Naive motion: count pixels for which abs(current - previous) > 12.
 Corrected motion: fit current ~= a*previous + b on the majority of pixels, trim high-residual local changes, then count residuals above 12. The fit estimates both multiplicative exposure change a and additive brightness offset b.
 
 The clean synthetic global +60 brightness test changes 100% of pixels by naive subtraction and 0% after compensation. A local 50x30 region in a 160x120 frame changes 1500/19200 = 7.8125% of image area and remains detectable. These figures describe this constructed image test, not expected field performance. A shadow affecting half the picture is not a global illumination change and remains an unresolved visual anomaly.
-
-## 9. Why this is not a PID project
-
-The system estimates conditions and triggers events. It does not regulate a physical variable to a setpoint through a feedback actuator. A PID controller would not solve the classification problem. The relevant subjects are DSP, embedded programming, sensor physics, timing, fault handling and experimental measurement.
-
-## Five questions you should be able to answer
-
-1. Why do RMS-only alarms fail when gain changes?
-2. Why does normalized power survive constant gain but not clipping?
-3. Why do two abnormal audio frames count as persistence rather than two sensors?
-4. Why does an invalid echo have to invalidate old proximity evidence?
-5. Why can a mathematically correct fusion rule still alert on a harmless heated object?

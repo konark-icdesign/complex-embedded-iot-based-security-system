@@ -1,10 +1,10 @@
-# Simulation report - 17 September 2026
+# Simulation results - 17 September 2026
 
-## Verdict
+## Run status
 
-Proceed as a college ECE experiment. The simulation and embedded logic run, but the design is not ready for unattended security use. Keep the measured misses and false alarms visible. MATLAB execution and physical room validation remain outstanding.
+The Python simulation and C++ host checks have run. The Arduino sketch has compiled. MATLAB execution and physical room tests are still pending.
 
-## Actual execution
+## Recorded checks
 
 | Item | Result |
 |---|---|
@@ -16,7 +16,7 @@ Proceed as a college ECE experiment. The simulation and embedded logic run, but 
 | Latency among detections | Median 0.25 s; maximum 3.2 s in idealized simulation |
 | Synthetic non-intrusion duration | 2.2 hours, fragmented 24-second trials |
 | Real sound recordings | 40 clips: 6 train, 4 calibration, 30 evaluation from 25 original source IDs |
-| Native regression suite | 13 Python regressions passed; original failures retained |
+| Native regression suite | 13 Python regression checks passed |
 | Embedded host checks | Strict GCC warnings, ASan and UBSan passed; leak checking unavailable |
 | Embedded cross-language replay | 12480 ticks, 0 mismatches |
 | Arduino target | UNO R4 WiFi, official Renesas core 1.6.0; compile succeeded |
@@ -25,25 +25,25 @@ Proceed as a college ECE experiment. The simulation and embedded logic run, but 
 | Hardware / HP throughput | NOT TESTED |
 | Remote alert | Local simulated receiver only; no human contacted |
 
-The repeated cases use the same event schedules and simplified sensor responses. Noise-seed repetition is not independent field validation. Do not advertise 84.2% real-world detection or 93.9% reliability from these counts. No room-level accuracy has been established.
+The repeated cases use the same event schedules and simplified sensor responses. Noise-seed repetition is not independent field validation. Room-level accuracy has not been measured.
 
 ## Unresolved system failures
 
 | Case | Observed | Why |
 |---|---|---|
-| 31 Audio + PIR only | Missed intrusion; YELLOW | Below the deliberate corroboration requirement |
+| 31 Audio + PIR only | Missed intrusion; YELLOW | Below the current corroboration requirement |
 | 32 Audio + radar only | Missed intrusion; YELLOW | Same evidence tradeoff |
 | 51 Silent far entrant outside camera, radar only | Missed intrusion; YELLOW | Insufficient observability |
 | 38 Heated moving object | False RED | Camera and PIR can share one harmless cause |
 | 42 Nearby outside activity | False RED | Poor placement lets outside activity affect audio, PIR and radar |
 
-These five outcomes repeat across the ten seeds. We did not feed their ground-truth labels into the decision logic to force a pass. They require better boundary sensing, placement and room data, not cosmetic code changes.
+These five outcomes repeat across the ten seeds. Coverage, placement and the corroboration rule need further investigation.
 
 ## Real-audio challenge
 
 Source: [ESC-50, official dataset](https://github.com/karolpiczak/ESC-50). Six rain/engine clips in fold 1 trained a separate proxy model; four fold-2 clips calibrated it. Thirty fold-5 clips evaluated both that model and the frozen synthetic model. No evaluation clip trained either model. Three clips per category are a small stress check, not a validated benchmark. The 30 clips come from 25 original source IDs.
 
-The proxy treats either approved rain or engine background as normal. It deliberately tests a broader baseline than one real room; this is separate from the context-selected synthetic dry/rain models. The minimum-distance choice can hide suspicious sounds. Engine recordings are not recordings of your PC fan.
+The proxy treats either approved rain or engine background as normal. It tests a broader baseline than one room; this is separate from the context-selected synthetic dry/rain models. The minimum-distance choice can hide suspicious sounds. Engine recordings are only a background proxy.
 
 | Class | Tested | Proxy model flagged | Synthetic model flagged |
 |---|---:|---:|---:|
@@ -58,7 +58,7 @@ The proxy treats either approved rain or engine background as normal. It deliber
 | clock_tick | 3 | 3 | 3 |
 | coughing | 3 | 3 | 3 |
 
-All six held-out background proxy clips were accepted by the broad model, but all three footsteps were missed. Their source titles describe wood, carpet, and dirt/rocks footsteps. The synthetic model flagged all 30 clips, including every held-out normal proxy. This is strong evidence that attractive synthetic plots do not establish transfer to a real microphone/room. Audio remains an anomaly trigger, not a validated footstep classifier.
+All six held-out background proxy clips were accepted by the broad model, but all three footsteps were missed. Their source titles describe wood, carpet, and dirt/rocks footsteps. The synthetic model flagged all 30 clips, including every held-out normal proxy. The difference between synthetic and recorded inputs shows a transfer problem. The current audio detector measures anomalies rather than classifying footsteps.
 
 ## Reproduced mechanisms
 
@@ -68,18 +68,18 @@ All six held-out background proxy clips were accepted by the broad model, but al
 - Sustained 1.2 m target: accepted after median and persistence; typical synthetic delay 0.4 s.
 - Camera obstruction: central RED can still use audio and physical evidence; obstruction alone stays a health/YELLOW condition.
 - PC/USB failure with independently powered board and all three physical inputs: local fallback activates in the model.
-- Internet outage, process restart and lost acknowledgment: persistent queue yields one unique local receiver alert after retry. This is not proof of external provider exactly-once delivery.
+- Internet outage, process restart and lost acknowledgment: persistent queue yields one unique local receiver alert after retry. External delivery has not been implemented.
 
-## Actual debug history
+## Fixes recorded during development
 
 1. Regression `test_green_visits_yellow_before_red` failed: simultaneous qualifying evidence moved directly from GREEN to RED. The transition was fixed; the first failing log is retained.
-2. Code inspection found that the evidence ring copied the next 100 ms audio chunk. It was changed to retain only samples already completed at the current timestamp. No claim is made that this inspection was an instrumented failing test.
+2. Code inspection found that the evidence ring copied the next 100 ms audio chunk. It was changed to retain only samples already completed at the current timestamp. This was found by code inspection.
 3. Regression `test_persistent_camera_fault_does_not_merge_separate_incidents` failed: a persistent fault held RED indefinitely and suppressed a later distinct event. Activity-clear timing was separated from health timing; a cleared incident now returns to YELLOW when faults remain.
-4. The first sanitizer invocation could not start LeakSanitizer under the hosted process tracer. The rerun disabled leak detection only; address and undefined-behavior checks remained enabled. The board build also contains warnings from the official vendor core. They were retained, not disguised as a warning-free core build.
+4. The first sanitizer invocation could not start LeakSanitizer under the hosted process tracer. The rerun disabled leak detection only; address and undefined-behavior checks remained enabled. The board build also contains warnings from the official vendor core. The build log retains those warnings.
 
 ## Correlation-window sensitivity
 
-With isolated audio, PIR and radar event impulses, a 2-second window missed a 3.2-second delayed third input. Four seconds accepted it. Eight seconds accepted a constructed set of unrelated inputs 7 seconds apart. See `impulse_timing_sensitivity.csv`. Four seconds is a documented prototype compromise, not universal calibration. The companion sustained-sensor sweep shows little difference because sustained signals overlap.
+With isolated audio, PIR and radar event impulses, a 2-second window missed a 3.2-second delayed third input. Four seconds accepted it. Eight seconds accepted a constructed set of unrelated inputs 7 seconds apart. See `impulse_timing_sensitivity.csv`. Four seconds remains a provisional setting. The companion sustained-sensor sweep shows little difference because sustained signals overlap.
 
 ## All primary scenarios
 
@@ -140,8 +140,8 @@ With isolated audio, PIR and radar event impulses, a 2-second window missed a 3.
 
 ## Outstanding work and files
 
-The ZIP contains Python and MATLAB source, the UNO R4 sketch, exact selected audio files with attribution, baseline fixtures, complete CSV/JSON traces, original failure logs, final test logs, a sample synthetic WAV/MP4 and guides. `docs/hp_setup.md` gives software choices for the 8 GB HP; `docs/dsp_maths.md` explains the mathematics; `docs/learning_and_validation.md` lists practical learning and field-validation steps.
+The repository contains Python and MATLAB source, the UNO R4 sketch, result tables, traces and test logs. The audio files are downloaded separately; fixtures and sample media are generated by the simulation. `docs/hp_setup.md` gives software choices for the 8 GB HP; `docs/dsp_maths.md` explains the mathematics; `docs/learning_and_validation.md` lists practical learning and field-validation steps.
 
-Still required: literal MATLAB execution; continuous physical acquisition and clock mapping; actual microphone/camera/sensor measurements; HP workload benchmarking; real notification transport; power/disk-failure handling; and frozen-model evaluation on held-out room recordings. This project is published on GitHub; no external security alert was sent.
+Still required: MATLAB execution; continuous physical acquisition and clock mapping; actual microphone/camera/sensor measurements; HP workload benchmarking; real notification transport; power/disk-failure handling; and frozen-model evaluation on held-out room recordings. Notifications were tested with the local mock receiver.
 
 Official references for software and board facts are in `docs/sources.md`. Simulation facts are derived from `results/summary.json`, `scenario_results.csv`, `real_audio_results.csv`, `embedded_replay.json` and the compile/test logs.

@@ -1,6 +1,6 @@
-# Hardware mapping and bench bring-up
+# Wiring plan and bench checks
 
-This is a wiring plan, not a record of hardware testing. The actual board, sensors and their electrical specifications must be checked before connection. An EK-labelled board is not automatically pin-, firmware- or voltage-equivalent to the official UNO R4 WiFi.
+These connections are planned for the UNO R4 WiFi sketch. Check the exact sensor modules and their electrical specifications before wiring. No physical test has been recorded.
 
 The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-S3 radio. The compiled firmware runs on the RA4M1. The simulation does not put camera or audio processing into its 32 KB SRAM. Source: https://docs.arduino.cc/hardware/uno-r4-wifi .
 
@@ -18,7 +18,7 @@ The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-
 | PC connection | USB-C | Serial data at 115200 baud |
 | Shared reference | GND | All low-voltage sensor grounds need a common reference |
 
-Pinout and supply requirements vary across LD2410, LD2410B, LD2410C and clones. The chosen firmware reads only OUT, not UART. It therefore cannot verify radar frame freshness, configure distance gates, or reliably distinguish a wire stuck low from no presence. Test and document this limitation. Consult the exact module manual from its manufacturer before wiring: https://www.hlktech.net/ .
+Pinout and supply requirements vary across LD2410, LD2410B, LD2410C and clones. The chosen firmware reads only OUT, not UART. It therefore cannot verify radar frame freshness, configure distance gates, or reliably distinguish a wire stuck low from no presence. Use the exact module manual before wiring: https://www.hlktech.net/ .
 
 ## Power arrangement
 
@@ -57,4 +57,4 @@ S,sequence,board_millis,pir_filtered,radar_filtered,range_metres,range_valid,ala
 7. Disconnect the PC data link while the board remains powered. Present all three physical stimuli and measure fallback latency.
 8. Test board power loss separately. The RAM latch and history do not survive it; the current design cannot claim otherwise.
 
-The recorded target compile used 53,724 bytes of flash and 6,904 bytes of global RAM. Stack usage, electrical behavior, real-time deadlines and watchdog recovery were not measured on a physical board. Compiler success does not establish any of them.
+The recorded target build used 53,724 bytes of flash and 6,904 bytes of global RAM. Stack usage, electrical behaviour, processing deadlines and watchdog recovery still need board measurements.
