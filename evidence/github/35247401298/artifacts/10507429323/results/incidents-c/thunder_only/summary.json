@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "expected_confirmed_incidents": true,
+    "distinct_ids": true,
+    "receiver_matches_red": true,
+    "queue_drained": true,
+    "all_closed": true,
+    "outage_queued": true,
+    "retry_after_lost_ack": true,
+    "local_fallback": true,
+    "yellow_reaches_board": true
+  },
+  "passed": true,
+  "incidents": [
+    {
+      "id": "d44ec79b-9202-4303-b9fc-e4ed8e0900bd",
+      "trigger": 8.2,
+      "deadline": 16.2,
+      "state": "YELLOW",
+      "status": "closed",
+      "confirmed_at": null,
+      "channels": [],
+      "score": 0.0,
+      "reason": "insufficient corroborating evidence",
+      "fallback": false,
+      "audio_trigger": 8.2,
+      "closed_at": 16.2,
+      "review": {
+        "method": "classical grayscale frame replay; no person/thermal classifier",
+        "motion_times": [],
+        "fault_times": [
+          3.2
+        ]
+      }
+    },
+    {
+      "id": "36e50ce9-e7f8-4270-bf2d-fb5ab33d6650",
+      "trigger": 32.2,
+      "deadline": 40.2,
+      "state": "YELLOW",
+      "status": "closed",
+      "confirmed_at": null,
+      "channels": [],
+      "score": 0.0,
+      "reason": "insufficient corroborating evidence",
+      "fallback": false,
+      "audio_trigger": 32.2,
+      "closed_at": 40.2,
+      "review": {
+        "method": "classical grayscale frame replay; no person/thermal classifier",
+        "motion_times": [],
+        "fault_times": []
+      }
+    }
+  ],
+  "received": 0,
+  "attempts": 0,
+  "max_pending": 0,
+  "model": {
+    "center": [
+      0.5950084529725939,
+      0.08166863615697541,
+      0.14575255411267507,
+      0.1756410873040784,
+      0.18937099518347014,
+      0.23767290770710492,
+      0.2510991695163654,
+      1.1754953784341966,
+      0.06272381632518671
+    ],
+    "scale": [
+      0.031698201986823646,
+      0.025,
+      0.025,
+      0.025,
+      0.02,
+      0.08,
+      0.025,
+      0.1,
+      0.1
+    ],
+    "threshold": 3.5
+  },
+  "scope": "synthetic raw audio/images, compiled C++ board, loopback HTTP; board pre-armed"
+}

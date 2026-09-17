@@ -1,0 +1,13 @@
+MATLAB execution: 26.1.0.3346908 (R2026a) Update 5
+[Warning: Graphics acceleration hardware is unavailable. Graphics quality and
+performance might be diminished. See <a
+href="https://www.mathworks.com/support/requirements/matlab-system-requirements.html">MATLAB
+System Requirements</a>.] 
+[> In alternatePrintPath
+In print (line 56)
+In saveas (line 140)
+In run_full_simulation (line 35)
+In command_6bf4eeff_495d_4c2a_8fe3_d089db5bb4d8 (line 1)] 
+PASS raw DSP, baseline fit, lighting kernels and 52 fusion trace replays.
+Max DSP feature discrepancy: 5.5e-15; anomalous windows: 21
+Physical microphone, camera, serial and Arduino tests remain separate.

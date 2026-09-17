@@ -1,0 +1,6023 @@
+{
+  "split": "development",
+  "scope": "synthetic audio anomaly checks; not intrusion accuracy",
+  "models": {
+    "baseline": {
+      "center": [
+        0.5956103598248093,
+        0.08177149765772376,
+        0.1462041291603108,
+        0.1749719041886003,
+        0.1897167125731446,
+        0.238041024044597,
+        0.25061064973131414,
+        1.1740481279302484,
+        0.06397584904320035
+      ],
+      "scale": [
+        0.02847813222294599,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.08,
+        0.025,
+        0.1,
+        0.1
+      ],
+      "threshold": 3.5
+    },
+    "room_0.1": {
+      "center": [
+        0.5956103598248093,
+        0.08177149765772376,
+        0.1462041291603108,
+        0.1749719041886003,
+        0.1897167125731446,
+        0.238041024044597,
+        0.25061064973131414,
+        1.1740481279302484,
+        0.06397584904320035
+      ],
+      "scale": [
+        0.02847813222294599,
+        0.011670099367896194,
+        0.013545642189710723,
+        0.014159495797415456,
+        0.01343969039442195,
+        0.019464245888729224,
+        0.013761309233023978,
+        0.07564046991379342,
+        0.016614288147439107
+      ],
+      "threshold": 3.065126112896632
+    },
+    "room_0.25": {
+      "center": [
+        0.5956103598248093,
+        0.08177149765772376,
+        0.1462041291603108,
+        0.1749719041886003,
+        0.1897167125731446,
+        0.238041024044597,
+        0.25061064973131414,
+        1.1740481279302484,
+        0.06397584904320035
+      ],
+      "scale": [
+        0.02847813222294599,
+        0.011670099367896194,
+        0.013545642189710723,
+        0.014159495797415456,
+        0.01343969039442195,
+        0.02,
+        0.013761309233023978,
+        0.07564046991379342,
+        0.025
+      ],
+      "threshold": 3.057438766059329
+    },
+    "room_0.5": {
+      "center": [
+        0.5956103598248093,
+        0.08177149765772376,
+        0.1462041291603108,
+        0.1749719041886003,
+        0.1897167125731446,
+        0.238041024044597,
+        0.25061064973131414,
+        1.1740481279302484,
+        0.06397584904320035
+      ],
+      "scale": [
+        0.02847813222294599,
+        0.0125,
+        0.013545642189710723,
+        0.014159495797415456,
+        0.01343969039442195,
+        0.04,
+        0.013761309233023978,
+        0.07564046991379342,
+        0.05
+      ],
+      "threshold": 2.9574361935415907
+    },
+    "room_1.0": {
+      "center": [
+        0.5956103598248093,
+        0.08177149765772376,
+        0.1462041291603108,
+        0.1749719041886003,
+        0.1897167125731446,
+        0.238041024044597,
+        0.25061064973131414,
+        1.1740481279302484,
+        0.06397584904320035
+      ],
+      "scale": [
+        0.02847813222294599,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.08,
+        0.025,
+        0.1,
+        0.1
+      ],
+      "threshold": 1.942788900138508
+    }
+  },
+  "results": {
+    "baseline": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.32615594487426286
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.35601776095492993
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4098644017325925
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.514315650751202
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.48107919789703174
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4270913174209377
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.3632440280334149
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.39328565163306084
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4444008210770088
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.47878701047367095
+          }
+        ]
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.32913683863473436
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.3561294844685617
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4104924824880757
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5138126952883627
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4819062583681982
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.42491074719163485
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.363809701504419
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.3938510027743525
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.44349852152527813
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4780705464220615
+          }
+        ]
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6127326103070211
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7434190033140874
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5917226393185505
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6008407016383348
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6620746964751848
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7668330223689761
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7216695114428091
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.771600918931689
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6247060470362511
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6762841600529441
+          }
+        ]
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.35395233136324367
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.39584446267745305
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4098698699811501
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.514315650751202
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4800745148531571
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4346367227895132
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.38770264780659264
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4218529940162353
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.4444008210770088
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.47878701047367095
+          }
+        ]
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.637911614119893
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6416116288449083
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6185587532361054
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7144785114783259
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.624686004408696
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6533412082976184
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.5881638581176563
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6738766423486091
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6061244614112145
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.614266735442192
+          }
+        ]
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.936827885961474
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9563877373091856
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.917026459179198
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.93616847389846
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9356594721194647
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9104617508370083
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.8787731383283863
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.900344830976689
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.952989483428869
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9303709611331596
+          }
+        ]
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.07200000000000006,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7510247655142732
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.8054050518636748
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7775499629271219
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7571641278501389
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.8069726400723845
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7736590360108682
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.8335991473471278
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7754107682492901
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7732400119546121
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7888889060970494
+          }
+        ]
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.2128180115897678
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.179032685031612
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1322047513412272
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1783048167951766
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.2002473183268227
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.179008705893368
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1129396925843777
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.160365797282712
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.109883947306618
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.177004848053972
+          }
+        ]
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5652485246888911
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5386160896227091
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6146669964376967
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5450763653687005
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.61459422581883
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5604063626768135
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5639861059528225
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5911797440383986
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5931780404012101
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.545122737333789
+          }
+        ]
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.20000000000000018,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5402631857832616
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5536121740988829
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5929265601571398
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.583628395857875
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.631635909081416
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5136807956829295
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5651730225323026
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.6021852946510384
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.20000000000000018,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.551538407751622
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 1.5184131091925042
+          }
+        ]
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 2.7461882714596797
+          }
+        ]
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.031622652188054
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 4.031622652188054
+          }
+        ]
+      }
+    },
+    "room_0.1": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5748196586576885
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6658005333643193
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7037761760351194
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9024815136116368
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8281738934692814
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7847916783005565
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6415840309294347
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7072942760354415
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7912631151905962
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8289504622471728
+          }
+        ]
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5793048588804357
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6710272962024746
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7046063498545583
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9015876965352214
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8279473680488012
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7824774973745992
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6420793835543758
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7074466614211976
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7913843472571486
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8280809304480754
+          }
+        ]
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 9,
+        "event_hits": 9,
+        "median_latency": 1.992,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6489170188846647
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 1.5439999999999996,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.7664023941227909
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.3130345194801964
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.342057291486134
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 2.6959999999999997,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.5396035020897199
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 1.992,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.5102091417508199
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 2.6959999999999997,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.4239067616353047
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 1.992,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.6067079435436884
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 3.6559999999999997,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2953155382027166
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 2.12,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.4053279164862529
+          }
+        ]
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8997657849098688
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8922369009253388
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7037652295509544
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9024815136116368
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8254330781910714
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8076776114781047
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.656033000567489
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8107316392878857
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7912631151905962
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8289504622471728
+          }
+        ]
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3005349051993043
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.288134220261288
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3715522795303547
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3151035827382564
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.358990021799336
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.305969339765381
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.327630335059181
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.336267611479932
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.338589881380715
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.351220001226474
+          }
+        ]
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.034055684763629
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.101537022265252
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.995118985368441
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.087857774093967
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.937183218866938
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.07185812819829
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.84231941184619
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.823507207302379
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.048285310234497
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.952744508579274
+          }
+        ]
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.07200000000000006,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.63762338533295
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.7292808375094864
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.6070321893102926
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.588289250238111
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.56821507252887
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.582428954824075
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.609297218129537
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.5818946021614186
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.623809570091696
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.525517490881558
+          }
+        ]
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.249172503800797
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.229643463040681
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.238144436586571
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.226690651245515
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.249305188941923
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.255979284689577
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.2308426021806245
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.247168698483173
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.234417216091249
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.230661017118069
+          }
+        ]
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9362119660832784
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9430729469238577
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0602924780952567
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.933847806159219
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.035118642034569
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9699024096136245
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9845799080920196
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9859573163448332
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.016215047391119
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9295888555363847
+          }
+        ]
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.0662189225883054
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.3237154689897537
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.082069358068403
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.5137816250858465
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.575052979116333
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.1365303929738055
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.182728043866093
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.2633485969520635
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.202994518454888
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.4279753951602445
+          }
+        ]
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.423501497139272
+          }
+        ]
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.066995534759119
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.066995534759119
+          }
+        ]
+      }
+    },
+    "room_0.25": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5753607010946331
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6245544161051769
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7014896275233796
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8981547068934231
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8219628146885841
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7780431130607823
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6398341186541409
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7058060866022946
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7802795018492177
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8263447519001588
+          }
+        ]
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5795694089903208
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6263821591714226
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7023660155284549
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.897424416380564
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8226827734399214
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7752587340291832
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6405294250627219
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.706509425063825
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.77957072969576
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8252905468319038
+          }
+        ]
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 2.088,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 2.184,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2424822967874445
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 1.992,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.4782296350310233
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1343699823674611
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1500178066717492
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2711797766431896
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.3745444202739423
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2951532838358073
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.4328943762455577
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1481900109781484
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2647437967095572
+          }
+        ]
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.717127503365582
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7374794459541918
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7014886264774122
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8981547068934231
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8192845604955024
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7780431130607823
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6403838896452735
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7534152838371296
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7802795018492177
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8263447519001588
+          }
+        ]
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3011399693239576
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.28874382920461
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3722018299487235
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3162398099896753
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3039677887753114
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3069526006539816
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3285610929973974
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.337518535481213
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3395491730591456
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.351665553131893
+          }
+        ]
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.036980910669111
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.10525045129423
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.997245853060341
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.092040560186654
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.825668038010161
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.0781250962492095
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.845575140311744
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.808182615305231
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.974411465140247
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.9568887854045585
+          }
+        ]
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.07200000000000006,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.63615029458177
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.7283900142425703
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.6059345949650905
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.587053112802757
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.566320041319193
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.580834285025543
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.6072945484229986
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.5805760689824218
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.6225036419395256
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.5239139285098084
+          }
+        ]
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.257712730957896
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.238260359799652
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.2470505780202545
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.23510499090972
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.25780607860889
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.264726378696338
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.239685253922425
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.25593473320979
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.243203319272617
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.239241584310606
+          }
+        ]
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9352029731477471
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9220998658064306
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0567677231223358
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9268802104278295
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0326066919102568
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9674698691407868
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9827672094954304
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9849864535726409
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0092956313122114
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9231837182058813
+          }
+        ]
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.873833300701402
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 3.002002185208803
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.911031571311495
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.115871964395968
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.1941892888532006
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.918227197545818
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.9141344202165564
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.0216618055555795
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.93700164612329
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 3.026137734030699
+          }
+        ]
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.412880466919487
+          }
+        ]
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.060764867545202
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.060764867545202
+          }
+        ]
+      }
+    },
+    "room_0.5": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5846656168977652
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6094316002273326
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6895974850975246
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8757231674578777
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8120796412295804
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7588786698410922
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6144029105432635
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7065404693768114
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7596699847519095
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7874169586283958
+          }
+        ]
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5888426915251714
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6072403376745221
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6905252452957171
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8749907470817776
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8132471743584336
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7557143737364105
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6129124296571669
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7073761898022712
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7585194283779468
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.786314516604707
+          }
+        ]
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0263819259950568
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2513729616902833
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9882008847429542
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.99888052052401
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1071668774054348
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2637941390141605
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1930113244067384
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2803394158139998
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.031459418903236
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1266896530911967
+          }
+        ]
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5994778813759589
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.650012037011639
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6896034875928128
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8757231674578777
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8092160630131501
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7588786698410922
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6285328987150817
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7065404693768114
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7596699847519095
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7874169586283958
+          }
+        ]
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.081449279103608
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9836345676021754
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.0201391777675677
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.139009285866313
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.016062273495389
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.0188052966994827
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9608867789593476
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.056629483648185
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9671128313538775
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.983436968990346
+          }
+        ]
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.7839513446518005
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.856527435994691
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.734864680132829
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.869320040174593
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.7921860888728185
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.882180420899379
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.650794332548391
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.64847524775174
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.858786677486603
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.723457058213555
+          }
+        ]
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.07200000000000006,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.143670937169111
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.2309887181337458
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.143337935994793
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1281388343817387
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.187268054531605
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.145746274631428
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.203949072545146
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1185059965438477
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1512574732946463
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1425723976074225
+          }
+        ]
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.371793133464726
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.3534424071576385
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.366275751698105
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.347449454939942
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.371334386853711
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.3816988984901775
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.358030413680833
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.373184490598943
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.36075126657258
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 4.353912759817813
+          }
+        ]
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9202319970994377
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8795208980377639
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.034616612123296
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9015137161716318
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.993284460111394
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9287680761023529
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9493386011206266
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9622954316622415
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.972628882049851
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8822018461403215
+          }
+        ]
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.723232883926537
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.769533637343029
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.8293181945131165
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.778265518890256
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.8648025350384065
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.702824782783006
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.767802952978323
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.792439024423594
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.738723459712263
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.7609556298052635
+          }
+        ]
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.39551894482084
+          }
+        ]
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 5.087290039734084
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 5.087290039734084
+          }
+        ]
+      }
+    },
+    "room_1.0": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5875809806091312
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6413780536080986
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7383846005923761
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.926557063148174
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8666804677129712
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7694194726286069
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6543964184818603
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7085174208158064
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8006031296857012
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8625510144403121
+          }
+        ]
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.5929511616725018
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6415793273016446
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7395161093445799
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9256509718482845
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8681704451618214
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7654911015111808
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.6554154983975286
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7095359200435813
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7989776064850941
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8612602801868612
+          }
+        ]
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1038585488735706
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.3392945118297737
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.066008374593491
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0824348726638524
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1927499881731574
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.381475660119363
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.300112065633974
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.3900651872513665
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.125429100645468
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.2183488180401656
+          }
+        ]
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.637657112248805
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7131272055714916
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7383944518273456
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.926557063148174
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8648704971838466
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.783012775940218
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.698459450342923
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.7599824556088209
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8006031296857012
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.8625510144403121
+          }
+        ]
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9507532439633164
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9574189457987705
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9158884096581446
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.088691102644416
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.926926860157083
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.9785501804283068
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.861130976718833
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.0155454603443816
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.8934876118236414
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 2.908156194244712
+          }
+        ]
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.290794898062441
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.326032632698515
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.255121957099568
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.289606944898623
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.288689960955408
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.243295412694241
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.186207304062227
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.2250694389363135
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.319910563244515
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.279162529307663
+          }
+        ]
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.07200000000000006,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1545304170015736
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.2524983445563054
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.2023164584692556
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1655906861713214
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.25532240780378
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1953068218556653
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.3032909624187248
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1984626268090697
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.1945519358272385
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 3.222743948605686
+          }
+        ]
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.788000456334964
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.727135046333335
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.642772937869228
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.7258237670546945
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.7653539266903016
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.727091847103687
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.608066282069329
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.6935060158625035
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.602561253462568
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 5.723481829341394
+          }
+        ]
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0183143604897444
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9703351267577671
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.107343410999807
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9819735323042255
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.1072123122653972
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0095910416355636
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.016040070382402
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0650303303600714
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 1.0686303289339474
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 155,
+            "peak_ratio": 0.9820570729698109
+          }
+        ]
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "median_latency": 0.13600000000000012,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.7748362932571204
+          },
+          {
+            "seed": 2001,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.7988849477976854
+          },
+          {
+            "seed": 2002,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.869711145741316
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.8529601878554094
+          },
+          {
+            "seed": 2004,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.9394473487972985
+          },
+          {
+            "seed": 2005,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.7269472172259936
+          },
+          {
+            "seed": 2006,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.07200000000000006,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.819712207781559
+          },
+          {
+            "seed": 2007,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.886391069497487
+          },
+          {
+            "seed": 2008,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 3,
+            "valid_frames": 155,
+            "peak_ratio": 2.7951489874908835
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.13600000000000012,
+            "outside_frames": 2,
+            "valid_frames": 155,
+            "peak_ratio": 2.735472640282678
+          }
+        ]
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "median_latency": null,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2003,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          },
+          {
+            "seed": 2009,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 4.947351176148696
+          }
+        ]
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "median_latency": 0.008000000000000007,
+        "rows": [
+          {
+            "seed": 2000,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2001,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2002,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2003,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2004,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2005,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2006,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2007,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2008,
+            "flagged": false,
+            "event_hit": false,
+            "latency": null,
+            "outside_frames": 0,
+            "valid_frames": 0,
+            "peak_ratio": 7.26310474681639
+          },
+          {
+            "seed": 2009,
+            "flagged": true,
+            "event_hit": true,
+            "latency": 0.008000000000000007,
+            "outside_frames": 91,
+            "valid_frames": 155,
+            "peak_ratio": 7.26310474681639
+          }
+        ]
+      }
+    }
+  }
+}

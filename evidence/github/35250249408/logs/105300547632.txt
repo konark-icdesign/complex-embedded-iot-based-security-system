@@ -1,0 +1,462 @@
+﻿2026-09-17T17:02:20.0239559Z Current runner version: '2.337.0'
+2026-09-17T17:02:20.0264826Z ##[group]Runner Image Provisioner
+2026-09-17T17:02:20.0265782Z Hosted Compute Agent
+2026-09-17T17:02:20.0266397Z Version: 20260828.587
+2026-09-17T17:02:20.0267263Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-17T17:02:20.0268105Z Build Date: 2026-08-28T16:44:25Z
+2026-09-17T17:02:20.0268873Z Worker ID: {b33cc8b6-d3a0-4117-96a9-850608e7d626}
+2026-09-17T17:02:20.0269667Z Azure Region: northcentralus
+2026-09-17T17:02:20.0270308Z ##[endgroup]
+2026-09-17T17:02:20.0271698Z ##[group]Operating System
+2026-09-17T17:02:20.0272425Z Ubuntu
+2026-09-17T17:02:20.0272975Z 24.04.5
+2026-09-17T17:02:20.0273538Z LTS
+2026-09-17T17:02:20.0274099Z ##[endgroup]
+2026-09-17T17:02:20.0274714Z ##[group]Runner Image
+2026-09-17T17:02:20.0275433Z Image: ubuntu-24.04
+2026-09-17T17:02:20.0276025Z Version: 20260907.300.1
+2026-09-17T17:02:20.0277587Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-17T17:02:20.0279144Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-17T17:02:20.0280230Z ##[endgroup]
+2026-09-17T17:02:20.0281353Z ##[group]GITHUB_TOKEN Permissions
+2026-09-17T17:02:20.0283324Z Contents: read
+2026-09-17T17:02:20.0283981Z Metadata: read
+2026-09-17T17:02:20.0284644Z ##[endgroup]
+2026-09-17T17:02:20.0286891Z Secret source: Actions
+2026-09-17T17:02:20.0288030Z Cache mode: write
+2026-09-17T17:02:20.0288780Z Prepare workflow directory
+2026-09-17T17:02:20.0693849Z Prepare all required actions
+2026-09-17T17:02:20.0742379Z Getting action download info
+2026-09-17T17:02:20.3511463Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-17T17:02:20.4440454Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-17T17:02:20.5354104Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-17T17:02:20.7434912Z Complete job name: integration
+2026-09-17T17:02:20.8205632Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:20.8214636Z ##[group]Run actions/checkout@v4
+2026-09-17T17:02:20.8215325Z with:
+2026-09-17T17:02:20.8215968Z   repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:20.8220393Z   token: ***
+2026-09-17T17:02:20.8220825Z   ssh-strict: true
+2026-09-17T17:02:20.8221277Z   ssh-user: git
+2026-09-17T17:02:20.8221731Z   persist-credentials: true
+2026-09-17T17:02:20.8222220Z   clean: true
+2026-09-17T17:02:20.8222677Z   sparse-checkout-cone-mode: true
+2026-09-17T17:02:20.8223199Z   fetch-depth: 1
+2026-09-17T17:02:20.8223629Z   fetch-tags: false
+2026-09-17T17:02:20.8224072Z   show-progress: true
+2026-09-17T17:02:20.8224578Z   lfs: false
+2026-09-17T17:02:20.8225002Z   submodules: false
+2026-09-17T17:02:20.8225457Z   set-safe-directory: true
+2026-09-17T17:02:20.8225958Z   allow-unsafe-pr-checkout: false
+2026-09-17T17:02:20.8226793Z ##[endgroup]
+2026-09-17T17:02:20.9207972Z Syncing repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:20.9210022Z ##[group]Getting Git version info
+2026-09-17T17:02:20.9211207Z Working directory is '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:02:20.9212640Z [command]/usr/bin/git version
+2026-09-17T17:02:20.9286324Z git version 2.55.0
+2026-09-17T17:02:20.9308050Z ##[endgroup]
+2026-09-17T17:02:20.9322399Z Temporarily overriding HOME='/home/runner/work/_temp/0ab19ec5-fa79-4ec4-bcf6-38a653b32ad5' before making global git config changes
+2026-09-17T17:02:20.9324375Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:02:20.9327830Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:02:20.9375509Z Deleting the contents of '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:02:20.9385849Z ##[group]Initializing the repository
+2026-09-17T17:02:20.9395035Z [command]/usr/bin/git init /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:02:20.9463411Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T17:02:20.9465231Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T17:02:20.9467213Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T17:02:20.9468648Z hint: call:
+2026-09-17T17:02:20.9469380Z hint:
+2026-09-17T17:02:20.9470418Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T17:02:20.9471525Z hint:
+2026-09-17T17:02:20.9472459Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T17:02:20.9473958Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T17:02:20.9475087Z hint:
+2026-09-17T17:02:20.9475672Z hint: 	git branch -m <name>
+2026-09-17T17:02:20.9476438Z hint:
+2026-09-17T17:02:20.9477618Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T17:02:20.9479972Z Initialized empty Git repository in /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system/.git/
+2026-09-17T17:02:20.9482615Z [command]/usr/bin/git remote add origin https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:20.9521805Z ##[endgroup]
+2026-09-17T17:02:20.9523204Z ##[group]Disabling automatic garbage collection
+2026-09-17T17:02:20.9525003Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-17T17:02:20.9557188Z ##[endgroup]
+2026-09-17T17:02:20.9558790Z ##[group]Setting up auth
+2026-09-17T17:02:20.9563343Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:02:20.9600857Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:02:21.0009459Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:02:21.0042874Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:02:21.0299841Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:02:21.0339568Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:02:21.0596419Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-17T17:02:21.0641497Z ##[endgroup]
+2026-09-17T17:02:21.0643332Z ##[group]Fetching the repository
+2026-09-17T17:02:21.0652866Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +93b9885058050f6a8ae259495d76098657cd34d9:refs/remotes/pull/2/merge
+2026-09-17T17:02:21.7831994Z From https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:02:21.7834100Z  * [new ref]         93b9885058050f6a8ae259495d76098657cd34d9 -> pull/2/merge
+2026-09-17T17:02:21.7839231Z ##[endgroup]
+2026-09-17T17:02:21.7841029Z ##[group]Determining the checkout info
+2026-09-17T17:02:21.7842772Z ##[endgroup]
+2026-09-17T17:02:21.7847563Z [command]/usr/bin/git sparse-checkout disable
+2026-09-17T17:02:21.7908760Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-17T17:02:21.7952098Z ##[group]Checking out the ref
+2026-09-17T17:02:21.7955416Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-09-17T17:02:21.8113585Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-09-17T17:02:21.8114634Z 
+2026-09-17T17:02:21.8115417Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-17T17:02:21.8117454Z changes and commit them, and you can discard any commits you make in this
+2026-09-17T17:02:21.8118777Z state without impacting any branches by switching back to a branch.
+2026-09-17T17:02:21.8119538Z 
+2026-09-17T17:02:21.8120096Z If you want to create a new branch to retain commits you create, you may
+2026-09-17T17:02:21.8121299Z do so (now or later) by using -c with the switch command. Example:
+2026-09-17T17:02:21.8122028Z 
+2026-09-17T17:02:21.8122385Z   git switch -c <new-branch-name>
+2026-09-17T17:02:21.8122937Z 
+2026-09-17T17:02:21.8123274Z Or undo this operation with:
+2026-09-17T17:02:21.8123811Z 
+2026-09-17T17:02:21.8124116Z   git switch -
+2026-09-17T17:02:21.8124537Z 
+2026-09-17T17:02:21.8125234Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-17T17:02:21.8126230Z 
+2026-09-17T17:02:21.8127986Z HEAD is now at 93b9885 Merge 5bd05078df6b171632d88e8e7efde1f01fbf58a4 into 2092371051f78bdec194c8adffd083b626593c51
+2026-09-17T17:02:21.8139113Z ##[endgroup]
+2026-09-17T17:02:21.8181100Z [command]/usr/bin/git log -1 --format=%H
+2026-09-17T17:02:21.8209116Z 93b9885058050f6a8ae259495d76098657cd34d9
+2026-09-17T17:02:21.8579246Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:02:21.8585061Z ##[group]Run actions/setup-python@v5
+2026-09-17T17:02:21.8586194Z with:
+2026-09-17T17:02:21.8587140Z   python-version: 3.12
+2026-09-17T17:02:21.8588114Z   check-latest: false
+2026-09-17T17:02:21.8597907Z   token: ***
+2026-09-17T17:02:21.8598781Z   update-environment: true
+2026-09-17T17:02:21.8599827Z   allow-prereleases: false
+2026-09-17T17:02:21.8600833Z   freethreaded: false
+2026-09-17T17:02:21.8601742Z ##[endgroup]
+2026-09-17T17:02:21.9927534Z ##[group]Installed versions
+2026-09-17T17:02:22.0026205Z (node:2248) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:02:22.0029682Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:02:22.0032015Z Successfully set up CPython (3.12.14)
+2026-09-17T17:02:22.0034579Z ##[endgroup]
+2026-09-17T17:02:22.0217201Z ##[group]Run python -m pip install -r requirements.txt pytest
+2026-09-17T17:02:22.0218977Z [36;1mpython -m pip install -r requirements.txt pytest[0m
+2026-09-17T17:02:22.0285189Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:02:22.0286841Z env:
+2026-09-17T17:02:22.0287890Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:22.0289748Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:22.0291479Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:22.0293039Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:22.0296016Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:22.0299722Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:22.0302254Z ##[endgroup]
+2026-09-17T17:02:22.8157560Z Collecting pytest
+2026-09-17T17:02:22.8604820Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-09-17T17:02:23.0478204Z Collecting numpy<3,>=1.26 (from -r requirements.txt (line 1))
+2026-09-17T17:02:23.0513290Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-09-17T17:02:23.1599417Z Collecting scipy<2,>=1.11 (from -r requirements.txt (line 2))
+2026-09-17T17:02:23.1635253Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-17T17:02:23.3016187Z Collecting matplotlib<4,>=3.8 (from -r requirements.txt (line 3))
+2026-09-17T17:02:23.3051844Z   Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+2026-09-17T17:02:23.3788865Z Collecting contourpy>=1.0.1 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.3822572Z   Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-09-17T17:02:23.3968160Z Collecting cycler>=0.10 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.4003799Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-09-17T17:02:23.5240444Z Collecting fonttools>=4.28.2 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.5274027Z   Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (125 kB)
+2026-09-17T17:02:23.5977166Z Collecting kiwisolver>=1.3.1 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.6016050Z   Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+2026-09-17T17:02:23.6198603Z Collecting packaging>=20.0 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.6231001Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-09-17T17:02:23.7817350Z Collecting pillow>=9 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.7857339Z   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-09-17T17:02:23.8079459Z Collecting pyparsing>=3 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.8122913Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-09-17T17:02:23.8243032Z Collecting python-dateutil>=2.7 (from matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.8275536Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-09-17T17:02:23.8389325Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-09-17T17:02:23.8463863Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-09-17T17:02:23.8604474Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-09-17T17:02:23.8643373Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-09-17T17:02:23.8840035Z Collecting pygments>=2.7.2 (from pytest)
+2026-09-17T17:02:23.8871198Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-09-17T17:02:23.9087653Z Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib<4,>=3.8->-r requirements.txt (line 3))
+2026-09-17T17:02:23.9119616Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-09-17T17:02:23.9185152Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-09-17T17:02:24.1849479Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 63.1 MB/s  0:00:00
+2026-09-17T17:02:24.1893716Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-09-17T17:02:24.4451408Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 139.3 MB/s  0:00:00
+2026-09-17T17:02:24.4487110Z Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+2026-09-17T17:02:24.5061462Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 178.7 MB/s  0:00:00
+2026-09-17T17:02:24.5095200Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-09-17T17:02:24.5163595Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-09-17T17:02:24.5212699Z Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+2026-09-17T17:02:24.5282823Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-09-17T17:02:24.5339621Z Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+2026-09-17T17:02:24.5657342Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 175.8 MB/s  0:00:00
+2026-09-17T17:02:24.5689665Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-09-17T17:02:24.5739747Z Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+2026-09-17T17:02:24.5839673Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 152.3 MB/s  0:00:00
+2026-09-17T17:02:24.5876982Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-09-17T17:02:24.5929690Z Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-09-17T17:02:24.6346394Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 169.5 MB/s  0:00:00
+2026-09-17T17:02:24.6379055Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-09-17T17:02:24.6465424Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 151.2 MB/s  0:00:00
+2026-09-17T17:02:24.6495917Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-09-17T17:02:24.6547917Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-09-17T17:02:24.6635045Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-09-17T17:02:24.9069436Z Installing collected packages: six, pyparsing, pygments, pluggy, pillow, packaging, numpy, kiwisolver, iniconfig, fonttools, cycler, scipy, python-dateutil, pytest, contourpy, matplotlib
+2026-09-17T17:02:35.9576715Z 
+2026-09-17T17:02:35.9596600Z Successfully installed contourpy-1.4.0 cycler-0.12.1 fonttools-4.65.0 iniconfig-2.3.0 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.3 packaging-26.3 pillow-12.3.0 pluggy-1.6.0 pygments-2.21.0 pyparsing-3.3.2 pytest-9.1.1 python-dateutil-2.9.0.post0 scipy-1.18.1 six-1.17.0
+2026-09-17T17:02:36.0435296Z ##[group]Run python -m pytest -q
+2026-09-17T17:02:36.0435635Z [36;1mpython -m pytest -q[0m
+2026-09-17T17:02:36.0477864Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:02:36.0478209Z env:
+2026-09-17T17:02:36.0478488Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.0478931Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:36.0479350Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.0479728Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.0480114Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:36.0480488Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:36.0480811Z ##[endgroup]
+2026-09-17T17:02:46.1445520Z ..........................                                               [100%]
+2026-09-17T17:02:46.1446096Z 26 passed in 9.81s
+2026-09-17T17:02:46.2322433Z ##[group]Run make embedded sanitize incident-build c-sanitize
+2026-09-17T17:02:46.2322904Z [36;1mmake embedded sanitize incident-build c-sanitize[0m
+2026-09-17T17:02:46.2363143Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:02:46.2363492Z env:
+2026-09-17T17:02:46.2363765Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:46.2364202Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:46.2364632Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:46.2365003Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:46.2365372Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:46.2365752Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:46.2366070Z ##[endgroup]
+2026-09-17T17:02:46.2450656Z g++ -std=c++17 -Wall -Wextra -Werror -Wpedantic tests/embedded_test.cpp -o embedded-tests
+2026-09-17T17:02:47.7515092Z ./embedded-tests
+2026-09-17T17:02:47.7528592Z PASS central state commands preserve alarm latch and fallback provenance
+2026-09-17T17:02:47.7529241Z PASS isolated echo rejected
+2026-09-17T17:02:47.7529737Z PASS sustained range accepted without single-sensor alarm
+2026-09-17T17:02:47.7530122Z PASS invalid range invalidates old evidence
+2026-09-17T17:02:47.7530767Z PASS offline fallback latches until explicit reset
+2026-09-17T17:02:47.7531389Z PASS healthy host controls central alarm
+2026-09-17T17:02:47.7531673Z PASS millis wraparound
+2026-09-17T17:02:47.7531939Z PASS bounded command parser rejects overflow tails
+2026-09-17T17:02:47.7532250Z PASS sample gap resets persistence
+2026-09-17T17:02:47.7532535Z PASS warm-up inhibits alarm
+2026-09-17T17:02:47.7532796Z ALL EMBEDDED HOST TESTS PASSED
+2026-09-17T17:02:47.7533561Z g++ -std=c++17 -Wall -Wextra -Werror -Wpedantic -fsanitize=address,undefined -fno-omit-frame-pointer -g tests/embedded_test.cpp -o embedded-tests-sanitized
+2026-09-17T17:02:48.4422547Z ./embedded-tests-sanitized
+2026-09-17T17:02:48.5335482Z PASS central state commands preserve alarm latch and fallback provenance
+2026-09-17T17:02:48.5336015Z PASS isolated echo rejected
+2026-09-17T17:02:48.5336417Z PASS sustained range accepted without single-sensor alarm
+2026-09-17T17:02:48.5337139Z PASS invalid range invalidates old evidence
+2026-09-17T17:02:48.5337627Z PASS offline fallback latches until explicit reset
+2026-09-17T17:02:48.5337961Z PASS healthy host controls central alarm
+2026-09-17T17:02:48.5338244Z PASS millis wraparound
+2026-09-17T17:02:48.5338514Z PASS bounded command parser rejects overflow tails
+2026-09-17T17:02:48.5338824Z PASS sample gap resets persistence
+2026-09-17T17:02:48.5339096Z PASS warm-up inhibits alarm
+2026-09-17T17:02:48.5339349Z ALL EMBEDDED HOST TESTS PASSED
+2026-09-17T17:02:48.5401143Z mkdir -p build
+2026-09-17T17:02:48.5416343Z g++ -std=c++17 -Wall -Wextra -Werror -Wpedantic tests/board_stream.cpp -o build/board-stream
+2026-09-17T17:02:48.9757213Z cc -std=c11 -Wall -Wextra -Werror -Wpedantic -O2 -fPIC -shared csrc/detection.c -lm -o build/libdetection.so
+2026-09-17T17:02:49.3480474Z mkdir -p build
+2026-09-17T17:02:49.3493629Z cc -std=c11 -Wall -Wextra -Werror -Wpedantic -fsanitize=address,undefined -fno-omit-frame-pointer -g tests/c_core_test.c csrc/detection.c -lm -o build/c-core-test
+2026-09-17T17:02:49.5368039Z ./build/c-core-test
+2026-09-17T17:02:49.5452841Z C core boundary checks passed
+2026-09-17T17:02:49.5524375Z ##[group]Run python scripts/verify_c_core.py | tee c-parity.json
+2026-09-17T17:02:49.5525153Z [36;1mpython scripts/verify_c_core.py | tee c-parity.json[0m
+2026-09-17T17:02:49.5578761Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:02:49.5579120Z env:
+2026-09-17T17:02:49.5579395Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:49.5579850Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:49.5580276Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:49.5580657Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:49.5581050Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:49.5581424Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:49.5581755Z ##[endgroup]
+2026-09-17T17:02:50.4654852Z {
+2026-09-17T17:02:50.4655214Z   "frames": 64,
+2026-09-17T17:02:50.4655633Z   "max_feature_error": 5.551115123125783e-15,
+2026-09-17T17:02:50.4655952Z   "fusion_masks": 32,
+2026-09-17T17:02:50.4656191Z   "invalid_window_parity": true
+2026-09-17T17:02:50.4656428Z }
+2026-09-17T17:02:50.5309665Z ##[group]Run python run_incidents.py --output results/incidents-python
+2026-09-17T17:02:50.5310193Z [36;1mpython run_incidents.py --output results/incidents-python[0m
+2026-09-17T17:02:50.5349213Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:02:50.5349550Z env:
+2026-09-17T17:02:50.5349818Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:50.5350238Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:02:50.5350665Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:50.5351037Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:50.5351418Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:02:50.5351968Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:02:50.5352289Z ##[endgroup]
+2026-09-17T17:02:55.2691410Z two_incidents {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:02:59.2653713Z outage_restart {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:03:02.4534999Z pc_failure {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:03:06.1968127Z thunder_only {"passed": true, "received": 0, "failed_checks": []}
+2026-09-17T17:03:06.2673774Z ##[group]Run python run_incidents.py --output results/incidents-c --c-library build/libdetection.so
+2026-09-17T17:03:06.2674529Z [36;1mpython run_incidents.py --output results/incidents-c --c-library build/libdetection.so[0m
+2026-09-17T17:03:06.2713474Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:03:06.2713817Z env:
+2026-09-17T17:03:06.2714090Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:06.2714537Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:03:06.2714963Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:06.2715339Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:06.2715712Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:06.2716079Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:03:06.2716400Z ##[endgroup]
+2026-09-17T17:03:10.9781012Z two_incidents {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:03:14.9108777Z outage_restart {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:03:18.0026381Z pc_failure {"passed": true, "received": 2, "failed_checks": []}
+2026-09-17T17:03:21.2804398Z thunder_only {"passed": true, "received": 0, "failed_checks": []}
+2026-09-17T17:03:21.3554924Z ##[group]Run python scripts/compare_incidents.py results/incidents-python results/incidents-c
+2026-09-17T17:03:21.3556031Z [36;1mpython scripts/compare_incidents.py results/incidents-python results/incidents-c[0m
+2026-09-17T17:03:21.3611392Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:03:21.3611763Z env:
+2026-09-17T17:03:21.3612053Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.3612496Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:03:21.3612927Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.3613307Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.3613691Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.3614113Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:03:21.3614436Z ##[endgroup]
+2026-09-17T17:03:21.3941049Z PASS identical incident decisions in 4 continuous sessions
+2026-09-17T17:03:21.4008462Z ##[group]Run python run_simulation.py --seeds 1
+2026-09-17T17:03:21.4008837Z [36;1mpython run_simulation.py --seeds 1[0m
+2026-09-17T17:03:21.4009188Z [36;1mpython scripts/verify_embedded_replay.py[0m
+2026-09-17T17:03:21.4045812Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-17T17:03:21.4046154Z env:
+2026-09-17T17:03:21.4046423Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.4047042Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:03:21.4047463Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.4047982Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.4048537Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:21.4049050Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:03:21.4049527Z ##[endgroup]
+2026-09-17T17:03:44.5622718Z Completed seed 1/1
+2026-09-17T17:03:51.4803285Z {
+2026-09-17T17:03:51.4803726Z   "trials": 52,
+2026-09-17T17:03:51.4804013Z   "intrusion_trials": 19,
+2026-09-17T17:03:51.4804294Z   "nonintrusion_trials": 33,
+2026-09-17T17:03:51.4804811Z   "detected": 16,
+2026-09-17T17:03:51.4805023Z   "missed": 3,
+2026-09-17T17:03:51.4805226Z   "false_alerts": 2,
+2026-09-17T17:03:51.4805449Z   "naive_false_alerts": 17,
+2026-09-17T17:03:51.4805693Z   "median_latency": 0.25,
+2026-09-17T17:03:51.4805954Z   "max_latency": 3.2,
+2026-09-17T17:03:51.4806203Z   "nonintrusion_simulated_hours": 0.22,
+2026-09-17T17:03:51.4807083Z   "note": "Scenario-weighted synthetic trials; not a real security accuracy or false-alarms/hour estimate."
+2026-09-17T17:03:51.4807577Z }
+2026-09-17T17:03:51.4807902Z Simulation finished. See summary.json and scenario_results.csv for outcomes.
+2026-09-17T17:03:53.4198452Z {
+2026-09-17T17:03:53.4198737Z   "input_ticks": 12480,
+2026-09-17T17:03:53.4199100Z   "output_ticks": 12480,
+2026-09-17T17:03:53.4199469Z   "mismatches": 0,
+2026-09-17T17:03:53.4199796Z   "examples": [],
+2026-09-17T17:03:53.4200238Z   "sanitizer": "AddressSanitizer + UndefinedBehaviorSanitizer",
+2026-09-17T17:03:53.4200787Z   "leak_check_disabled": false
+2026-09-17T17:03:53.4201158Z }
+2026-09-17T17:03:53.4934030Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:53.4936142Z ##[group]Run actions/upload-artifact@v4
+2026-09-17T17:03:53.4936784Z with:
+2026-09-17T17:03:53.4937120Z   name: matlab-inputs
+2026-09-17T17:03:53.4937564Z   path: fixtures/matlab_reference.mat
+results/traces/
+
+2026-09-17T17:03:53.4938065Z   retention-days: 14
+2026-09-17T17:03:53.4938420Z   if-no-files-found: warn
+2026-09-17T17:03:53.4938826Z   compression-level: 6
+2026-09-17T17:03:53.4939163Z   overwrite: false
+2026-09-17T17:03:53.4939506Z   include-hidden-files: false
+2026-09-17T17:03:53.4939877Z env:
+2026-09-17T17:03:53.4940267Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:53.4941013Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:03:53.4941688Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:53.4942306Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:53.4942934Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:53.4943557Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:03:53.4944077Z ##[endgroup]
+2026-09-17T17:03:53.6620170Z (node:2434) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:03:53.6621279Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:03:53.6754149Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-09-17T17:03:53.6797179Z The least common ancestor is /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system. This will be the root directory of the artifact
+2026-09-17T17:03:53.6798644Z With the provided path, there will be 53 files uploaded
+2026-09-17T17:03:53.6799470Z Artifact name is valid!
+2026-09-17T17:03:53.6799860Z Root directory input is valid!
+2026-09-17T17:03:53.9188259Z Beginning upload of artifact content to blob storage
+2026-09-17T17:03:54.2018722Z (node:2434) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-17T17:03:54.6649791Z Uploaded bytes 8388608
+2026-09-17T17:03:54.8820100Z Uploaded bytes 16777216
+2026-09-17T17:03:55.0616468Z Uploaded bytes 22619912
+2026-09-17T17:03:55.0934422Z Finished uploading artifact content to blob storage!
+2026-09-17T17:03:55.0935448Z SHA256 digest of uploaded artifact zip is 63377d557b100f4d1c902ca19ca86d1f4bbc5264134999eb03103112c6ab85a8
+2026-09-17T17:03:55.0937878Z Finalizing artifact upload
+2026-09-17T17:03:55.3008368Z Artifact matlab-inputs.zip successfully finalized. Artifact ID 10509337603
+2026-09-17T17:03:55.3009449Z Artifact matlab-inputs has been successfully uploaded! Final size is 22619912 bytes. Artifact ID is 10509337603
+2026-09-17T17:03:55.3015474Z Artifact download URL: https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249408/artifacts/10509337603
+2026-09-17T17:03:55.3189222Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:55.3190410Z ##[group]Run actions/upload-artifact@v4
+2026-09-17T17:03:55.3190696Z with:
+2026-09-17T17:03:55.3190915Z   name: incident-results
+2026-09-17T17:03:55.3191669Z   path: results/incidents-python/
+results/incidents-c/
+!results/incidents-*/**/*.sqlite*
+!results/incidents-*/**/receiver/
+results/summary.json
+results/embedded_replay.json
+c-parity.json
+
+2026-09-17T17:03:55.3192427Z   retention-days: 14
+2026-09-17T17:03:55.3192667Z   if-no-files-found: warn
+2026-09-17T17:03:55.3192916Z   compression-level: 6
+2026-09-17T17:03:55.3193142Z   overwrite: false
+2026-09-17T17:03:55.3193373Z   include-hidden-files: false
+2026-09-17T17:03:55.3193616Z env:
+2026-09-17T17:03:55.3193926Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:55.3194357Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-17T17:03:55.3194778Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:55.3195164Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:55.3195547Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-17T17:03:55.3195925Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-17T17:03:55.3196247Z ##[endgroup]
+2026-09-17T17:03:55.4826144Z (node:2447) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:03:55.4827508Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:03:55.5269458Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-09-17T17:03:55.5273513Z The least common ancestor is /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system. This will be the root directory of the artifact
+2026-09-17T17:03:55.5274990Z With the provided path, there will be 57 files uploaded
+2026-09-17T17:03:55.5278669Z Artifact name is valid!
+2026-09-17T17:03:55.5279764Z Root directory input is valid!
+2026-09-17T17:03:55.7900595Z Beginning upload of artifact content to blob storage
+2026-09-17T17:03:56.1104681Z (node:2447) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-17T17:03:56.5300670Z Uploaded bytes 8388608
+2026-09-17T17:03:56.8167144Z Uploaded bytes 16777216
+2026-09-17T17:03:56.8618002Z Uploaded bytes 25165824
+2026-09-17T17:03:57.1727060Z Uploaded bytes 33554432
+2026-09-17T17:03:57.4623195Z Uploaded bytes 41429934
+2026-09-17T17:03:57.4957389Z Finished uploading artifact content to blob storage!
+2026-09-17T17:03:57.4960571Z SHA256 digest of uploaded artifact zip is 57f851d02713f183e298412c92b4022ef82c261aaecc9a11731a4d457a50d9ef
+2026-09-17T17:03:57.4962986Z Finalizing artifact upload
+2026-09-17T17:03:57.7040235Z Artifact incident-results.zip successfully finalized. Artifact ID 10509242830
+2026-09-17T17:03:57.7041001Z Artifact incident-results has been successfully uploaded! Final size is 41429934 bytes. Artifact ID is 10509242830
+2026-09-17T17:03:57.7049816Z Artifact download URL: https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249408/artifacts/10509242830
+2026-09-17T17:03:57.7248781Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:57.7249936Z Post job cleanup.
+2026-09-17T17:03:57.8442920Z (node:2459) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:03:57.8443708Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:03:57.8596468Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:57.8597916Z Post job cleanup.
+2026-09-17T17:03:57.9482487Z [command]/usr/bin/git version
+2026-09-17T17:03:57.9524474Z git version 2.55.0
+2026-09-17T17:03:57.9561197Z Temporarily overriding HOME='/home/runner/work/_temp/05e9eaed-499d-4dcc-a6eb-da6b220ab13f' before making global git config changes
+2026-09-17T17:03:57.9562462Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:03:57.9567926Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:03:57.9606202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:03:57.9643510Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:03:57.9904255Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:03:57.9931810Z http.https://github.com/.extraheader
+2026-09-17T17:03:57.9943258Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-17T17:03:57.9978134Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:03:58.0246249Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:03:58.0288393Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:03:58.0722387Z Cleaning up orphan processes
+2026-09-17T17:03:58.1035308Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

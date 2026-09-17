@@ -1,0 +1,768 @@
+﻿2026-09-17T17:03:05.1817739Z Current runner version: '2.337.0'
+2026-09-17T17:03:05.1835563Z ##[group]Runner Image Provisioner
+2026-09-17T17:03:05.1836115Z Hosted Compute Agent
+2026-09-17T17:03:05.1836587Z Version: 20260828.587
+2026-09-17T17:03:05.1836954Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-17T17:03:05.1837435Z Build Date: 2026-08-28T16:44:25Z
+2026-09-17T17:03:05.1837894Z Worker ID: {c8837984-f9e1-49d9-a60f-f121dabe2b2f}
+2026-09-17T17:03:05.1838299Z Azure Region: westus3
+2026-09-17T17:03:05.1838755Z ##[endgroup]
+2026-09-17T17:03:05.1839505Z ##[group]Operating System
+2026-09-17T17:03:05.1839838Z Ubuntu
+2026-09-17T17:03:05.1840221Z 24.04.5
+2026-09-17T17:03:05.1840521Z LTS
+2026-09-17T17:03:05.1840880Z ##[endgroup]
+2026-09-17T17:03:05.1841195Z ##[group]Runner Image
+2026-09-17T17:03:05.1841530Z Image: ubuntu-24.04
+2026-09-17T17:03:05.1841932Z Version: 20260907.300.1
+2026-09-17T17:03:05.1842645Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-17T17:03:05.1843527Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-17T17:03:05.1844051Z ##[endgroup]
+2026-09-17T17:03:05.1844774Z ##[group]GITHUB_TOKEN Permissions
+2026-09-17T17:03:05.1846125Z Contents: read
+2026-09-17T17:03:05.1846531Z Metadata: read
+2026-09-17T17:03:05.1846853Z ##[endgroup]
+2026-09-17T17:03:05.1848212Z Secret source: Actions
+2026-09-17T17:03:05.1848758Z Cache mode: write
+2026-09-17T17:03:05.1849183Z Prepare workflow directory
+2026-09-17T17:03:05.2049269Z Prepare all required actions
+2026-09-17T17:03:05.2079670Z Getting action download info
+2026-09-17T17:03:05.5182609Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-17T17:03:05.6361270Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-09-17T17:03:06.3292093Z Download action repository 'matlab-actions/setup-matlab@v3' (SHA:f9e43010f1ae678f7cfa0542fe2a4f60f7d1ad8d)
+2026-09-17T17:03:06.9368005Z Download action repository 'matlab-actions/run-command@v3' (SHA:bfa857648f4895aa98a446fe41c85e0788421ed5)
+2026-09-17T17:03:08.2533926Z Complete job name: matlab-room
+2026-09-17T17:03:08.2942858Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:08.2947537Z ##[group]Run actions/checkout@v4
+2026-09-17T17:03:08.2947744Z with:
+2026-09-17T17:03:08.2947923Z   repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:03:08.2949441Z   token: ***
+2026-09-17T17:03:08.2949553Z   ssh-strict: true
+2026-09-17T17:03:08.2949664Z   ssh-user: git
+2026-09-17T17:03:08.2949782Z   persist-credentials: true
+2026-09-17T17:03:08.2949937Z   clean: true
+2026-09-17T17:03:08.2950056Z   sparse-checkout-cone-mode: true
+2026-09-17T17:03:08.2950215Z   fetch-depth: 1
+2026-09-17T17:03:08.2950328Z   fetch-tags: false
+2026-09-17T17:03:08.2950449Z   show-progress: true
+2026-09-17T17:03:08.2950596Z   lfs: false
+2026-09-17T17:03:08.2950701Z   submodules: false
+2026-09-17T17:03:08.2950817Z   set-safe-directory: true
+2026-09-17T17:03:08.2950952Z   allow-unsafe-pr-checkout: false
+2026-09-17T17:03:08.2951154Z ##[endgroup]
+2026-09-17T17:03:08.3566974Z Syncing repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:03:08.3568402Z ##[group]Getting Git version info
+2026-09-17T17:03:08.3568807Z Working directory is '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:03:08.3569378Z [command]/usr/bin/git version
+2026-09-17T17:03:08.5374797Z git version 2.55.0
+2026-09-17T17:03:08.5388207Z ##[endgroup]
+2026-09-17T17:03:08.5399634Z Temporarily overriding HOME='/home/runner/work/_temp/29339a37-db22-4c48-a1a5-a12de5764a18' before making global git config changes
+2026-09-17T17:03:08.5400633Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:03:08.5404184Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:03:08.5449979Z Deleting the contents of '/home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system'
+2026-09-17T17:03:08.5452536Z ##[group]Initializing the repository
+2026-09-17T17:03:08.5455274Z [command]/usr/bin/git init /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:03:08.5678564Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T17:03:08.5679025Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T17:03:08.5679440Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T17:03:08.5679778Z hint: call:
+2026-09-17T17:03:08.5679943Z hint:
+2026-09-17T17:03:08.5680198Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T17:03:08.5680473Z hint:
+2026-09-17T17:03:08.5680714Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T17:03:08.5681119Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T17:03:08.5681425Z hint:
+2026-09-17T17:03:08.5681596Z hint: 	git branch -m <name>
+2026-09-17T17:03:08.5681791Z hint:
+2026-09-17T17:03:08.5682051Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T17:03:08.5682587Z Initialized empty Git repository in /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system/.git/
+2026-09-17T17:03:08.5688653Z [command]/usr/bin/git remote add origin https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:03:08.5727576Z ##[endgroup]
+2026-09-17T17:03:08.5727833Z ##[group]Disabling automatic garbage collection
+2026-09-17T17:03:08.5729984Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-17T17:03:08.5753968Z ##[endgroup]
+2026-09-17T17:03:08.5754352Z ##[group]Setting up auth
+2026-09-17T17:03:08.5758592Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:03:08.5784350Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:03:08.7895453Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:03:08.7924133Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:03:08.8107373Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:03:08.8139073Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:03:08.8322754Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-17T17:03:08.8353906Z ##[endgroup]
+2026-09-17T17:03:08.8354372Z ##[group]Fetching the repository
+2026-09-17T17:03:08.8361101Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +93b9885058050f6a8ae259495d76098657cd34d9:refs/remotes/pull/2/merge
+2026-09-17T17:03:09.7939135Z From https://github.com/konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:03:09.7940131Z  * [new ref]         93b9885058050f6a8ae259495d76098657cd34d9 -> pull/2/merge
+2026-09-17T17:03:09.7946359Z ##[endgroup]
+2026-09-17T17:03:09.7946713Z ##[group]Determining the checkout info
+2026-09-17T17:03:09.7947087Z ##[endgroup]
+2026-09-17T17:03:09.7950050Z [command]/usr/bin/git sparse-checkout disable
+2026-09-17T17:03:09.7993173Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-17T17:03:09.8026984Z ##[group]Checking out the ref
+2026-09-17T17:03:09.8029932Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-09-17T17:03:09.8144469Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-09-17T17:03:09.8144667Z 
+2026-09-17T17:03:09.8144792Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-17T17:03:09.8145211Z changes and commit them, and you can discard any commits you make in this
+2026-09-17T17:03:09.8145462Z state without impacting any branches by switching back to a branch.
+2026-09-17T17:03:09.8145648Z 
+2026-09-17T17:03:09.8145763Z If you want to create a new branch to retain commits you create, you may
+2026-09-17T17:03:09.8146010Z do so (now or later) by using -c with the switch command. Example:
+2026-09-17T17:03:09.8146146Z 
+2026-09-17T17:03:09.8146221Z   git switch -c <new-branch-name>
+2026-09-17T17:03:09.8146360Z 
+2026-09-17T17:03:09.8146443Z Or undo this operation with:
+2026-09-17T17:03:09.8146554Z 
+2026-09-17T17:03:09.8146626Z   git switch -
+2026-09-17T17:03:09.8146725Z 
+2026-09-17T17:03:09.8146841Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-17T17:03:09.8147014Z 
+2026-09-17T17:03:09.8147198Z HEAD is now at 93b9885 Merge 5bd05078df6b171632d88e8e7efde1f01fbf58a4 into 2092371051f78bdec194c8adffd083b626593c51
+2026-09-17T17:03:09.8241903Z ##[endgroup]
+2026-09-17T17:03:09.8279193Z [command]/usr/bin/git log -1 --format=%H
+2026-09-17T17:03:09.8301038Z 93b9885058050f6a8ae259495d76098657cd34d9
+2026-09-17T17:03:09.8490734Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:03:09.8491757Z ##[group]Run actions/download-artifact@v4
+2026-09-17T17:03:09.8491906Z with:
+2026-09-17T17:03:09.8492028Z   name: detection-quality
+2026-09-17T17:03:09.8492163Z   path: results/detection-quality
+2026-09-17T17:03:09.8492306Z   merge-multiple: false
+2026-09-17T17:03:09.8492497Z   repository: konark-icdesign/complex-embedded-iot-based-security-system
+2026-09-17T17:03:09.8492729Z   run-id: 35250249454
+2026-09-17T17:03:09.8492846Z ##[endgroup]
+2026-09-17T17:03:09.9385101Z Downloading single artifact
+2026-09-17T17:03:09.9476678Z (node:2047) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-17T17:03:09.9477273Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-17T17:03:10.1588212Z Preparing to download the following artifacts:
+2026-09-17T17:03:10.1588620Z - detection-quality (ID: 10508942621, Size: 1186289, Expected Digest: sha256:ce45b4eddbd596f23884166e386d51c0cefa05a3e3491b5c7049c3bd94d87d02)
+2026-09-17T17:03:10.3719038Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/49cb0328-e9df-4811-9b5d-81af3d11b2a4/workflow-job-run-73797147-1b6a-540d-ab21-65f506f33f77/artifacts/75f3d67ee37373fddbf1af71d794a8a4d9210c478010752d9d7d10c311115193.zip
+2026-09-17T17:03:10.3720429Z Starting download of artifact to: /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system/results/detection-quality
+2026-09-17T17:03:10.6121026Z (node:2047) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-09-17T17:03:11.0050923Z SHA256 digest of downloaded artifact is ce45b4eddbd596f23884166e386d51c0cefa05a3e3491b5c7049c3bd94d87d02
+2026-09-17T17:03:11.0051427Z Artifact download completed successfully.
+2026-09-17T17:03:11.0051663Z Total of 1 artifact(s) downloaded
+2026-09-17T17:03:11.0054829Z Download artifact has finished successfully
+2026-09-17T17:03:11.0159330Z ##[group]Run matlab-actions/setup-matlab@v3
+2026-09-17T17:03:11.0159497Z with:
+2026-09-17T17:03:11.0159614Z   release: R2026a
+2026-09-17T17:03:11.0159739Z   install-system-dependencies: auto
+2026-09-17T17:03:11.0159884Z   cache: false
+2026-09-17T17:03:11.0159998Z ##[endgroup]
+2026-09-17T17:03:11.0826244Z Auto-detected runner type: GitHub-hosted
+2026-09-17T17:03:11.0826508Z System dependencies will be installed (auto mode)
+2026-09-17T17:03:11.0827855Z ##[group]Preparing system for MATLAB
+2026-09-17T17:03:11.2091185Z [command]/usr/bin/sudo -E bash /home/runner/work/_temp/0b6254a7-0a64-42c5-87bf-32005f64838f r2026a
+2026-09-17T17:03:11.2825491Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-17T17:03:11.3305934Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-09-17T17:03:11.3316768Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-09-17T17:03:11.3405938Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-09-17T17:03:11.3419060Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-09-17T17:03:11.3501812Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-09-17T17:03:11.3826492Z Get:7 https://dl.google.com/linux/chrome-stable/deb stable InRelease [2548 B]
+2026-09-17T17:03:11.4374496Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [427 kB]
+2026-09-17T17:03:11.4491922Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [476 kB]
+2026-09-17T17:03:11.4702193Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1275 kB]
+2026-09-17T17:03:11.4753053Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [294 kB]
+2026-09-17T17:03:11.4776171Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+2026-09-17T17:03:11.4782304Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1689 kB]
+2026-09-17T17:03:11.4840461Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [338 kB]
+2026-09-17T17:03:11.4871459Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+2026-09-17T17:03:11.4880386Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1580 kB]
+2026-09-17T17:03:11.5011595Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [359 kB]
+2026-09-17T17:03:11.5027092Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [45.7 kB]
+2026-09-17T17:03:11.5039265Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [13.1 kB]
+2026-09-17T17:03:11.5478043Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2026-09-17T17:03:11.5488040Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5776 B]
+2026-09-17T17:03:11.5498516Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+2026-09-17T17:03:11.5507604Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1009 kB]
+2026-09-17T17:03:11.5551715Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [214 kB]
+2026-09-17T17:03:11.5569659Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [46.4 kB]
+2026-09-17T17:03:11.5590167Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1208 kB]
+2026-09-17T17:03:11.5637984Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [243 kB]
+2026-09-17T17:03:11.5652051Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+2026-09-17T17:03:11.5666528Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1449 kB]
+2026-09-17T17:03:11.5727038Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [336 kB]
+2026-09-17T17:03:11.5748188Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [11.3 kB]
+2026-09-17T17:03:11.6432618Z Get:32 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1409 B]
+2026-09-17T17:03:16.2432201Z Fetched 12.1 MB in 1s (12.2 MB/s)
+2026-09-17T17:03:16.7219159Z Reading package lists...
+2026-09-17T17:03:16.7405975Z Reading package lists...
+2026-09-17T17:03:16.8906547Z Building dependency tree...
+2026-09-17T17:03:16.8911157Z Reading state information...
+2026-09-17T17:03:16.9039834Z Skipping ca-certificates, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9040331Z Skipping debianutils, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9040668Z debianutils set to manually installed.
+2026-09-17T17:03:16.9041015Z Skipping ibverbs-providers, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9041436Z ibverbs-providers set to manually installed.
+2026-09-17T17:03:16.9041783Z Skipping libasound2t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9042121Z libasound2t64 set to manually installed.
+2026-09-17T17:03:16.9042447Z Skipping libatk1.0-0t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9042782Z libatk1.0-0t64 set to manually installed.
+2026-09-17T17:03:16.9043134Z Skipping libatk-bridge2.0-0t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9043512Z libatk-bridge2.0-0t64 set to manually installed.
+2026-09-17T17:03:16.9043853Z Skipping libatomic1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9044177Z libatomic1 set to manually installed.
+2026-09-17T17:03:16.9044502Z Skipping libatspi2.0-0t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9044994Z libatspi2.0-0t64 set to manually installed.
+2026-09-17T17:03:16.9045309Z Skipping libc6, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9045698Z Skipping libcairo2, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9046017Z libcairo2 set to manually installed.
+2026-09-17T17:03:16.9046400Z Skipping libcairo-gobject2, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9046756Z libcairo-gobject2 set to manually installed.
+2026-09-17T17:03:16.9047072Z Skipping libcap2, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9047391Z libcap2 set to manually installed.
+2026-09-17T17:03:16.9047692Z Skipping libcrypt1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9048009Z libcrypt1 set to manually installed.
+2026-09-17T17:03:16.9048316Z Skipping libcups2t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9048643Z libcups2t64 set to manually installed.
+2026-09-17T17:03:16.9048959Z Skipping libfontconfig1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9049297Z libfontconfig1 set to manually installed.
+2026-09-17T17:03:16.9049626Z Skipping libfribidi0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9049980Z libfribidi0 set to manually installed.
+2026-09-17T17:03:16.9050440Z Skipping libgbm1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9050747Z libgbm1 set to manually installed.
+2026-09-17T17:03:16.9051082Z Skipping libgdk-pixbuf-2.0-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9051448Z libgdk-pixbuf-2.0-0 set to manually installed.
+2026-09-17T17:03:16.9051769Z Skipping libgl1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9052078Z libgl1 set to manually installed.
+2026-09-17T17:03:16.9052387Z Skipping libglib2.0-0t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9052722Z libglib2.0-0t64 set to manually installed.
+2026-09-17T17:03:16.9053029Z Skipping libglx0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9053338Z libglx0 set to manually installed.
+2026-09-17T17:03:16.9054317Z Skipping libgstreamer1.0-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9054671Z libgstreamer1.0-0 set to manually installed.
+2026-09-17T17:03:16.9055129Z Skipping libgtk-3-0t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9055455Z libgtk-3-0t64 set to manually installed.
+2026-09-17T17:03:16.9055800Z Skipping libibverbs1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9056120Z libibverbs1 set to manually installed.
+2026-09-17T17:03:16.9056418Z Skipping libice6, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9056724Z libice6 set to manually installed.
+2026-09-17T17:03:16.9057044Z Skipping libnspr4, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9057362Z libnspr4 set to manually installed.
+2026-09-17T17:03:16.9057658Z Skipping libnss3, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9057962Z libnss3 set to manually installed.
+2026-09-17T17:03:16.9058256Z Skipping libnuma1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9058573Z libnuma1 set to manually installed.
+2026-09-17T17:03:16.9058866Z Skipping libpam0g, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9059182Z libpam0g set to manually installed.
+2026-09-17T17:03:16.9059492Z Skipping libpango-1.0-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9059828Z libpango-1.0-0 set to manually installed.
+2026-09-17T17:03:16.9060173Z Skipping libpangocairo-1.0-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9060538Z libpangocairo-1.0-0 set to manually installed.
+2026-09-17T17:03:16.9060889Z Skipping libpangoft2-1.0-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9061244Z libpangoft2-1.0-0 set to manually installed.
+2026-09-17T17:03:16.9061578Z Skipping libpixman-1-0, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9061914Z libpixman-1-0 set to manually installed.
+2026-09-17T17:03:16.9062248Z Skipping libpython3.12t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9062602Z libpython3.12t64 set to manually installed.
+2026-09-17T17:03:16.9062928Z Skipping libtirpc3t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9063261Z libtirpc3t64 set to manually installed.
+2026-09-17T17:03:16.9063567Z Skipping libudev1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9063882Z libudev1 set to manually installed.
+2026-09-17T17:03:16.9064176Z Skipping libuuid1, it is already installed and upgrade is not set.
+2026-09-17T17:03:16.9064483Z libuuid1 set to manually installed.
+2026-09-17T17:03:16.9064808Z Skipping libxcomposite1, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0188820Z libxcomposite1 set to manually installed.
+2026-09-17T17:03:17.0189361Z Skipping libxcursor1, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0189805Z libxcursor1 set to manually installed.
+2026-09-17T17:03:17.0190279Z Skipping libxdamage1, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0190745Z libxdamage1 set to manually installed.
+2026-09-17T17:03:17.0191184Z Skipping libxfixes3, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0191637Z libxfixes3 set to manually installed.
+2026-09-17T17:03:17.0192068Z Skipping libxfont2, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0192511Z libxfont2 set to manually installed.
+2026-09-17T17:03:17.0192931Z Skipping libxft2, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0193308Z libxft2 set to manually installed.
+2026-09-17T17:03:17.0193700Z Skipping libxinerama1, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0194125Z libxinerama1 set to manually installed.
+2026-09-17T17:03:17.0194508Z Skipping libxrandr2, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0194833Z libxrandr2 set to manually installed.
+2026-09-17T17:03:17.0195357Z Skipping libxt6t64, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0196345Z libxt6t64 set to manually installed.
+2026-09-17T17:03:17.0196697Z Skipping libxtst6, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0197142Z Skipping libxxf86vm1, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0197538Z libxxf86vm1 set to manually installed.
+2026-09-17T17:03:17.0197906Z Skipping locales, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0198352Z Skipping make, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0198747Z Skipping net-tools, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0199088Z Skipping procps, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0199370Z procps set to manually installed.
+2026-09-17T17:03:17.0199622Z Skipping sudo, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0199930Z Skipping unzip, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0200165Z Skipping x11-xkb-utils, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0200383Z x11-xkb-utils set to manually installed.
+2026-09-17T17:03:17.0200570Z Skipping zlib1g, it is already installed and upgrade is not set.
+2026-09-17T17:03:17.0200779Z The following additional packages will be installed:
+2026-09-17T17:03:17.0200978Z   libamd-comgr2 libamdhip64-5 libboost-chrono1.83.0t64
+2026-09-17T17:03:17.0201228Z   libboost-filesystem1.83.0 libboost-serialization1.83.0 libboost-thread1.83.0
+2026-09-17T17:03:17.0201494Z   libc-bin libc-dev-bin libc6-dev libc6-i386 libfdt1 libflac12t64
+2026-09-17T17:03:17.0201729Z   libhsa-runtime64-1 libhsakmt1 libmp3lame0 libmpg123-0t64 libopus0
+2026-09-17T17:03:17.0201984Z   liborc-0.4-0t64 librte-eal24 librte-ethdev24 librte-hash24 librte-kvargs24
+2026-09-17T17:03:17.0202281Z   librte-log24 librte-mbuf24 librte-mempool24 librte-meter24 librte-net24
+2026-09-17T17:03:17.0202650Z   librte-rcu24 librte-ring24 librte-telemetry24 libvorbisenc2
+2026-09-17T17:03:17.0202846Z Suggested packages:
+2026-09-17T17:03:17.0203026Z   glibc-doc libnss-nis libnss-nisplus manpages-dev libvisual-0.4-plugins
+2026-09-17T17:03:17.0203229Z   opus-tools uhd-host
+2026-09-17T17:03:17.0203348Z Recommended packages:
+2026-09-17T17:03:17.0203500Z   manpages-dev libc-devtools gstreamer1.0-plugins-base
+2026-09-17T17:03:17.0774380Z The following NEW packages will be installed:
+2026-09-17T17:03:17.0775049Z   libamd-comgr2 libamdhip64-5 libboost-atomic1.74.0 libboost-chrono1.74.0t64
+2026-09-17T17:03:17.0775630Z   libboost-chrono1.83.0t64 libboost-date-time1.74.0 libboost-filesystem1.74.0
+2026-09-17T17:03:17.0776185Z   libboost-filesystem1.83.0 libboost-log1.74.0 libboost-program-options1.74.0
+2026-09-17T17:03:17.0776731Z   libboost-regex1.74.0 libboost-serialization1.83.0 libboost-system1.74.0
+2026-09-17T17:03:17.0777244Z   libboost-thread1.74.0 libboost-thread1.83.0 libfdt1 libflac12t64
+2026-09-17T17:03:17.0777798Z   libgstreamer-plugins-base1.0-0 libhidapi-libusb0 libhsa-runtime64-1
+2026-09-17T17:03:17.0778318Z   libhsakmt1 libmosquitto1 libmosquittopp1 libmp3lame0 libmpg123-0t64
+2026-09-17T17:03:17.0778845Z   libopengl0 libopus0 liborc-0.4-0t64 libpsm2-2 librdmacm1t64 librte-eal24
+2026-09-17T17:03:17.0779354Z   librte-ethdev24 librte-hash24 librte-kvargs24 librte-log24 librte-mbuf24
+2026-09-17T17:03:17.0779858Z   librte-mempool24 librte-meter24 librte-net24 librte-rcu24 librte-ring24
+2026-09-17T17:03:17.0780371Z   librte-telemetry24 libsndfile1 libucx0 libuhd4.6.0-dpdk libvorbisenc2
+2026-09-17T17:03:17.0780764Z   locales-all
+2026-09-17T17:03:17.0780993Z The following packages will be upgraded:
+2026-09-17T17:03:17.0781740Z   libc-bin libc-dev-bin libc6 libc6-dev libc6-i386 locales
+2026-09-17T17:03:17.0923555Z 6 upgraded, 47 newly installed, 0 to remove and 67 not upgraded.
+2026-09-17T17:03:17.0923888Z Need to get 60.2 MB of archives.
+2026-09-17T17:03:17.0924174Z After this operation, 383 MB of additional disk space will be used.
+2026-09-17T17:03:17.0924406Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-17T17:03:17.1641064Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9 [2126 kB]
+2026-09-17T17:03:17.2230829Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9 [20.4 kB]
+2026-09-17T17:03:17.2689516Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-i386 amd64 2.39-0ubuntu8.9 [2787 kB]
+2026-09-17T17:03:17.3607148Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6 amd64 2.39-0ubuntu8.9 [3264 kB]
+2026-09-17T17:03:17.4552432Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-bin amd64 2.39-0ubuntu8.9 [682 kB]
+2026-09-17T17:03:17.5048302Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 locales all 2.39-0ubuntu8.9 [4232 kB]
+2026-09-17T17:03:17.6137568Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libamd-comgr2 amd64 6.0+git20231212.4510c28+dfsg-3build2 [14.4 MB]
+2026-09-17T17:03:17.8957020Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libhsakmt1 amd64 5.7.0-1build1 [62.9 kB]
+2026-09-17T17:03:17.9418580Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libhsa-runtime64-1 amd64 5.7.1-2build1 [491 kB]
+2026-09-17T17:03:17.9982826Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libamdhip64-5 amd64 5.7.1-3 [9621 kB]
+2026-09-17T17:03:18.2485053Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-atomic1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [226 kB]
+2026-09-17T17:03:18.2954360Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-chrono1.74.0t64 amd64 1.74.0+ds1-23.1ubuntu3 [234 kB]
+2026-09-17T17:03:18.3428784Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-chrono1.83.0t64 amd64 1.83.0-2.1ubuntu3.2 [245 kB]
+2026-09-17T17:03:18.3951063Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-date-time1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [223 kB]
+2026-09-17T17:03:18.4425286Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-filesystem1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [269 kB]
+2026-09-17T17:03:18.4913063Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-filesystem1.83.0 amd64 1.83.0-2.1ubuntu3.2 [284 kB]
+2026-09-17T17:03:18.5380046Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-regex1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [519 kB]
+2026-09-17T17:03:18.5861943Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-thread1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [265 kB]
+2026-09-17T17:03:18.6380335Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-log1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [587 kB]
+2026-09-17T17:03:18.6915642Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-program-options1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [308 kB]
+2026-09-17T17:03:18.7410530Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-serialization1.83.0 amd64 1.83.0-2.1ubuntu3.2 [341 kB]
+2026-09-17T17:03:18.7937671Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libboost-system1.74.0 amd64 1.74.0+ds1-23.1ubuntu3 [223 kB]
+2026-09-17T17:03:18.8466546Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-thread1.83.0 amd64 1.83.0-2.1ubuntu3.2 [276 kB]
+2026-09-17T17:03:18.8985202Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libflac12t64 amd64 1.4.3+ds-2.1ubuntu2 [197 kB]
+2026-09-17T17:03:18.9482911Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 liborc-0.4-0t64 amd64 1:0.4.38-1ubuntu0.1 [207 kB]
+2026-09-17T17:03:18.9982007Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.24.2-1ubuntu0.4 [862 kB]
+2026-09-17T17:03:19.0662667Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libmosquitto1 amd64 2.0.18-1build3 [54.1 kB]
+2026-09-17T17:03:19.1124759Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libmosquittopp1 amd64 2.0.18-1build3 [13.7 kB]
+2026-09-17T17:03:19.1579465Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libmp3lame0 amd64 3.100-6build1 [142 kB]
+2026-09-17T17:03:19.2065729Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpg123-0t64 amd64 1.32.5-1ubuntu1.1 [169 kB]
+2026-09-17T17:03:19.2578205Z Get:32 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libopus0 amd64 1.4-1build1 [208 kB]
+2026-09-17T17:03:19.3078033Z Get:33 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libpsm2-2 amd64 11.2.185-2build1 [194 kB]
+2026-09-17T17:03:19.3672790Z Get:34 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librdmacm1t64 amd64 50.0-2ubuntu0.2 [70.7 kB]
+2026-09-17T17:03:19.4129588Z Get:35 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libfdt1 amd64 1.7.0-2build1 [20.1 kB]
+2026-09-17T17:03:19.4586438Z Get:36 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-log24 amd64 23.11.4-0ubuntu0.24.04.2 [19.4 kB]
+2026-09-17T17:03:19.5040185Z Get:37 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-kvargs24 amd64 23.11.4-0ubuntu0.24.04.2 [6356 B]
+2026-09-17T17:03:19.5504016Z Get:38 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-telemetry24 amd64 23.11.4-0ubuntu0.24.04.2 [15.9 kB]
+2026-09-17T17:03:19.5971186Z Get:39 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-eal24 amd64 23.11.4-0ubuntu0.24.04.2 [151 kB]
+2026-09-17T17:03:19.6440404Z Get:40 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-ring24 amd64 23.11.4-0ubuntu0.24.04.2 [7980 B]
+2026-09-17T17:03:19.6901581Z Get:41 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-mempool24 amd64 23.11.4-0ubuntu0.24.04.2 [19.4 kB]
+2026-09-17T17:03:19.7365895Z Get:42 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-mbuf24 amd64 23.11.4-0ubuntu0.24.04.2 [25.7 kB]
+2026-09-17T17:03:19.7838911Z Get:43 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-meter24 amd64 23.11.4-0ubuntu0.24.04.2 [6476 B]
+2026-09-17T17:03:19.8300333Z Get:44 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-net24 amd64 23.11.4-0ubuntu0.24.04.2 [13.0 kB]
+2026-09-17T17:03:19.8776314Z Get:45 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-ethdev24 amd64 23.11.4-0ubuntu0.24.04.2 [129 kB]
+2026-09-17T17:03:19.9238958Z Get:46 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-rcu24 amd64 23.11.4-0ubuntu0.24.04.2 [11.1 kB]
+2026-09-17T17:03:19.9700289Z Get:47 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librte-hash24 amd64 23.11.4-0ubuntu0.24.04.2 [36.8 kB]
+2026-09-17T17:03:20.0165790Z Get:48 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libvorbisenc2 amd64 1.3.7-1build3 [80.8 kB]
+2026-09-17T17:03:20.1072367Z Get:49 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsndfile1 amd64 1.2.2-1ubuntu5.24.04.1 [209 kB]
+2026-09-17T17:03:20.3403412Z Get:50 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libucx0 amd64 1.16.0+ds-5ubuntu1 [1140 kB]
+2026-09-17T17:03:20.5179450Z Get:51 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 libuhd4.6.0-dpdk amd64 4.6.0.0+ds1-5.1ubuntu0.24.04.1 [3464 kB]
+2026-09-17T17:03:20.6566119Z Get:52 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libhidapi-libusb0 amd64 0.14.0-1build1 [17.6 kB]
+2026-09-17T17:03:20.7017392Z Get:53 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libopengl0 amd64 1.7.0-1build1 [32.8 kB]
+2026-09-17T17:03:20.7479173Z Get:54 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 locales-all amd64 2.39-0ubuntu8.9 [11.0 MB]
+2026-09-17T17:03:21.1275954Z Preconfiguring packages ...
+2026-09-17T17:03:21.2021389Z Fetched 60.2 MB in 4s (15.6 MB/s)
+2026-09-17T17:03:21.2442231Z (Reading database ... 
+2026-09-17T17:03:21.2442511Z (Reading database ... 5%
+2026-09-17T17:03:21.2442657Z (Reading database ... 10%
+2026-09-17T17:03:21.2443004Z (Reading database ... 15%
+2026-09-17T17:03:21.2443236Z (Reading database ... 20%
+2026-09-17T17:03:21.2443362Z (Reading database ... 25%
+2026-09-17T17:03:21.2443489Z (Reading database ... 30%
+2026-09-17T17:03:21.2443611Z (Reading database ... 35%
+2026-09-17T17:03:21.2443735Z (Reading database ... 40%
+2026-09-17T17:03:21.2443856Z (Reading database ... 45%
+2026-09-17T17:03:21.2443976Z (Reading database ... 50%
+2026-09-17T17:03:21.2488022Z (Reading database ... 55%
+2026-09-17T17:03:21.3830897Z (Reading database ... 60%
+2026-09-17T17:03:21.5581202Z (Reading database ... 65%
+2026-09-17T17:03:21.7414520Z (Reading database ... 70%
+2026-09-17T17:03:21.8680370Z (Reading database ... 75%
+2026-09-17T17:03:22.0388324Z (Reading database ... 80%
+2026-09-17T17:03:22.1735323Z (Reading database ... 85%
+2026-09-17T17:03:22.4921039Z (Reading database ... 90%
+2026-09-17T17:03:22.6818215Z (Reading database ... 95%
+2026-09-17T17:03:22.6818458Z (Reading database ... 100%
+2026-09-17T17:03:22.6818706Z (Reading database ... 201818 files and directories currently installed.)
+2026-09-17T17:03:22.6853750Z Preparing to unpack .../libc6-dev_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:22.6970376Z Unpacking libc6-dev:amd64 (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:23.0108108Z Preparing to unpack .../libc-dev-bin_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:23.0140483Z Unpacking libc-dev-bin (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:23.1225879Z Preparing to unpack .../libc6-i386_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:23.1532641Z Unpacking libc6-i386 (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:23.6134479Z Preparing to unpack .../libc6_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:23.7796152Z Unpacking libc6:amd64 (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:24.0591523Z Setting up libc6:amd64 (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:24.3898886Z (Reading database ... 
+2026-09-17T17:03:24.3899243Z (Reading database ... 5%
+2026-09-17T17:03:24.3899477Z (Reading database ... 10%
+2026-09-17T17:03:24.3899768Z (Reading database ... 15%
+2026-09-17T17:03:24.3899987Z (Reading database ... 20%
+2026-09-17T17:03:24.3900206Z (Reading database ... 25%
+2026-09-17T17:03:24.3900423Z (Reading database ... 30%
+2026-09-17T17:03:24.3900636Z (Reading database ... 35%
+2026-09-17T17:03:24.3900855Z (Reading database ... 40%
+2026-09-17T17:03:24.3901069Z (Reading database ... 45%
+2026-09-17T17:03:24.3901287Z (Reading database ... 50%
+2026-09-17T17:03:24.3915679Z (Reading database ... 55%
+2026-09-17T17:03:24.4000168Z (Reading database ... 60%
+2026-09-17T17:03:24.4017437Z (Reading database ... 65%
+2026-09-17T17:03:24.4040947Z (Reading database ... 70%
+2026-09-17T17:03:24.4058353Z (Reading database ... 75%
+2026-09-17T17:03:24.4146431Z (Reading database ... 80%
+2026-09-17T17:03:24.4162399Z (Reading database ... 85%
+2026-09-17T17:03:24.4218146Z (Reading database ... 90%
+2026-09-17T17:03:24.4369659Z (Reading database ... 95%
+2026-09-17T17:03:24.4369881Z (Reading database ... 100%
+2026-09-17T17:03:24.4370248Z (Reading database ... 201818 files and directories currently installed.)
+2026-09-17T17:03:24.4402575Z Preparing to unpack .../libc-bin_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:24.4438738Z Unpacking libc-bin (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:24.4922408Z Setting up libc-bin (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:24.9371205Z (Reading database ... 
+2026-09-17T17:03:24.9371461Z (Reading database ... 5%
+2026-09-17T17:03:24.9371606Z (Reading database ... 10%
+2026-09-17T17:03:24.9371737Z (Reading database ... 15%
+2026-09-17T17:03:24.9371867Z (Reading database ... 20%
+2026-09-17T17:03:24.9371994Z (Reading database ... 25%
+2026-09-17T17:03:24.9372117Z (Reading database ... 30%
+2026-09-17T17:03:24.9372240Z (Reading database ... 35%
+2026-09-17T17:03:24.9372360Z (Reading database ... 40%
+2026-09-17T17:03:24.9372483Z (Reading database ... 45%
+2026-09-17T17:03:24.9372605Z (Reading database ... 50%
+2026-09-17T17:03:24.9379396Z (Reading database ... 55%
+2026-09-17T17:03:24.9443117Z (Reading database ... 60%
+2026-09-17T17:03:24.9460291Z (Reading database ... 65%
+2026-09-17T17:03:24.9481729Z (Reading database ... 70%
+2026-09-17T17:03:24.9499132Z (Reading database ... 75%
+2026-09-17T17:03:24.9590339Z (Reading database ... 80%
+2026-09-17T17:03:24.9607473Z (Reading database ... 85%
+2026-09-17T17:03:24.9668044Z (Reading database ... 90%
+2026-09-17T17:03:24.9821452Z (Reading database ... 95%
+2026-09-17T17:03:24.9821660Z (Reading database ... 100%
+2026-09-17T17:03:24.9821950Z (Reading database ... 201818 files and directories currently installed.)
+2026-09-17T17:03:24.9853598Z Preparing to unpack .../00-locales_2.39-0ubuntu8.9_all.deb ...
+2026-09-17T17:03:25.0680120Z Unpacking locales (2.39-0ubuntu8.9) over (2.39-0ubuntu8.8) ...
+2026-09-17T17:03:25.3239728Z Selecting previously unselected package libamd-comgr2:amd64.
+2026-09-17T17:03:25.3332351Z Preparing to unpack .../01-libamd-comgr2_6.0+git20231212.4510c28+dfsg-3build2_amd64.deb ...
+2026-09-17T17:03:25.3350476Z Unpacking libamd-comgr2:amd64 (6.0+git20231212.4510c28+dfsg-3build2) ...
+2026-09-17T17:03:26.0105500Z Selecting previously unselected package libhsakmt1:amd64.
+2026-09-17T17:03:26.0198031Z Preparing to unpack .../02-libhsakmt1_5.7.0-1build1_amd64.deb ...
+2026-09-17T17:03:26.0210695Z Unpacking libhsakmt1:amd64 (5.7.0-1build1) ...
+2026-09-17T17:03:26.1726078Z Selecting previously unselected package libhsa-runtime64-1.
+2026-09-17T17:03:26.1818618Z Preparing to unpack .../03-libhsa-runtime64-1_5.7.1-2build1_amd64.deb ...
+2026-09-17T17:03:26.1828037Z Unpacking libhsa-runtime64-1 (5.7.1-2build1) ...
+2026-09-17T17:03:26.2190735Z Selecting previously unselected package libamdhip64-5.
+2026-09-17T17:03:26.2312029Z Preparing to unpack .../04-libamdhip64-5_5.7.1-3_amd64.deb ...
+2026-09-17T17:03:26.2320984Z Unpacking libamdhip64-5 (5.7.1-3) ...
+2026-09-17T17:03:26.8528403Z Selecting previously unselected package libboost-atomic1.74.0:amd64.
+2026-09-17T17:03:26.8620455Z Preparing to unpack .../05-libboost-atomic1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:26.8794733Z Unpacking libboost-atomic1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:26.9983314Z Selecting previously unselected package libboost-chrono1.74.0t64:amd64.
+2026-09-17T17:03:27.0075374Z Preparing to unpack .../06-libboost-chrono1.74.0t64_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.0114387Z Unpacking libboost-chrono1.74.0t64:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.0833671Z Selecting previously unselected package libboost-chrono1.83.0t64:amd64.
+2026-09-17T17:03:27.0926461Z Preparing to unpack .../07-libboost-chrono1.83.0t64_1.83.0-2.1ubuntu3.2_amd64.deb ...
+2026-09-17T17:03:27.0934706Z Unpacking libboost-chrono1.83.0t64:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:27.1912232Z Selecting previously unselected package libboost-date-time1.74.0:amd64.
+2026-09-17T17:03:27.2004149Z Preparing to unpack .../08-libboost-date-time1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.2018938Z Unpacking libboost-date-time1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.2520998Z Selecting previously unselected package libboost-filesystem1.74.0:amd64.
+2026-09-17T17:03:27.2613230Z Preparing to unpack .../09-libboost-filesystem1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.2666745Z Unpacking libboost-filesystem1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.5531707Z Selecting previously unselected package libboost-filesystem1.83.0:amd64.
+2026-09-17T17:03:27.5624565Z Preparing to unpack .../10-libboost-filesystem1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+2026-09-17T17:03:27.6333487Z Unpacking libboost-filesystem1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:27.7158528Z Selecting previously unselected package libboost-regex1.74.0:amd64.
+2026-09-17T17:03:27.7251338Z Preparing to unpack .../11-libboost-regex1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.7259055Z Unpacking libboost-regex1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.7665806Z Selecting previously unselected package libboost-thread1.74.0:amd64.
+2026-09-17T17:03:27.7756795Z Preparing to unpack .../12-libboost-thread1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.7769662Z Unpacking libboost-thread1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.8070105Z Selecting previously unselected package libboost-log1.74.0.
+2026-09-17T17:03:27.8159980Z Preparing to unpack .../13-libboost-log1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.8167806Z Unpacking libboost-log1.74.0 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.8498485Z Selecting previously unselected package libboost-program-options1.74.0:amd64.
+2026-09-17T17:03:27.8587313Z Preparing to unpack .../14-libboost-program-options1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:27.8608940Z Unpacking libboost-program-options1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:27.9118753Z Selecting previously unselected package libboost-serialization1.83.0:amd64.
+2026-09-17T17:03:27.9208621Z Preparing to unpack .../15-libboost-serialization1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+2026-09-17T17:03:28.1288430Z Unpacking libboost-serialization1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:28.2010719Z Selecting previously unselected package libboost-system1.74.0:amd64.
+2026-09-17T17:03:28.2102096Z Preparing to unpack .../16-libboost-system1.74.0_1.74.0+ds1-23.1ubuntu3_amd64.deb ...
+2026-09-17T17:03:28.2112107Z Unpacking libboost-system1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:28.2415718Z Selecting previously unselected package libboost-thread1.83.0:amd64.
+2026-09-17T17:03:28.2505230Z Preparing to unpack .../17-libboost-thread1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+2026-09-17T17:03:28.2512800Z Unpacking libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:28.7954529Z Selecting previously unselected package libflac12t64:amd64.
+2026-09-17T17:03:28.8045513Z Preparing to unpack .../18-libflac12t64_1.4.3+ds-2.1ubuntu2_amd64.deb ...
+2026-09-17T17:03:28.8052860Z Unpacking libflac12t64:amd64 (1.4.3+ds-2.1ubuntu2) ...
+2026-09-17T17:03:28.8237395Z Selecting previously unselected package liborc-0.4-0t64:amd64.
+2026-09-17T17:03:28.8325628Z Preparing to unpack .../19-liborc-0.4-0t64_1%3a0.4.38-1ubuntu0.1_amd64.deb ...
+2026-09-17T17:03:28.8333695Z Unpacking liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...
+2026-09-17T17:03:29.0933847Z Selecting previously unselected package libgstreamer-plugins-base1.0-0:amd64.
+2026-09-17T17:03:29.1026116Z Preparing to unpack .../20-libgstreamer-plugins-base1.0-0_1.24.2-1ubuntu0.4_amd64.deb ...
+2026-09-17T17:03:29.1034154Z Unpacking libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.4) ...
+2026-09-17T17:03:29.1617880Z Selecting previously unselected package libmosquitto1:amd64.
+2026-09-17T17:03:29.1707875Z Preparing to unpack .../21-libmosquitto1_2.0.18-1build3_amd64.deb ...
+2026-09-17T17:03:29.1715212Z Unpacking libmosquitto1:amd64 (2.0.18-1build3) ...
+2026-09-17T17:03:29.2278914Z Selecting previously unselected package libmosquittopp1:amd64.
+2026-09-17T17:03:29.2369981Z Preparing to unpack .../22-libmosquittopp1_2.0.18-1build3_amd64.deb ...
+2026-09-17T17:03:29.2376780Z Unpacking libmosquittopp1:amd64 (2.0.18-1build3) ...
+2026-09-17T17:03:29.2542934Z Selecting previously unselected package libmp3lame0:amd64.
+2026-09-17T17:03:29.2632226Z Preparing to unpack .../23-libmp3lame0_3.100-6build1_amd64.deb ...
+2026-09-17T17:03:29.2681983Z Unpacking libmp3lame0:amd64 (3.100-6build1) ...
+2026-09-17T17:03:29.7921695Z Selecting previously unselected package libmpg123-0t64:amd64.
+2026-09-17T17:03:29.8015563Z Preparing to unpack .../24-libmpg123-0t64_1.32.5-1ubuntu1.1_amd64.deb ...
+2026-09-17T17:03:29.8101061Z Unpacking libmpg123-0t64:amd64 (1.32.5-1ubuntu1.1) ...
+2026-09-17T17:03:29.8415265Z Selecting previously unselected package libopus0:amd64.
+2026-09-17T17:03:29.8504963Z Preparing to unpack .../25-libopus0_1.4-1build1_amd64.deb ...
+2026-09-17T17:03:29.8512805Z Unpacking libopus0:amd64 (1.4-1build1) ...
+2026-09-17T17:03:29.8709117Z Selecting previously unselected package libpsm2-2.
+2026-09-17T17:03:29.8798229Z Preparing to unpack .../26-libpsm2-2_11.2.185-2build1_amd64.deb ...
+2026-09-17T17:03:29.8805506Z Unpacking libpsm2-2 (11.2.185-2build1) ...
+2026-09-17T17:03:29.9022023Z Selecting previously unselected package librdmacm1t64:amd64.
+2026-09-17T17:03:29.9110745Z Preparing to unpack .../27-librdmacm1t64_50.0-2ubuntu0.2_amd64.deb ...
+2026-09-17T17:03:29.9295466Z Unpacking librdmacm1t64:amd64 (50.0-2ubuntu0.2) ...
+2026-09-17T17:03:30.3580542Z Selecting previously unselected package libfdt1:amd64.
+2026-09-17T17:03:30.3671891Z Preparing to unpack .../28-libfdt1_1.7.0-2build1_amd64.deb ...
+2026-09-17T17:03:30.3797781Z Unpacking libfdt1:amd64 (1.7.0-2build1) ...
+2026-09-17T17:03:30.3967626Z Selecting previously unselected package librte-log24:amd64.
+2026-09-17T17:03:30.4058300Z Preparing to unpack .../29-librte-log24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.4111420Z Unpacking librte-log24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.4637085Z Selecting previously unselected package librte-kvargs24:amd64.
+2026-09-17T17:03:30.4728883Z Preparing to unpack .../30-librte-kvargs24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.4738703Z Unpacking librte-kvargs24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.5003507Z Selecting previously unselected package librte-telemetry24:amd64.
+2026-09-17T17:03:30.5096141Z Preparing to unpack .../31-librte-telemetry24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.5104263Z Unpacking librte-telemetry24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.5346549Z Selecting previously unselected package librte-eal24:amd64.
+2026-09-17T17:03:30.5437850Z Preparing to unpack .../32-librte-eal24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.5446847Z Unpacking librte-eal24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.5871401Z Selecting previously unselected package librte-ring24:amd64.
+2026-09-17T17:03:30.5962777Z Preparing to unpack .../33-librte-ring24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.5971338Z Unpacking librte-ring24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.6160775Z Selecting previously unselected package librte-mempool24:amd64.
+2026-09-17T17:03:30.6252393Z Preparing to unpack .../34-librte-mempool24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.6260209Z Unpacking librte-mempool24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.6436411Z Selecting previously unselected package librte-mbuf24:amd64.
+2026-09-17T17:03:30.6527038Z Preparing to unpack .../35-librte-mbuf24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.6536380Z Unpacking librte-mbuf24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.7118337Z Selecting previously unselected package librte-meter24:amd64.
+2026-09-17T17:03:30.7212958Z Preparing to unpack .../36-librte-meter24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.7221322Z Unpacking librte-meter24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.7407256Z Selecting previously unselected package librte-net24:amd64.
+2026-09-17T17:03:30.7499800Z Preparing to unpack .../37-librte-net24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.7510594Z Unpacking librte-net24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.7981276Z Selecting previously unselected package librte-ethdev24:amd64.
+2026-09-17T17:03:30.8072583Z Preparing to unpack .../38-librte-ethdev24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.8629017Z Unpacking librte-ethdev24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:30.9217922Z Selecting previously unselected package librte-rcu24:amd64.
+2026-09-17T17:03:30.9316777Z Preparing to unpack .../39-librte-rcu24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:30.9324363Z Unpacking librte-rcu24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:31.3249513Z Selecting previously unselected package librte-hash24:amd64.
+2026-09-17T17:03:31.3341873Z Preparing to unpack .../40-librte-hash24_23.11.4-0ubuntu0.24.04.2_amd64.deb ...
+2026-09-17T17:03:31.3351348Z Unpacking librte-hash24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:31.3527563Z Selecting previously unselected package libvorbisenc2:amd64.
+2026-09-17T17:03:31.3614829Z Preparing to unpack .../41-libvorbisenc2_1.3.7-1build3_amd64.deb ...
+2026-09-17T17:03:31.3623249Z Unpacking libvorbisenc2:amd64 (1.3.7-1build3) ...
+2026-09-17T17:03:31.3803166Z Selecting previously unselected package libsndfile1:amd64.
+2026-09-17T17:03:31.3888098Z Preparing to unpack .../42-libsndfile1_1.2.2-1ubuntu5.24.04.1_amd64.deb ...
+2026-09-17T17:03:31.3895560Z Unpacking libsndfile1:amd64 (1.2.2-1ubuntu5.24.04.1) ...
+2026-09-17T17:03:31.5292145Z Selecting previously unselected package libucx0:amd64.
+2026-09-17T17:03:31.5381688Z Preparing to unpack .../43-libucx0_1.16.0+ds-5ubuntu1_amd64.deb ...
+2026-09-17T17:03:31.5393852Z Unpacking libucx0:amd64 (1.16.0+ds-5ubuntu1) ...
+2026-09-17T17:03:31.5763031Z Selecting previously unselected package libuhd4.6.0-dpdk:amd64.
+2026-09-17T17:03:31.5852416Z Preparing to unpack .../44-libuhd4.6.0-dpdk_4.6.0.0+ds1-5.1ubuntu0.24.04.1_amd64.deb ...
+2026-09-17T17:03:31.6135927Z Unpacking libuhd4.6.0-dpdk:amd64 (4.6.0.0+ds1-5.1ubuntu0.24.04.1) ...
+2026-09-17T17:03:31.7154814Z Selecting previously unselected package libhidapi-libusb0:amd64.
+2026-09-17T17:03:31.7245326Z Preparing to unpack .../45-libhidapi-libusb0_0.14.0-1build1_amd64.deb ...
+2026-09-17T17:03:31.7254634Z Unpacking libhidapi-libusb0:amd64 (0.14.0-1build1) ...
+2026-09-17T17:03:31.7449700Z Selecting previously unselected package libopengl0:amd64.
+2026-09-17T17:03:31.7541195Z Preparing to unpack .../46-libopengl0_1.7.0-1build1_amd64.deb ...
+2026-09-17T17:03:31.7550588Z Unpacking libopengl0:amd64 (1.7.0-1build1) ...
+2026-09-17T17:03:31.7991043Z Selecting previously unselected package locales-all.
+2026-09-17T17:03:31.8082464Z Preparing to unpack .../47-locales-all_2.39-0ubuntu8.9_amd64.deb ...
+2026-09-17T17:03:31.8098445Z Unpacking locales-all (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:34.0518555Z Setting up libboost-system1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.0541210Z Setting up libboost-atomic1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.0559362Z Setting up libmosquitto1:amd64 (2.0.18-1build3) ...
+2026-09-17T17:03:34.0585168Z Setting up libboost-program-options1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.0605722Z Setting up libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:34.0630723Z Setting up libboost-filesystem1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.0654481Z Setting up libmosquittopp1:amd64 (2.0.18-1build3) ...
+2026-09-17T17:03:34.0673136Z Setting up libmpg123-0t64:amd64 (1.32.5-1ubuntu1.1) ...
+2026-09-17T17:03:34.0691869Z Setting up libboost-filesystem1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:34.0715950Z Setting up libfdt1:amd64 (1.7.0-2build1) ...
+2026-09-17T17:03:34.0890233Z Setting up locales (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:34.4371413Z locales-all installed, skipping locales generation
+2026-09-17T17:03:34.7013854Z Setting up locales-all (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:34.7129506Z Setting up libopengl0:amd64 (1.7.0-1build1) ...
+2026-09-17T17:03:34.7156830Z Setting up liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...
+2026-09-17T17:03:34.7184675Z Setting up libboost-serialization1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:34.7205844Z Setting up libboost-chrono1.83.0t64:amd64 (1.83.0-2.1ubuntu3.2) ...
+2026-09-17T17:03:34.7230058Z Setting up libboost-regex1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.7255225Z Setting up libopus0:amd64 (1.4-1build1) ...
+2026-09-17T17:03:34.7276085Z Setting up libhidapi-libusb0:amd64 (0.14.0-1build1) ...
+2026-09-17T17:03:34.7302534Z Setting up libboost-chrono1.74.0t64:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.7326367Z Setting up libpsm2-2 (11.2.185-2build1) ...
+2026-09-17T17:03:34.7353500Z Setting up libc6-i386 (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:34.7442054Z Setting up librdmacm1t64:amd64 (50.0-2ubuntu0.2) ...
+2026-09-17T17:03:34.7822578Z Setting up libamd-comgr2:amd64 (6.0+git20231212.4510c28+dfsg-3build2) ...
+2026-09-17T17:03:34.9307111Z Setting up libflac12t64:amd64 (1.4.3+ds-2.1ubuntu2) ...
+2026-09-17T17:03:34.9339333Z Setting up libboost-date-time1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.9511878Z Setting up libc-dev-bin (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:34.9697072Z Setting up libhsakmt1:amd64 (5.7.0-1build1) ...
+2026-09-17T17:03:34.9723715Z Setting up libmp3lame0:amd64 (3.100-6build1) ...
+2026-09-17T17:03:34.9745686Z Setting up libvorbisenc2:amd64 (1.3.7-1build3) ...
+2026-09-17T17:03:34.9769403Z Setting up libboost-thread1.74.0:amd64 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.9792582Z Setting up libboost-log1.74.0 (1.74.0+ds1-23.1ubuntu3) ...
+2026-09-17T17:03:34.9815790Z Setting up librte-log24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:34.9836367Z Setting up libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.4) ...
+2026-09-17T17:03:34.9856355Z Setting up librte-telemetry24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:34.9879064Z Setting up librte-kvargs24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:34.9967102Z Setting up libhsa-runtime64-1 (5.7.1-2build1) ...
+2026-09-17T17:03:34.9989016Z Setting up libc6-dev:amd64 (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:35.0010197Z Setting up libsndfile1:amd64 (1.2.2-1ubuntu5.24.04.1) ...
+2026-09-17T17:03:35.0029482Z Setting up librte-eal24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0050909Z Setting up libamdhip64-5 (5.7.1-3) ...
+2026-09-17T17:03:35.0074128Z Setting up librte-ring24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0376642Z Setting up librte-meter24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0472404Z Setting up librte-mempool24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0710668Z Setting up libucx0:amd64 (1.16.0+ds-5ubuntu1) ...
+2026-09-17T17:03:35.0808650Z Setting up librte-mbuf24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0890301Z Setting up librte-rcu24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0910844Z Setting up librte-net24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0935983Z Setting up librte-ethdev24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0955554Z Setting up librte-hash24:amd64 (23.11.4-0ubuntu0.24.04.2) ...
+2026-09-17T17:03:35.0978921Z Setting up libuhd4.6.0-dpdk:amd64 (4.6.0.0+ds1-5.1ubuntu0.24.04.1) ...
+2026-09-17T17:03:35.1005674Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-09-17T17:03:35.1027234Z Not building database; man-db/auto-update is not 'true'.
+2026-09-17T17:03:35.1038159Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-09-17T17:03:35.7173387Z 
+2026-09-17T17:03:35.7173932Z Running kernel seems to be up-to-date.
+2026-09-17T17:03:35.7174166Z 
+2026-09-17T17:03:35.7174257Z Restarting services...
+2026-09-17T17:03:35.8560149Z  systemctl restart chrony.service containerd.service cron.service haveged.service hv-kvp-daemon.service multipathd.service packagekit.service php8.3-fpm.service polkit.service rsyslog.service systemd-journald.service systemd-networkd.service systemd-resolved.service systemd-udevd.service udisks2.service
+2026-09-17T17:03:36.0861183Z 
+2026-09-17T17:03:36.0862798Z Service restarts being deferred:
+2026-09-17T17:03:36.0863317Z  systemctl restart ModemManager.service
+2026-09-17T17:03:36.0863742Z  /etc/needrestart/restart.d/dbus.service
+2026-09-17T17:03:36.0864292Z  systemctl restart docker.service
+2026-09-17T17:03:36.0865753Z  systemctl restart getty@tty1.service
+2026-09-17T17:03:36.0867141Z  systemctl restart hosted-compute-agent.service
+2026-09-17T17:03:36.0867569Z  systemctl restart networkd-dispatcher.service
+2026-09-17T17:03:36.0867993Z  systemctl restart serial-getty@ttyS0.service
+2026-09-17T17:03:36.0868455Z  systemctl restart systemd-logind.service
+2026-09-17T17:03:36.0868929Z  systemctl restart walinuxagent.service
+2026-09-17T17:03:36.0869226Z 
+2026-09-17T17:03:36.0869450Z No containers need to be restarted.
+2026-09-17T17:03:36.0870051Z 
+2026-09-17T17:03:36.0870418Z User sessions running outdated binaries:
+2026-09-17T17:03:36.0870810Z  runner @ user manager service: systemd[911]
+2026-09-17T17:03:36.1086777Z 
+2026-09-17T17:03:36.1088361Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-09-17T17:03:36.7132405Z ##[endgroup]
+2026-09-17T17:03:36.7132792Z ##[group]Setting up MATLAB
+2026-09-17T17:03:37.4601838Z [command]/usr/bin/chmod +x /home/runner/work/_temp/mpm
+2026-09-17T17:03:38.7330677Z Installing with the following parameters:
+2026-09-17T17:03:38.7330950Z --destination=/opt/hostedtoolcache/MATLAB/2026.1.999/x64
+2026-09-17T17:03:38.7331132Z --release=R2026a
+2026-09-17T17:03:38.7331253Z --products=MATLAB
+2026-09-17T17:03:38.7331386Z ---------------------------------------------
+2026-09-17T17:03:42.8131581Z The following MathWorks Products are licensed under The MathWorks, Inc. Software License Agreement,
+2026-09-17T17:03:42.8132200Z available in the installation of the MathWorks Product or in the virtual machine image.
+2026-09-17T17:03:42.8132611Z MATLAB
+2026-09-17T17:03:42.8132712Z 
+2026-09-17T17:03:42.8132785Z Starting install
+2026-09-17T17:03:42.8139752Z Products will be installed to: /opt/hostedtoolcache/MATLAB/2026.1.999/x64
+2026-09-17T17:03:43.5065411Z 
+2026-09-17T17:03:43.7345510Z Installing... 2%
+2026-09-17T17:03:44.4223661Z Installing... 4%
+2026-09-17T17:03:44.8478455Z Installing... 6%
+2026-09-17T17:03:45.1000316Z Installing... 8%
+2026-09-17T17:03:45.9035914Z Installing... 10%
+2026-09-17T17:03:45.9720633Z Installing... 14%
+2026-09-17T17:03:46.0406745Z Installing... 16%
+2026-09-17T17:03:46.4432515Z Installing... 24%
+2026-09-17T17:03:46.8003317Z Installing... 26%
+2026-09-17T17:03:48.3612671Z Installing... 28%
+2026-09-17T17:03:49.3296793Z Installing... 30%
+2026-09-17T17:03:49.7373579Z Installing... 32%
+2026-09-17T17:03:50.3155705Z Installing... 34%
+2026-09-17T17:03:51.5558390Z Installing... 36%
+2026-09-17T17:03:52.1541071Z Installing... 38%
+2026-09-17T17:03:52.8090989Z Installing... 40%
+2026-09-17T17:03:53.1653222Z Installing... 42%
+2026-09-17T17:03:53.9086111Z Installing... 44%
+2026-09-17T17:03:54.6507162Z Installing... 46%
+2026-09-17T17:03:56.1839128Z Installing... 48%
+2026-09-17T17:03:57.2472019Z Installing... 50%
+2026-09-17T17:03:58.7611745Z Installing... 52%
+2026-09-17T17:04:00.3138683Z Installing... 54%
+2026-09-17T17:04:00.9006164Z Installing... 56%
+2026-09-17T17:04:02.8937269Z Installing... 59%
+2026-09-17T17:04:03.5393929Z Installing... 61%
+2026-09-17T17:04:03.8831717Z Installing... 63%
+2026-09-17T17:04:05.9839604Z Installing... 65%
+2026-09-17T17:04:07.1707730Z Installing... 67%
+2026-09-17T17:04:08.5162681Z Installing... 69%
+2026-09-17T17:04:10.2507594Z Installing... 71%
+2026-09-17T17:04:11.4712069Z Installing... 73%
+2026-09-17T17:04:12.3914019Z Installing... 83%
+2026-09-17T17:04:12.9774219Z Installing... 85%
+2026-09-17T17:04:14.1191093Z Installing... 87%
+2026-09-17T17:04:16.2340459Z Installing... 89%
+2026-09-17T17:04:18.2529428Z Installing... 91%
+2026-09-17T17:04:19.7466652Z Installing... 93%
+2026-09-17T17:04:22.5667015Z Installing... 95%
+2026-09-17T17:04:25.9210718Z Installing... 97%
+2026-09-17T17:04:26.9561015Z Installing... 99%
+2026-09-17T17:04:26.9561208Z Installing... 100%
+2026-09-17T17:04:27.0019680Z Completing setup...
+2026-09-17T17:04:27.7024059Z Installation complete
+2026-09-17T17:04:29.1190370Z [command]/usr/bin/chmod +x /opt/hostedtoolcache/matlab-batch/v1/x64/matlab-batch
+2026-09-17T17:04:29.1224123Z ##[endgroup]
+2026-09-17T17:04:29.1327435Z ##[group]Run matlab-actions/run-command@v3
+2026-09-17T17:04:29.1327601Z with:
+2026-09-17T17:04:29.1327733Z   command: addpath('matlab'); verify_room_quality
+2026-09-17T17:04:29.1327899Z   generate-summary: true
+2026-09-17T17:04:29.1328024Z ##[endgroup]
+2026-09-17T17:04:29.1796375Z [command]/home/runner/work/_actions/matlab-actions/run-command/v3/dist/bin/glnxa64/run-matlab-command setenv('MW_ORIG_WORKING_FOLDER',cd('/tmp/run_matlab_command-vsggDZ')); command_80dead27_45d9_4489_bf68_32851a96d487 
+2026-09-17T17:04:31.4958432Z [Warning: Unable to locate a personal folder for $documents/MATLAB.] 
+2026-09-17T17:04:32.2481845Z ROOM_MATLAB clips=240 max_score_error=1.7763568394002505e-15 flags=identical
+2026-09-17T17:04:34.8093316Z Post job cleanup.
+2026-09-17T17:04:34.8921680Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T17:04:34.8922323Z Post job cleanup.
+2026-09-17T17:04:34.9495989Z [command]/usr/bin/git version
+2026-09-17T17:04:34.9527728Z git version 2.55.0
+2026-09-17T17:04:34.9552289Z Temporarily overriding HOME='/home/runner/work/_temp/03225c84-d6cc-437d-9ea9-82ac36fc12fc' before making global git config changes
+2026-09-17T17:04:34.9553237Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T17:04:34.9555926Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/complex-embedded-iot-based-security-system/complex-embedded-iot-based-security-system
+2026-09-17T17:04:34.9586259Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T17:04:34.9612644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T17:04:34.9797555Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T17:04:34.9820065Z http.https://github.com/.extraheader
+2026-09-17T17:04:34.9830443Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-17T17:04:34.9857960Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T17:04:35.0044630Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T17:04:35.0076055Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T17:04:35.0374392Z Cleaning up orphan processes
+2026-09-17T17:04:35.0623652Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

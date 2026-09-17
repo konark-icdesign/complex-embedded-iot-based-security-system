@@ -1,0 +1,25 @@
+{
+  "two_incidents": {
+    "passed": true,
+    "received": 2,
+    "failed_checks": []
+  },
+  "outage_restart": {
+    "passed": true,
+    "received": 2,
+    "failed_checks": []
+  },
+  "pc_failure": {
+    "passed": false,
+    "received": 1,
+    "failed_checks": [
+      "expected_confirmed_incidents",
+      "prebuffer_5c541f72-dc8d-447f-b00e-0dbb6f001ec6"
+    ]
+  },
+  "thunder_only": {
+    "passed": true,
+    "received": 0,
+    "failed_checks": []
+  }
+}

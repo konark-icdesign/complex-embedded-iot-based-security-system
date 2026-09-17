@@ -1,0 +1,86 @@
+{
+  "baseline_quiet": {
+    "rain": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "engine": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "footsteps": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "glass_breaking": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "door_wood_knock": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "door_wood_creaks": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "thunderstorm": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "wind": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "clock_tick": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "coughing": {
+      "clips": 3,
+      "flagged": 3
+    }
+  },
+  "room_quiet": {
+    "rain": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "engine": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "footsteps": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "glass_breaking": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "door_wood_knock": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "door_wood_creaks": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "thunderstorm": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "wind": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "clock_tick": {
+      "clips": 3,
+      "flagged": 3
+    },
+    "coughing": {
+      "clips": 3,
+      "flagged": 3
+    }
+  }
+}

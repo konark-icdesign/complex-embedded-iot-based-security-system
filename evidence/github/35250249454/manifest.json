@@ -1,0 +1,91 @@
+{
+  "run_id": 35250249454,
+  "head_sha": "5bd05078df6b171632d88e8e7efde1f01fbf58a4",
+  "conclusion": "success",
+  "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454",
+  "archived_at": "2026-09-17T17:20:34.929272+00:00",
+  "files": [
+    {
+      "path": "run.json",
+      "bytes": 17176,
+      "sha256": "e746419a1a1ee134b0fa4a63d964c33dc61502d04586dc61c39376204137f98d",
+      "source_sha256": "e746419a1a1ee134b0fa4a63d964c33dc61502d04586dc61c39376204137f98d",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454",
+      "redactions": 0
+    },
+    {
+      "path": "jobs.json",
+      "bytes": 7307,
+      "sha256": "7199dc16ae83da48187e86f1469e1d35724d25b08702901fbbcb50c556e22e6a",
+      "source_sha256": "7199dc16ae83da48187e86f1469e1d35724d25b08702901fbbcb50c556e22e6a",
+      "source": "actions/runs/35250249454/jobs",
+      "redactions": 0
+    },
+    {
+      "path": "logs/105300547737.txt",
+      "bytes": 40496,
+      "sha256": "bf8bcac8ef43dc0ed0d06a6a46f91c0d628368ccb10dc2d1cecd89668e25cd25",
+      "source_sha256": "bf8bcac8ef43dc0ed0d06a6a46f91c0d628368ccb10dc2d1cecd89668e25cd25",
+      "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454/job/105300547737",
+      "redactions": 0
+    },
+    {
+      "path": "logs/105300802406.txt",
+      "bytes": 68258,
+      "sha256": "13b413adc4344c96b6bee095dfb67384f61861c987b6dadd5083a275f58544ab",
+      "source_sha256": "13b413adc4344c96b6bee095dfb67384f61861c987b6dadd5083a275f58544ab",
+      "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454/job/105300802406",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10508942621/acceptance.json",
+      "bytes": 148,
+      "sha256": "561be886e377e23a9b0494f9123843a8d29da97a800fbbb4763480638123b387",
+      "source_sha256": "561be886e377e23a9b0494f9123843a8d29da97a800fbbb4763480638123b387",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip#acceptance.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10508942621/development.json",
+      "bytes": 217269,
+      "sha256": "6bf7550e921e2dccbb209a5dcfb28a0dd8c7427f01682e2919afd977c68fc532",
+      "source_sha256": "6bf7550e921e2dccbb209a5dcfb28a0dd8c7427f01682e2919afd977c68fc532",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip#development.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10508942621/heldout.json",
+      "bytes": 167508,
+      "sha256": "6d020d32e61728d43dceb5bd9f22ad0876514cfebc7a0820030ca84f444b1e54",
+      "source_sha256": "6d020d32e61728d43dceb5bd9f22ad0876514cfebc7a0820030ca84f444b1e54",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip#heldout.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10508942621/real_transfer.json",
+      "bytes": 1327,
+      "sha256": "e93b135fcfd14c69ee8bf7b27daa97855ea2a50a1166b731997457cfc197ce24",
+      "source_sha256": "e93b135fcfd14c69ee8bf7b27daa97855ea2a50a1166b731997457cfc197ce24",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip#real_transfer.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10508942621/room_reference.mat",
+      "bytes": 3051136,
+      "sha256": "6a53e96c96786b8650995fb646d8fd7c64ac14c36552b9d640a4a2f042bf2deb",
+      "source_sha256": "6a53e96c96786b8650995fb646d8fd7c64ac14c36552b9d640a4a2f042bf2deb",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10508942621/zip#room_reference.mat",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts.json",
+      "bytes": 1750,
+      "sha256": "0d22e98c73b43c0c33e6babc7dfc2157c4e8c27c213e5c2953107429e37ce12c",
+      "source_sha256": "0d22e98c73b43c0c33e6babc7dfc2157c4e8c27c213e5c2953107429e37ce12c",
+      "source": "actions/runs/35250249454/artifacts",
+      "redactions": 0
+    }
+  ],
+  "unavailable": [],
+  "scope": "Completed-job logs and selected artifact members; omissions in artifacts.json"
+}

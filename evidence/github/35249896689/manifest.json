@@ -1,0 +1,51 @@
+{
+  "run_id": 35249896689,
+  "head_sha": "d1928ce5d032f7685abe8fd5ad1401cb484db8ea",
+  "conclusion": "success",
+  "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35249896689",
+  "archived_at": "2026-09-17T17:20:31.428595+00:00",
+  "files": [
+    {
+      "path": "run.json",
+      "bytes": 17159,
+      "sha256": "8686f85484c023b7970dc4b6ae3cd904be693c331400cae0ca75e6a09558e4f9",
+      "source_sha256": "8686f85484c023b7970dc4b6ae3cd904be693c331400cae0ca75e6a09558e4f9",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35249896689",
+      "redactions": 0
+    },
+    {
+      "path": "jobs.json",
+      "bytes": 3634,
+      "sha256": "53b939839ebf836c6ffc6dda410d757bf9e7f3266098a8db8993e050ba933ff2",
+      "source_sha256": "53b939839ebf836c6ffc6dda410d757bf9e7f3266098a8db8993e050ba933ff2",
+      "source": "actions/runs/35249896689/jobs",
+      "redactions": 0
+    },
+    {
+      "path": "logs/105299384591.txt",
+      "bytes": 31390,
+      "sha256": "0c111ef1e25fb12ce395ea96daa6b0c9fd70472690a9bba6e0399ed8a660b95b",
+      "source_sha256": "0c111ef1e25fb12ce395ea96daa6b0c9fd70472690a9bba6e0399ed8a660b95b",
+      "source": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35249896689/job/105299384591",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts/10509546456/development.json",
+      "bytes": 167895,
+      "sha256": "d50b9ab9afee28cc92f774680e29cff10655624c374d763bea7b6024a5d3d995",
+      "source_sha256": "d50b9ab9afee28cc92f774680e29cff10655624c374d763bea7b6024a5d3d995",
+      "source": "https://api.github.com/repos/konark-icdesign/complex-embedded-iot-based-security-system/actions/artifacts/10509546456/zip#development.json",
+      "redactions": 0
+    },
+    {
+      "path": "artifacts.json",
+      "bytes": 1209,
+      "sha256": "562e5c2eab1a58a835ef9f5c2943bd0f7c2166ae50bc31a2736effb13260a240",
+      "source_sha256": "562e5c2eab1a58a835ef9f5c2943bd0f7c2166ae50bc31a2736effb13260a240",
+      "source": "actions/runs/35249896689/artifacts",
+      "redactions": 0
+    }
+  ],
+  "unavailable": [],
+  "scope": "Completed-job logs and selected artifact members; omissions in artifacts.json"
+}
