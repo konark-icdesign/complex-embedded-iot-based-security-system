@@ -10,11 +10,22 @@ The GitHub history records the September 2026 simulation and upload. Hardware te
 
 ## Current version
 
-The main simulation is Python. Arduino C++ handles sensor filtering and the fallback alarm. MATLAB source is included, but has not been run. The full detection pipeline has not been implemented in C yet.
+The original scenario simulation is Python. The continuous incident runner can use a C core for audio features, anomaly scoring and corroboration; Python handles recording, incident state and HTTP delivery. Arduino C++ handles sensor filtering and the fallback alarm. MATLAB source is included, but has not been run.
 
 An unusual sound puts the system into YELLOW. The fusion code checks detections within a rolling four-second window. Audio alone cannot trigger RED; audio together with PIR and radar can. Camera and sensor inputs run continuously, so earlier movement can contribute too.
 
-The separate audio-triggered review of buffered infrared footage is still missing. The simulated camera uses grayscale images and detects image changes. No infrared camera has been tested.
+The continuous runner opens an investigation, retains five seconds of earlier evidence, collects eight seconds after the trigger and replays the recorded grayscale frames. Each incident gets its own evidence package. This is classical image-change analysis, not infrared interpretation or person recognition. No infrared camera has been tested.
+
+## Continuous incident run
+
+On Linux with Python dependencies, GCC and Make:
+
+```text
+make incident-build
+python run_incidents.py --c-library build/libdetection.so
+```
+
+This runs two incidents, network loss with a host restart, PC failure, and thunder without physical motion. It uses the compiled Arduino core and a loopback HTTP evidence receiver. An existing output directory is preserved; choose a new one with `--output` when rerunning. See [incident workflow](docs/incidents.md) for the interfaces and limitations. GitHub's **Incident pipeline** workflow runs these checks and retains the evidence as artifacts.
 
 ## Recorded results
 
@@ -52,10 +63,10 @@ For C++ host tests, MATLAB instructions and the smaller audio experiment, see [r
 ## Next work
 
 - Review the DSP and fusion code module by module.
-- Implement the C detection core and the intended audio-triggered investigation.
+- Validate the continuous incident pipeline and C/Python numerical agreement in GitHub Actions.
 - Investigate quiet footsteps, warm-object false alarms and responses to activity outside the room.
 - Run MATLAB, then connect and test the actual devices.
-- Add real remote notifications. The current receiver is a local SQLite simulation.
+- Connect a selected remote notification service. The continuous runner currently uses HTTP to a controlled local receiver; the older scenario runner retains its SQLite receiver demonstration.
 
 ## Notes
 

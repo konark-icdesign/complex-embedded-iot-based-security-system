@@ -29,8 +29,8 @@ void processServerMessage(uint32_t now) {
     }
 }
 void updateAlarmOutputs(const security::Output &out, bool armed) {
-    digitalWrite(GREEN_PIN, armed && !out.degraded && !out.range_fault && !out.alarm);
-    digitalWrite(YELLOW_PIN, !armed || out.degraded || out.range_fault);
+    digitalWrite(GREEN_PIN, armed && !out.degraded && !out.range_fault && !out.alarm && !out.investigating);
+    digitalWrite(YELLOW_PIN, !out.alarm && (!armed || out.degraded || out.range_fault || out.investigating));
     digitalWrite(RED_PIN, out.alarm);
     digitalWrite(BUZZER_PIN, out.alarm); // Drive a transistor, not a high-current buzzer directly.
 }

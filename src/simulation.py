@@ -3,7 +3,7 @@ from dataclasses import asdict
 import numpy as np
 from .dsp import features, FS, HOP
 from .vision import Camera, room, render
-from .fusion import Fusion, Sensors
+from .fusion import Fusion, Sensors, Outbox
 from .scenarios import waveform, physical
 
 
@@ -36,6 +36,7 @@ def run(case, model, seed=1000, config=None, capture=False):
     camera = Camera()
     sensors = Sensors()
     fusion = Fusion(config)
+    outbox = Outbox(":memory:")
     base = room(seed)
     trace = []
     ai = 0
@@ -93,6 +94,10 @@ def run(case, model, seed=1000, config=None, capture=False):
             state, score, entered, channels = fusion.update(t, e, health)
         else:
             state, score, entered, channels = -1, 0.0, False, []
+        internet = not (case.internet_outage and 6.0 <= t < 19.0)
+        if entered:
+            outbox.enqueue(fusion.alerts[-1])
+        outbox.pump(online and internet)
         # Deliberately bad reference design: any raw alarm input -> RED.
         naive_red = naive_red or a or last_cam["naive"] > 0.018 or p or m or d < 1.8
         row = dict(
@@ -112,6 +117,9 @@ def run(case, model, seed=1000, config=None, capture=False):
             naive_fraction=last_cam["naive"],
             fallback=int(fallback),
             server=int(online),
+            internet=int(internet),
+            queued_alerts=outbox.pending(),
+            delivered_alerts=outbox.count(),
             physical_p=int(pp),
             physical_m=int(mm),
             physical_u=int(uu),
@@ -137,6 +145,8 @@ def run(case, model, seed=1000, config=None, capture=False):
         naive_red=bool(naive_red),
         alerts=len(fusion.alerts),
         note=case.note,
+        delivered_alerts=outbox.count(),
+        pending_alerts=outbox.pending(),
     )
     if not case.intrusion and red_t:
         out["outcome"] = "FALSE_ALERT"
@@ -157,4 +167,5 @@ def run(case, model, seed=1000, config=None, capture=False):
         if capture
         else {}
     )
+    outbox.close()
     return out, trace, extra

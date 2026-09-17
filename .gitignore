@@ -11,3 +11,8 @@ results/*.wav
 results/*.mp4
 results/*.npz
 output/
+build/
+results/incident-run/
+results/incidents-python/
+results/incidents-c/
+c-parity.json
