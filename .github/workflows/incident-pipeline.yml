@@ -15,6 +15,27 @@ defaults:
     shell: bash
 
 jobs:
+  matlab-reference:
+    needs: integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: matlab-inputs
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: addpath('matlab'); run_full_simulation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: matlab-results
+          path: results/matlab/
+          retention-days: 14
   arduino-target:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -51,6 +72,13 @@ jobs:
         run: |
           python run_simulation.py --seeds 1
           python scripts/verify_embedded_replay.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: matlab-inputs
+          path: |
+            fixtures/matlab_reference.mat
+            results/traces/
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
         with:

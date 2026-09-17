@@ -220,6 +220,7 @@ def save_fixture(demo, models):
         frames=np.stack(demo["frames"], axis=2),
         frame_times=demo["frame_times"],
     )
+    data["expected_scores"], data["expected_flags"] = models["dry"].detect(demo["features"])
     for mode in ["dry", "rain"]:
         data["train_" + mode] = np.column_stack(
             [
