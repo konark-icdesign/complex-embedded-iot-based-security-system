@@ -2,7 +2,7 @@
 
 I started thinking about this project around 2022 and returned to it in September 2026. The idea is to monitor a room using sound, a camera and motion sensors, then check whether their readings point to the same event.
 
-The setup includes an Arduino UNO R4 WiFi, an HP t640, a TP-Link router, PIR, radar and ultrasonic sensors. Hardware integration is in progress. The results recorded here come from simulation and software tests; full testing in the room is still pending.
+The target board is the Made-in-India Arduino UNO Ek R4 WiFi. The planned installation uses the HP thin client and TP-Link router, with a microphone, camera, PIR, radar and ultrasonic sensor. Exact sensor models and electrical interfaces still need to be settled. The results recorded here come from simulation and software tests.
 
 ## How it works
 
@@ -60,7 +60,9 @@ More commands are in [reproduction](docs/reproduction.md) and [the incident work
 
 ## What is left
 
-The next hardware work is to connect the board, PC, camera and microphone, then check acquisition timing and communication. Room recordings are needed to calibrate and evaluate the detector using separate recording sessions.
+The next stage is circuit and firmware verification; physical assembly comes after that. The [electronics plan](docs/electronics_plan.md) records the Ek R4 pin allocation, component choices still open, and simulator limitations. A complete online R4 circuit simulation has not run: neither Wokwi nor Renesas's published online-simulator list includes the RA4M1.
+
+The live USB acquisition service, microphone and camera integration, and acquisition-time checks remain unfinished. Later, room recordings will be needed to calibrate and evaluate the detector using separate recording sessions.
 
 Very quiet footsteps, warm moving objects and activity outside the room still need work. A real notification endpoint also needs to be connected and tested.
 

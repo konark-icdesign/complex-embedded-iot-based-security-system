@@ -1,5 +1,7 @@
 # Wiring plan and bench checks
 
+The selected board is the Made-in-India UNO Ek R4 WiFi. See the [electronics plan](electronics_plan.md) for the development order and online simulator check. Physical assembly follows circuit and firmware verification.
+
 These connections are planned for the UNO R4 WiFi sketch. Check the exact sensor modules and their electrical specifications before wiring. No physical test has been recorded.
 
 The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-S3 radio. The compiled firmware runs on the RA4M1. The simulation does not put camera or audio processing into its 32 KB SRAM. Source: https://docs.arduino.cc/hardware/uno-r4-wifi .
@@ -46,7 +48,7 @@ S,sequence,board_millis,pir_filtered,radar_filtered,range_metres,range_valid,ala
 
 `range_metres` may be `nan`. The PC must honor `range_valid`. Opening a port can reset some boards; after reconnection, flush old bytes, establish a new session and remap the board clock. The supplied serial bench tool only displays these fields and sends heartbeats. It is not the complete continuous acquisition/fusion service.
 
-## Small bench sequence
+## Later physical bench sequence
 
 1. Compile and upload with sensors disconnected; confirm boot, status LEDs, serial messages and warm-up.
 2. Verify each input separately with a meter/known stimulus. Connect one sensor at a time.
