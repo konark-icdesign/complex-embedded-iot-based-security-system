@@ -18,6 +18,8 @@ Each manifest reports its requested and available recording interval, incomplete
 
 The first GitHub integration run passed normal incidents, outage/restart delivery and thunder rejection, but failed the PC-recovery acceptance check. Its second event overlapped the recovery investigation, and its prebuffer check incorrectly required footage from the PC outage. The correction adds explicit coverage metadata and a regression for grouping overlapping activity; the separate-incident session now leaves the required quiet interval. [First run](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35246753919).
 
+The first actual MATLAB R2026a execution found a separate input-type bug: SciPy saved the sample rate as an integer, and the frequency-axis multiplication rejected mixed integer/vector arithmetic. The feature function now converts and validates the sample rate before calculations. An integer-rate regression is included. [MATLAB failure](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35247401298).
+
 ## Commands
 
 ```text

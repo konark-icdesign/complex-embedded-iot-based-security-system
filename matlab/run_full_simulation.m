@@ -8,6 +8,8 @@ outdir=fullfile(root,'results','matlab');if ~exist(outdir,'dir'),mkdir(outdir);e
 diary(fullfile(outdir,'execution_log.txt'));cleanup=onCleanup(@() diary('off'));
 fprintf('MATLAB execution: %s\n',version);
 f=audio_features(fixture.audio,fixture.fs);
+integerRate=audio_features(fixture.audio,int32(fixture.fs));
+assert(max(abs(integerRate.x-f.x),[],'all')<1e-12,'Integer sample-rate regression');
 featureError=max(abs(f.x-fixture.expected_features),[],'all');
 assert(featureError<1e-8,'Feature parity failed');
 assert(max(abs(f.t-fixture.expected_times(:)))<1e-10,'End-time parity failed');
