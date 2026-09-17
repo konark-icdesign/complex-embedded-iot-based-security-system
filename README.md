@@ -27,7 +27,13 @@ python run_incidents.py --c-library build/libdetection.so
 
 This runs two incidents, network loss with a host restart, PC failure, and thunder without physical motion. It uses the compiled Arduino core and a loopback HTTP evidence receiver. An existing output directory is preserved; choose a new one with `--output` when rerunning. See [incident workflow](docs/incidents.md) for the interfaces and limitations. GitHub's **Incident pipeline** workflow runs these checks and retains the evidence as artifacts.
 
-## Recorded results
+## Detection quality update
+
+The continuous runner now uses a room-calibrated audio profile. On a new withheld synthetic set, soft-footstep detections improved from 0/20 to 20/20, with no flags on 60 quiet/gain-change/fan-change trials. Very soft footsteps remained mostly missed (1/20 detected), and the public-recording transfer test remains poor. These are simulation results. See the [comparison, failures and reproduction commands](docs/detection_quality.md).
+
+Use `--audio-profile legacy` to compare the previous continuous-runner calibration. Changing profiles requires a new output directory.
+
+## Earlier recorded results
 
 | Check | Result |
 |---|---|
@@ -64,7 +70,7 @@ For C++ host tests, MATLAB instructions and the smaller audio experiment, see [r
 
 - Review the DSP and fusion code module by module.
 - Review the continuous incident traces and the C/Python numerical comparison.
-- Investigate quiet footsteps, warm-object false alarms and responses to activity outside the room.
+- Validate audio on actual room recordings; investigate very quiet footsteps, warm-object false alarms and responses to activity outside the room.
 - Connect and test the actual devices, including the acquisition and clock adapters.
 - Connect a selected remote notification service. The continuous runner currently uses HTTP to a controlled local receiver; the older scenario runner retains its SQLite receiver demonstration.
 
