@@ -28,7 +28,7 @@ A door contact, constrained radar range or a camera region of interest are optio
 
 ## Implementation work
 
-The next software tasks are a C detection core and the separate audio-triggered review of buffered evidence. Keep the Python version as a numerical reference and compare the outputs on the same inputs.
+The continuous incident runner and C numerical core are implemented on the incident-workflow branch; use the Incident pipeline workflow to check their current validation status. Python remains the numerical reference. See `docs/incidents.md` for the investigation, recording, restart and HTTP delivery interfaces.
 
 Run the MATLAB code and record differences. After that, the hardware work includes live acquisition, device-clock mapping, reconnect handling, sensor placement, independent board power and real notification transport.
 

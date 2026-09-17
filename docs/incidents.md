@@ -14,6 +14,10 @@ Evidence is retained on disk. The rolling prebuffer is bounded, and each inciden
 
 An acquisition gap that exceeds an open incident's deadline closes it as interrupted. A latched board fallback reported after reconnection can open a separate incident. Its report timestamp is known; the original offline onset time is not recovered by the current board interface.
 
+Each manifest reports its requested and available recording interval, incomplete prebuffer and gaps. Footage cannot be recovered from a period when the PC was not acquiring it. Activity arriving during an open investigation is grouped with it. The two-incident acceptance sessions therefore leave a quiet interval after the recovery recording finishes.
+
+The first GitHub integration run passed normal incidents, outage/restart delivery and thunder rejection, but failed the PC-recovery acceptance check. Its second event overlapped the recovery investigation, and its prebuffer check incorrectly required footage from the PC outage. The correction adds explicit coverage metadata and a regression for grouping overlapping activity; the separate-incident session now leaves the required quiet interval. [First run](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35246753919).
+
 ## Commands
 
 ```text

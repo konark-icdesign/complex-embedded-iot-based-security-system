@@ -2,7 +2,7 @@ name: Incident pipeline
 
 on:
   push:
-    branches: [main, incident-workflow]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -10,7 +10,22 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
+  arduino-target:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/bootstrap_arduino.py --core-version 1.6.0
+      - name: Compile UNO R4 WiFi target
+        run: ../arduino-tools/arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/night_security
   integration:
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -43,6 +58,8 @@ jobs:
           path: |
             results/incidents-python/
             results/incidents-c/
+            !results/incidents-*/**/*.sqlite*
+            !results/incidents-*/**/receiver/
             results/summary.json
             results/embedded_replay.json
             c-parity.json

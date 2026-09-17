@@ -236,7 +236,13 @@ class IncidentJournal:
         np.savez_compressed(temporary, **arrays)
         temporary.replace(raw)
         digest = hashlib.sha256(raw.read_bytes()).hexdigest()
-        manifest = dict(record, media_sha256=digest, sample_rate=16000,
+        coverage = {"requested_start": record["trigger"] - self.PRE,
+                    "available_start": rows[0]["t"] if rows else None,
+                    "available_end": rows[-1]["t"] if rows else None,
+                    "prebuffer_incomplete": not rows or rows[0]["t"] > record["trigger"] - self.PRE + .11,
+                    "gaps": [[a["t"], b["t"]] for a, b in zip(rows, rows[1:])
+                             if b["t"] - a["t"] > .11]}
+        manifest = dict(record, media_sha256=digest, sample_rate=16000, coverage=coverage,
                         samples=[{k: v for k, v in row.items() if k not in ("audio", "frame")}
                                  for row in rows],
                         media_keys=list(arrays), camera_type="grayscale; IR interpretation unvalidated")

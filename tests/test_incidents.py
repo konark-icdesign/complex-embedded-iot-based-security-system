@@ -90,6 +90,26 @@ class Incidents(unittest.TestCase):
             with self.assertRaises(ValueError):
                 RoomStream(tmp, Baseline(np.ones(9), np.ones(9), 3.5))
 
+    def test_missing_pc_footage_is_reported_and_overlapping_activity_grouped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            j = IncidentJournal(tmp)
+            for seq in range(1, 80):
+                j.step(self.packet(seq))
+            # The PC returns after a long gap with a latched fallback report.
+            first = self.packet(210)
+            first["fallback"] = True
+            j.step(first)
+            for seq in range(211, 301):
+                packet = self.packet(seq, {"A": True, "P": True, "M": True} if seq == 280 else {})
+                packet["fallback"] = True
+                j.step(packet)
+            red = [r for r in j.records() if r["state"] == "RED"]
+            self.assertEqual(len(red), 1)  # Overlap belongs to the open investigation.
+            manifest = json.loads((Path(tmp)/"evidence"/red[0]["id"]/"manifest.json").read_text())
+            self.assertTrue(manifest["coverage"]["prebuffer_incomplete"])
+            self.assertEqual(manifest["coverage"]["available_start"], 21)
+            j.close()
+
 
 if __name__ == "__main__":
     unittest.main()

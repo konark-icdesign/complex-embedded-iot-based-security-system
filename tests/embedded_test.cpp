@@ -8,6 +8,24 @@ int main() {
     using security::Core;
     {
         Core c;
+        assert(c.command("YELLOW", 0));
+        c.heartbeat(0);
+        assert(c.tick(0, false, false, 3.F).investigating);
+        assert(c.command("GREEN", 100));
+        assert(!c.tick(100, false, false, 3.F).investigating);
+        c.command("ALARM", 200);
+        c.command("GREEN", 300);
+        auto out = c.tick(300, false, false, 3.F);
+        assert(out.alarm && !out.fallback_alarm);
+        c.reset();
+        for (uint32_t t = 400; t < 6000; t += 100) {
+            out = c.tick(t, true, true, 1.2F);
+        }
+        assert(out.alarm && out.fallback_alarm);
+        puts("PASS central state commands preserve alarm latch and fallback provenance");
+    }
+    {
+        Core c;
         security::Output o;
         for (uint32_t t = 0; t < 2000; t += 100) {
             c.heartbeat(t);

@@ -28,7 +28,7 @@ def run_session(directory, board_binary, backend=None, network_loss=False,
     model = quiet_baseline()
     stream = RoomStream(directory / "host", model, backend)
     wave = background(42, 1000, traffic=False)
-    for start in (8, 28):
+    for start in (8, 32):
         wave = add_event(wave, "thunder" if environment else "steps", start, 3, seed=45)
     board = subprocess.Popen([str(Path(board_binary).resolve())], stdin=subprocess.PIPE,
                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -43,11 +43,11 @@ def run_session(directory, board_binary, backend=None, network_loss=False,
                 t = round(seq / 10, 6)
                 pc = not (pc_loss and 9 <= t < 21)
                 internet = not (network_loss and 8 <= t < 24)
-                active = not environment and (9 <= t < 12 or 29 <= t < 32)
+                active = not environment and (9 <= t < 12 or 33 <= t < 36)
                 command = "ALARM" if state == "RED" else state
                 # Physical reset is a simulated button press between the incidents.
                 board.stdin.write(f"{seq*100} {int(active)} {int(active)} "
-                                  f"{1.2 if active else 3.0} 1 {int(pc)} {int(seq == 240)} {command}\n")
+                                  f"{1.2 if active else 3.0} 1 {int(pc)} {int(seq == 300)} {command}\n")
                 board.stdin.flush()
                 values = board.stdout.readline().split()
                 if len(values) != 8:
@@ -57,7 +57,7 @@ def run_session(directory, board_binary, backend=None, network_loss=False,
                     stream.close()
                     stream = RoomStream(directory / "host", model, backend)
                 if pc:
-                    start = 10 if t < 20 else 30
+                    start = 10 if t < 20 else 34
                     frame = (render(base, t, rng, "normal" if environment else "person",
                                     start=start, end=start+3) if seq % 2 else None)
                     result = stream.push(seq, t, wave[(seq-1)*1600:seq*1600], frame,
@@ -95,7 +95,9 @@ def run_session(directory, board_binary, backend=None, network_loss=False,
         for record in red:
             manifest = json.loads((directory / "host" / "evidence" / record["id"] / "manifest.json").read_text())
             checks["media_" + record["id"]] = bool(manifest["media_keys"])
-            checks["prebuffer_" + record["id"]] = manifest["samples"][0]["t"] < record["trigger"]
+            checks["prebuffer_or_reported_outage_" + record["id"]] = (
+                manifest["samples"][0]["t"] < record["trigger"]
+                or (pc_loss and record["fallback"] and manifest["coverage"]["prebuffer_incomplete"]))
         result = {"checks": checks, "passed": all(checks.values()), "incidents": records,
                   "received": len(received), "attempts": attempts, "max_pending": max_pending,
                   "model": {"center": model.center.tolist(), "scale": model.scale.tolist(),
