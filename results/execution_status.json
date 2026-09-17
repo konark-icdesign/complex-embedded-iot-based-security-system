@@ -1,0 +1,14 @@
+{
+  "python_regressions": {
+    "passed": 13
+  },
+  "native_embedded": "PASS strict warnings + ASan + UBSan; LSan unsupported",
+  "arduino_build": "PASS in prior run; unchanged firmware, not recompiled in the current rerun; vendor warnings retained",
+  "arduino_flash_bytes": 53724,
+  "arduino_global_ram_bytes": 6904,
+  "matlab": "NOT RUN",
+  "physical_hardware": "NOT TESTED",
+  "real_remote_notification": "NOT IMPLEMENTED; local receiver simulated",
+  "full_live_service": "NOT IMPLEMENTED; simulation and serial bench only",
+  "quiet_room_audio_regressions": 4
+}

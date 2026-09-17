@@ -18,3 +18,5 @@ Accessed 16 September 2026. Public pages can change; the measurements in `result
 | [Python downloads](https://www.python.org/downloads/) | Official Python installer |
 
 DSP equations in this project are stated explicitly in `dsp_maths.md`; the algorithm is a small original implementation for this experiment. It is not a reproduction of a published security classifier, and no published detection rate is borrowed for it.
+
+Online notebook support: [Google Colab FAQ](https://research.google.com/colaboratory/faq.html). Colab supports notebooks loaded from GitHub; hosted resources and session duration are limited. The provided notebook has not been executed on Colab.

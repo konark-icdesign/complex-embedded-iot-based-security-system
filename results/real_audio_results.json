@@ -1,0 +1,313 @@
+{
+  "status": "EXECUTED",
+  "training_clips": 6,
+  "calibration_clips": 4,
+  "test_clips": 30,
+  "thresholds": {
+    "rain": 5.344782661167564,
+    "engine": 5.455051342777618
+  },
+  "note": "Fold-5 clips; no tuning on them. Engine is a background proxy, not a measured PC fan.",
+  "rows": [
+    {
+      "filename": "5-181766-A-10.wav",
+      "category": "rain",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-188655-A-10.wav",
+      "category": "rain",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-193339-A-10.wav",
+      "category": "rain",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-209992-A-44.wav",
+      "category": "engine",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-209992-B-44.wav",
+      "category": "engine",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-232272-A-44.wav",
+      "category": "engine",
+      "fold": 5,
+      "declared_normal_proxy": true,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-234263-A-25.wav",
+      "category": "footsteps",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-234855-A-25.wav",
+      "category": "footsteps",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-243025-A-25.wav",
+      "category": "footsteps",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-221528-A-39.wav",
+      "category": "glass_breaking",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.07792207792207792,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.512
+    },
+    {
+      "filename": "5-221529-A-39.wav",
+      "category": "glass_breaking",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.025974025974025976,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.512
+    },
+    {
+      "filename": "5-233605-A-39.wav",
+      "category": "glass_breaking",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.06493506493506493,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.896
+    },
+    {
+      "filename": "5-218980-A-30.wav",
+      "category": "door_wood_knock",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.09090909090909091,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.256
+    },
+    {
+      "filename": "5-218981-A-30.wav",
+      "category": "door_wood_knock",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-235644-A-30.wav",
+      "category": "door_wood_knock",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-161270-A-33.wav",
+      "category": "door_wood_creaks",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-161270-B-33.wav",
+      "category": "door_wood_creaks",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-173568-A-33.wav",
+      "category": "door_wood_creaks",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-156999-A-19.wav",
+      "category": "thunderstorm",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-156999-B-19.wav",
+      "category": "thunderstorm",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-156999-C-19.wav",
+      "category": "thunderstorm",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-117773-A-16.wav",
+      "category": "wind",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-157204-A-16.wav",
+      "category": "wind",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-157204-B-16.wav",
+      "category": "wind",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": false,
+      "anomalous_window_fraction": 0.0,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": null
+    },
+    {
+      "filename": "5-201194-A-38.wav",
+      "category": "clock_tick",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.1038961038961039,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.448
+    },
+    {
+      "filename": "5-208624-A-38.wav",
+      "category": "clock_tick",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.03896103896103896,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.256
+    },
+    {
+      "filename": "5-209698-A-38.wav",
+      "category": "clock_tick",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.2597402597402597,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 0.768
+    },
+    {
+      "filename": "5-178997-A-24.wav",
+      "category": "coughing",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.05194805194805195,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 1.344
+    },
+    {
+      "filename": "5-184871-A-24.wav",
+      "category": "coughing",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.05194805194805195,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 1.088
+    },
+    {
+      "filename": "5-204604-A-24.wav",
+      "category": "coughing",
+      "fold": 5,
+      "declared_normal_proxy": false,
+      "anomaly": true,
+      "anomalous_window_fraction": 0.05194805194805195,
+      "synthetic_model_anomaly": true,
+      "first_anomaly": 1.28
+    }
+  ]
+}

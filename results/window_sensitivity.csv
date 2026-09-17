@@ -1,0 +1,13 @@
+span,scenario,red,latency
+0.5,36_delayed_camera,True,3.2
+0.5,38_warm_moving_object,True,0.2
+0.5,42_outside_door,True,0.3
+2.0,36_delayed_camera,True,3.2
+2.0,38_warm_moving_object,True,0.2
+2.0,42_outside_door,True,0.3
+4.0,36_delayed_camera,True,3.2
+4.0,38_warm_moving_object,True,0.2
+4.0,42_outside_door,True,0.3
+8.0,36_delayed_camera,True,3.2
+8.0,38_warm_moving_object,True,0.2
+8.0,42_outside_door,True,0.3

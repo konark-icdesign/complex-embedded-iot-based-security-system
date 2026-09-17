@@ -1,0 +1,61 @@
+WARNING: library WDT claims to run on renesas architecture(s) and may be incompatible with your current board which runs on renesas_uno architecture(s).
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/libraries/WDT/src/WDT.cpp: In constructor 'WDTimer::WDTimer()':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/libraries/WDT/src/WDT.cpp:25:14: warning: missing initializer for member 'st_wdt_instance_ctrl::p_context' [-Wmissing-field-initializers]
+ , _timeout {0}
+              ^
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/libraries/WDT/src/WDT.cpp:25:14: warning: missing initializer for member 'st_wdt_instance_ctrl::p_callback' [-Wmissing-field-initializers]
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/libraries/WDT/src/WDT.cpp:25:14: warning: missing initializer for member 'st_wdt_instance_ctrl::p_callback_memory' [-Wmissing-field-initializers]
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp: In function 'int pin2IrqChannel(int)':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp:78:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if(pin < 0 || pin >= PINS_COUNT) {
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c: In function 'cm_backtrace_init':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:144:13: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     fw_name = firmware_name;
+             ^
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:145:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     hw_ver = hardware_ver;
+            ^
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:146:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     sw_ver = software_ver;
+            ^
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'bool IRQManager::addPeripheral(Peripheral_t, void*)':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:385:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:448:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:609:26: warning: unused variable 'scfg' [-Wunused-variable]
+         i2c_slave_cfg_t *scfg = (i2c_slave_cfg_t *)p_cfg->scfg;
+                          ^~~~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:701:27: warning: unused variable 'mcfg' [-Wunused-variable]
+         i2c_master_cfg_t *mcfg = (i2c_master_cfg_t *)p_cfg->mcfg;
+                           ^~~~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_error_link_event(int, int)':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:49: warning: unused parameter 'li' [-Wunused-parameter]
+ void IRQManager::set_canfd_error_link_event(int li, int ch)
+                                                 ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:57: warning: unused parameter 'ch' [-Wunused-parameter]
+ void IRQManager::set_canfd_error_link_event(int li, int ch)
+                                                         ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_rx_link_event(int, int)':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:46: warning: unused parameter 'li' [-Wunused-parameter]
+ void IRQManager::set_canfd_rx_link_event(int li, int ch)
+                                              ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:54: warning: unused parameter 'ch' [-Wunused-parameter]
+ void IRQManager::set_canfd_rx_link_event(int li, int ch)
+                                                      ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_tx_link_event(int, int)':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:46: warning: unused parameter 'li' [-Wunused-parameter]
+ void IRQManager::set_canfd_tx_link_event(int li, int ch)
+                                              ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:54: warning: unused parameter 'ch' [-Wunused-parameter]
+ void IRQManager::set_canfd_tx_link_event(int li, int ch)
+                                                      ^~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c: In function 'wait_pipe_fifo_empty':
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:289:3: warning: 'return' with a value, in function returning void
+   TU_ASSERT(num);
+   ^~~~~~~~~
+/root/.arduino15/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:288:13: note: declared here
+ static void wait_pipe_fifo_empty(rusb2_reg_t* rusb, uint8_t num) {
+             ^~~~~~~~~~~~~~~~~~~~
+Sketch uses 53724 bytes (20%) of program storage space. Maximum is 262144 bytes.
+Global variables use 6904 bytes (21%) of dynamic memory, leaving 25864 bytes for local variables. Maximum is 32768 bytes.

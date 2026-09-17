@@ -1,0 +1,12 @@
+g++ -std=c++17 -Wall -Wextra -Werror -Wpedantic tests/embedded_test.cpp -o embedded-tests
+./embedded-tests
+PASS isolated echo rejected
+PASS sustained range accepted without single-sensor alarm
+PASS invalid range invalidates old evidence
+PASS offline fallback latches until explicit reset
+PASS healthy host controls central alarm
+PASS millis wraparound
+PASS bounded command parser rejects overflow tails
+PASS sample gap resets persistence
+PASS warm-up inhibits alarm
+ALL EMBEDDED HOST TESTS PASSED

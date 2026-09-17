@@ -1,4 +1,4 @@
-import unittest,tempfile
+import unittest,tempfile,json
 from pathlib import Path
 import numpy as np
 from src.dsp import features,background,train_synthetic,Baseline
@@ -6,6 +6,15 @@ from src.fusion import Fusion,Sensors,Outbox,PacketGate
 from src.vision import room,compensate,Camera
 
 class Regression(unittest.TestCase):
+    def test_missing_download_is_reported_as_not_run(self):
+        from src.real_audio import evaluate
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'fixtures'/'esc50';p.mkdir(parents=True)
+            (p/'manifest.json').write_text(json.dumps([{'filename':'missing.wav','status':'downloaded'}]))
+            result=evaluate(Path(d),{})
+            self.assertEqual(result['status'],'NOT_RUN_INCOMPLETE_DATA')
+            self.assertEqual(result['missing_files'],['missing.wav'])
+
     def test_invalid_audio_frame_cannot_inherit_anomaly(self):
         model=Baseline(np.zeros(9),np.ones(9),3.5)
         f={'x':np.full((3,9),10.),'valid':np.array([True,True,False])}

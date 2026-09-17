@@ -20,6 +20,8 @@ def evaluate(root,synthetic_models):
     directory=Path(root)/'fixtures'/'esc50'
     if not (directory/'manifest.json').exists():return dict(status='NOT_RUN_NO_DATA')
     manifest=json.loads((directory/'manifest.json').read_text())
+    missing=[r['filename'] for r in manifest if r.get('status')!='downloaded' or not (directory/'audio'/r['filename']).is_file()]
+    if missing:return dict(status='NOT_RUN_INCOMPLETE_DATA',missing_files=missing,action='Run python scripts/fetch_real_audio.py, then rerun the simulation.')
     data={r['filename']:features(load_audio(directory/'audio'/r['filename']))
           for r in manifest if r['status']=='downloaded'}
     models={}
@@ -36,10 +38,10 @@ def evaluate(root,synthetic_models):
         # normal coverage but can also hide footsteps; that tradeoff is measured.
         ratios=np.stack([m.score(f['x'])/m.threshold for m in models.values()])
         raw=(ratios.min(axis=0)>1)&f['valid']
-        flags=np.convolve(raw.astype(int),np.ones(3,dtype=int),'full')[:len(raw)]>=2
+        flags=(np.convolve(raw.astype(int),np.ones(3,dtype=int),'full')[:len(raw)]>=2)&f['valid']
         syn=np.stack([m.score(f['x'])/m.threshold for m in synthetic_models.values()])
         synraw=(syn.min(axis=0)>1)&f['valid']
-        synflags=np.convolve(synraw.astype(int),np.ones(3,dtype=int),'full')[:len(raw)]>=2
+        synflags=(np.convolve(synraw.astype(int),np.ones(3,dtype=int),'full')[:len(raw)]>=2)&f['valid']
         normal=r['category'] in ('rain','engine')
         results.append(dict(filename=r['filename'],category=r['category'],fold=5,
                             declared_normal_proxy=normal,anomaly=bool(flags.any()),

@@ -1,0 +1,21 @@
+test_durable_retry_lost_ack (test_regressions.Regression.test_durable_retry_lost_ack) ... ok
+test_gain_shape_invariance (test_regressions.Regression.test_gain_shape_invariance) ... ok
+test_global_light_and_local_change (test_regressions.Regression.test_global_light_and_local_change) ... ok
+test_green_visits_yellow_before_red (test_regressions.Regression.test_green_visits_yellow_before_red) ... FAIL
+test_median_glitch_and_timeout (test_regressions.Regression.test_median_glitch_and_timeout) ... ok
+test_packet_freshness (test_regressions.Regression.test_packet_freshness) ... ok
+test_saturated_camera_not_motion (test_regressions.Regression.test_saturated_camera_not_motion) ... ok
+test_stale_evidence_does_not_accumulate (test_regressions.Regression.test_stale_evidence_does_not_accumulate) ... ok
+
+======================================================================
+FAIL: test_green_visits_yellow_before_red (test_regressions.Regression.test_green_visits_yellow_before_red)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/7f0c382dc2cb/night-security/tests/test_regressions.py", line 11, in test_green_visits_yellow_before_red
+    self.assertEqual(f.update(1.,e)[0],1)
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.013s
+
+FAILED (failures=1)

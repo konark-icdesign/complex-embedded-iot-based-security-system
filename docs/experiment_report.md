@@ -16,7 +16,7 @@ Proceed as a college ECE experiment. The simulation and embedded logic run, but 
 | Latency among detections | Median 0.25 s; maximum 3.2 s in idealized simulation |
 | Synthetic non-intrusion duration | 2.2 hours, fragmented 24-second trials |
 | Real sound recordings | 40 clips: 6 train, 4 calibration, 30 evaluation from 25 original source IDs |
-| Native regression suite | 12 Python regressions passed; original failures retained |
+| Native regression suite | 13 Python regressions passed; original failures retained |
 | Embedded host checks | Strict GCC warnings, ASan and UBSan passed; leak checking unavailable |
 | Embedded cross-language replay | 12480 ticks, 0 mismatches |
 | Arduino target | UNO R4 WiFi, official Renesas core 1.6.0; compile succeeded |

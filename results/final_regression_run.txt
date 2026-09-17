@@ -1,0 +1,16 @@
+test_acquisition_timestamps_allow_bounded_delay (test_regressions.Regression.test_acquisition_timestamps_allow_bounded_delay) ... ok
+test_durable_retry_lost_ack (test_regressions.Regression.test_durable_retry_lost_ack) ... ok
+test_gain_shape_invariance (test_regressions.Regression.test_gain_shape_invariance) ... ok
+test_global_light_and_local_change (test_regressions.Regression.test_global_light_and_local_change) ... ok
+test_green_visits_yellow_before_red (test_regressions.Regression.test_green_visits_yellow_before_red) ... ok
+test_median_glitch_and_timeout (test_regressions.Regression.test_median_glitch_and_timeout) ... ok
+test_old_packet_cannot_refresh_physical_evidence (test_regressions.Regression.test_old_packet_cannot_refresh_physical_evidence) ... ok
+test_packet_freshness (test_regressions.Regression.test_packet_freshness) ... ok
+test_persistent_camera_fault_does_not_merge_separate_incidents (test_regressions.Regression.test_persistent_camera_fault_does_not_merge_separate_incidents) ... ok
+test_saturated_camera_not_motion (test_regressions.Regression.test_saturated_camera_not_motion) ... ok
+test_stale_evidence_does_not_accumulate (test_regressions.Regression.test_stale_evidence_does_not_accumulate) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.012s
+
+OK

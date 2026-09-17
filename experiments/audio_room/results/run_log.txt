@@ -1,0 +1,67 @@
+{
+  "scope": "synthetic quiet-room audio only",
+  "sample_rate": 16000,
+  "threshold": 3.5,
+  "training_seeds": [
+    11,
+    12,
+    13,
+    14
+  ],
+  "calibration_seeds": [
+    101,
+    102
+  ],
+  "test_seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009
+  ],
+  "results": {
+    "pc_background": {
+      "trials": 10,
+      "flagged": 0,
+      "pre_event_flags": 0
+    },
+    "lower_constant_gain": {
+      "trials": 10,
+      "flagged": 0,
+      "pre_event_flags": 0
+    },
+    "higher_constant_gain": {
+      "trials": 10,
+      "flagged": 0,
+      "pre_event_flags": 0
+    },
+    "thunder_like": {
+      "trials": 10,
+      "flagged": 10,
+      "pre_event_flags": 0
+    },
+    "footstep_like": {
+      "trials": 10,
+      "flagged": 10,
+      "pre_event_flags": 0
+    },
+    "soft_footstep_like": {
+      "trials": 10,
+      "flagged": 0,
+      "pre_event_flags": 0
+    },
+    "impact_like": {
+      "trials": 10,
+      "flagged": 10,
+      "pre_event_flags": 0
+    }
+  },
+  "real_room_recordings": false,
+  "matlab_executed": false,
+  "note": "Noise seeds repeat event templates. This is not real-world detection accuracy."
+}

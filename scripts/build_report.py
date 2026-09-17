@@ -41,7 +41,7 @@ Proceed as a college ECE experiment. The simulation and embedded logic run, but 
 | Latency among detections | Median {m['median_latency']} s; maximum {m['max_latency']} s in idealized simulation |
 | Synthetic non-intrusion duration | {m['nonintrusion_simulated_hours']} hours, fragmented 24-second trials |
 | Real sound recordings | 40 clips: 6 train, 4 calibration, 30 evaluation from 25 original source IDs |
-| Native regression suite | 12 Python regressions passed; original failures retained |
+| Native regression suite | 13 Python regressions passed; original failures retained |
 | Embedded host checks | Strict GCC warnings, ASan and UBSan passed; leak checking unavailable |
 | Embedded cross-language replay | {REPLAY['input_ticks']} ticks, {REPLAY['mismatches']} mismatches |
 | Arduino target | UNO R4 WiFi, official Renesas core 1.6.0; compile succeeded |
@@ -193,7 +193,7 @@ def pdf_report():
     add('All plotted media and sensor inputs on this page are synthetic. The supplied WAV/MP4 and timestamps are a separate normal walk-in example captured from the bounded evidence buffer.','Small2')
     page()
     title(7,'Firmware, outages and debug record')
-    table([['Verification','Observed result'],['UNO R4 WiFi target','Official Renesas UNO core 1.6.0 compiled successfully.'],['Static footprint','53,724 bytes flash; 6,904 bytes global RAM. Stack and electrical behavior unmeasured.'],['Native C++ checks','-Wall -Wextra -Werror -Wpedantic; AddressSanitizer and UndefinedBehaviorSanitizer.'],['Cross-language replay','12,480 ticks; zero mismatches against the reference physical filters/fallback.'],['Python regressions','12 passed. Two original failing state tests are preserved.'],['Notification fault test','One queued incident; restart and lost acknowledgment; one unique local receiver alert after retry.']],[W*.33,W*.67])
+    table([['Verification','Observed result'],['UNO R4 WiFi target','Official Renesas UNO core 1.6.0 compiled successfully.'],['Static footprint','53,724 bytes flash; 6,904 bytes global RAM. Stack and electrical behavior unmeasured.'],['Native C++ checks','-Wall -Wextra -Werror -Wpedantic; AddressSanitizer and UndefinedBehaviorSanitizer.'],['Cross-language replay','12,480 ticks; zero mismatches against the reference physical filters/fallback.'],['Python regressions','13 passed. Two original failing state tests are preserved.'],['Notification fault test','One queued incident; restart and lost acknowledgment; one unique local receiver alert after retry.']],[W*.33,W*.67])
     add('Faults fixed in development','Sub2')
     add('1. Simultaneous evidence skipped YELLOW. Fixed the transition; retained the failing test log.<br/>2. Inspection found a future 100 ms audio chunk in the evidence buffer. Changed capture to completed samples only.<br/>3. A persistent camera fault held RED and merged later incidents. Separated activity-clear timing from health timing; retained the failing regression.')
     add('Verification limits','Sub2')

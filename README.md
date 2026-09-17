@@ -19,7 +19,13 @@ A college ECE prototype for detecting unusual activity in a quiet restricted roo
 | MATLAB execution | NOT RUN: MATLAB is unavailable in the execution environment |
 | Physical sensors / HP performance | NOT TESTED |
 
+![Outcomes for the 52 distinct synthetic scenarios](docs/figures/scenario_outcomes.png)
+
 The repeated cases share the same event shapes and schedules; ten noise seeds do not turn them into ten independent real-world trials. These are engineering checks, not a claimed security accuracy.
+
+## Run online
+
+[Open the project notebook in Google Colab](https://colab.research.google.com/github/konark-icdesign/complex-embedded-iot-based-security-system/blob/main/notebooks/run_project.ipynb). Run its cells in order on a CPU runtime. It downloads the public audio subset, checks the modules, then runs the integrated simulation. The notebook is syntax-checked; a hosted Colab run has not been verified. No MATLAB execution or physical-board validation is implied.
 
 ## Run the executed reference
 
@@ -54,7 +60,7 @@ An invalid-frame persistence bug is corrected in both Python and MATLAB. Python 
 
 ## MATLAB
 
-Open the project folder in MATLAB and run:
+First run the Python simulation above to generate `fixtures/matlab_reference.mat` and the replay traces. Then open the project folder in MATLAB and run:
 
 ```matlab
 addpath('matlab');

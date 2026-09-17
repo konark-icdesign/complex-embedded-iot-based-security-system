@@ -1,0 +1,24 @@
+Completed seed 1/10
+Completed seed 2/10
+Completed seed 3/10
+Completed seed 4/10
+Completed seed 5/10
+Completed seed 6/10
+Completed seed 7/10
+Completed seed 8/10
+Completed seed 9/10
+Completed seed 10/10
+{
+  "trials": 52,
+  "intrusion_trials": 19,
+  "nonintrusion_trials": 33,
+  "detected": 16,
+  "missed": 3,
+  "false_alerts": 2,
+  "naive_false_alerts": 17,
+  "median_latency": 0.25,
+  "max_latency": 3.2,
+  "nonintrusion_simulated_hours": 0.22,
+  "note": "Scenario-weighted synthetic trials; not a real security accuracy or false-alarms/hour estimate."
+}
+Reference simulation completed. Known failures are NOT test passes.

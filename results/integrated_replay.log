@@ -1,0 +1,8 @@
+{
+  "input_ticks": 12480,
+  "output_ticks": 12480,
+  "mismatches": 0,
+  "examples": [],
+  "sanitizer": "AddressSanitizer + UndefinedBehaviorSanitizer",
+  "leak_check_disabled": true
+}

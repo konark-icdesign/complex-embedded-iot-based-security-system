@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "arduino_core": "arduino:renesas_uno@1.6.0",
+  "board_fqbn": "arduino:renesas_uno:unor4wifi",
+  "matlab": "NOT EXECUTED",
+  "hardware": "NOT TESTED",
+  "native_compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+}

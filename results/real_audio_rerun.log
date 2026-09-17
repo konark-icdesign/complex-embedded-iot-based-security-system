@@ -1,0 +1,12 @@
+Re-evaluated the public audio challenge after applying the valid-frame mask to proxy-model persistence.
+{
+  "status": "EXECUTED",
+  "training_clips": 6,
+  "calibration_clips": 4,
+  "test_clips": 30,
+  "thresholds": {
+    "rain": 5.344782661167564,
+    "engine": 5.455051342777618
+  },
+  "note": "Fold-5 clips; no tuning on them. Engine is a background proxy, not a measured PC fan."
+}

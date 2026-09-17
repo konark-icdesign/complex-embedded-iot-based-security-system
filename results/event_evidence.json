@@ -1,0 +1,19 @@
+{
+  "start": 2.9,
+  "end": 23.0,
+  "events": [
+    {
+      "id": "event-0001",
+      "t": 8.2,
+      "score": 8.5,
+      "channels": [
+        "A",
+        "M",
+        "P",
+        "V"
+      ],
+      "conclusion": "correlated unusual activity"
+    }
+  ],
+  "note": "All media synthetic. Audio window starts one 100ms chunk before first packet timestamp."
+}

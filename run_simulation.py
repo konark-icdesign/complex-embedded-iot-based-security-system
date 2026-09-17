@@ -120,6 +120,7 @@ def main():
     write_csv(RESULTS/'scenario_results.csv',primary);write_csv(RESULTS/'monte_carlo_results.csv',rows)
     real=evaluate(ROOT,models);(RESULTS/'real_audio_results.json').write_text(json.dumps(real,indent=2))
     if real.get('rows'):write_csv(RESULTS/'real_audio_results.csv',real['rows'])
+    else:(RESULTS/'real_audio_results.csv').unlink(missing_ok=True)
     save_fixture(demo,models);figures(primary,traces,demo,models)
     # Window sweep uses the same held-out signals: sensitivity analysis, not a second accuracy claim.
     sweep=[]

@@ -1,0 +1,9 @@
+test_decision_timestamps_use_frame_end (test_audio.AudioChecks.test_decision_timestamps_use_frame_end) ... ok
+test_gain_invariance (test_audio.AudioChecks.test_gain_invariance) ... ok
+test_invalid_window_cannot_inherit_anomaly (test_audio.AudioChecks.test_invalid_window_cannot_inherit_anomaly) ... ok
+test_silence_and_clipping_are_invalid (test_audio.AudioChecks.test_silence_and_clipping_are_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.052s
+
+OK
