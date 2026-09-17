@@ -13,6 +13,7 @@ from src.vision import room, render
 from src.streaming import RoomStream
 from src.delivery import deliver
 from src.native import NativeCore
+from src.room_audio import quiet_model
 from scripts.test_receiver import receiver
 
 
@@ -23,9 +24,9 @@ def quiet_baseline():
 
 
 def run_session(directory, board_binary, backend=None, network_loss=False,
-                pc_loss=False, restart=False, environment=False):
+                pc_loss=False, restart=False, environment=False, audio_profile="room"):
     directory = Path(directory)
-    model = quiet_baseline()
+    model = quiet_model() if audio_profile == "room" else quiet_baseline()
     stream = RoomStream(directory / "host", model, backend)
     wave = background(42, 1000, traffic=False)
     for start in (8, 32):
@@ -99,6 +100,7 @@ def run_session(directory, board_binary, backend=None, network_loss=False,
                 manifest["samples"][0]["t"] < record["trigger"]
                 or (pc_loss and record["fallback"] and manifest["coverage"]["prebuffer_incomplete"]))
         result = {"checks": checks, "passed": all(checks.values()), "incidents": records,
+                  "audio_profile": audio_profile,
                   "received": len(received), "attempts": attempts, "max_pending": max_pending,
                   "model": {"center": model.center.tolist(), "scale": model.scale.tolist(),
                             "threshold": model.threshold},
@@ -121,6 +123,7 @@ def main():
     parser.add_argument("--output", default="results/incident-run")
     parser.add_argument("--board", default="build/board-stream")
     parser.add_argument("--c-library", default=None)
+    parser.add_argument("--audio-profile", choices=("room", "legacy"), default="room")
     args = parser.parse_args()
     root = Path(args.output)
     if root.exists() and any(root.iterdir()):
@@ -130,7 +133,7 @@ def main():
     results = {}
     for name, options in [("two_incidents", {}), ("outage_restart", {"network_loss": True, "restart": True}),
                           ("pc_failure", {"pc_loss": True}), ("thunder_only", {"environment": True})]:
-        result = run_session(root / name, args.board, native, **options)
+        result = run_session(root / name, args.board, native, audio_profile=args.audio_profile, **options)
         results[name] = {"passed": result["passed"], "received": result["received"],
                          "failed_checks": [k for k, v in result["checks"].items() if not v]}
         print(name, json.dumps(results[name]), flush=True)

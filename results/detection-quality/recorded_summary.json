@@ -1,0 +1,787 @@
+{
+  "source_sha": "5bd05078df6b171632d88e8e7efde1f01fbf58a4",
+  "run_url": "https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249454",
+  "scope": "Synthetic audio; aggregate JSON extracted from GitHub job 105300547737; full per-trial data in workflow artifact.",
+  "development": {
+    "baseline": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.20000000000000018
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    },
+    "room_0.1": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 9,
+        "event_hits": 9,
+        "audio_only_red": 0,
+        "coincident_pm_red": 9,
+        "median_latency": 1.992
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    },
+    "room_0.25": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 2,
+        "event_hits": 2,
+        "audio_only_red": 0,
+        "coincident_pm_red": 2,
+        "median_latency": 2.088
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    },
+    "room_0.5": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    },
+    "room_1.0": {
+      "quiet": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "very_soft_steps": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 10,
+        "flagged": 10,
+        "event_hits": 10,
+        "audio_only_red": 0,
+        "coincident_pm_red": 10,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 10,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    }
+  },
+  "heldout": {
+    "baseline": {
+      "quiet": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "very_soft_steps": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "steps": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    },
+    "room_0.1": {
+      "quiet": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "gain_ramp": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "soft_steps": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.6160000000000001
+      },
+      "very_soft_steps": {
+        "trials": 20,
+        "flagged": 1,
+        "event_hits": 1,
+        "audio_only_red": 0,
+        "coincident_pm_red": 1,
+        "median_latency": 2.4400000000000004
+      },
+      "steps": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.13600000000000012
+      },
+      "impact": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.008000000000000007
+      },
+      "thunder": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.07200000000000006
+      },
+      "click": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.008000000000000007
+      },
+      "fan_shift": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "wind": {
+        "trials": 20,
+        "flagged": 20,
+        "event_hits": 20,
+        "audio_only_red": 0,
+        "coincident_pm_red": 20,
+        "median_latency": 0.13600000000000012
+      },
+      "silence": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      },
+      "clipping": {
+        "trials": 20,
+        "flagged": 0,
+        "event_hits": 0,
+        "audio_only_red": 0,
+        "coincident_pm_red": 0,
+        "median_latency": null
+      }
+    }
+  },
+  "real_transfer": {
+    "baseline_quiet": {
+      "rain": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "engine": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "footsteps": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "glass_breaking": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "door_wood_knock": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "door_wood_creaks": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "thunderstorm": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "wind": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "clock_tick": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "coughing": {
+        "clips": 3,
+        "flagged": 3
+      }
+    },
+    "room_quiet": {
+      "rain": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "engine": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "footsteps": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "glass_breaking": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "door_wood_knock": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "door_wood_creaks": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "thunderstorm": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "wind": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "clock_tick": {
+        "clips": 3,
+        "flagged": 3
+      },
+      "coughing": {
+        "clips": 3,
+        "flagged": 3
+      }
+    }
+  },
+  "acceptance": {
+    "soft_step_improvement": true,
+    "normal_and_fault_inputs_no_flags": true,
+    "strong_events_preserved": true,
+    "audio_alone_never_red": true
+  }
+}

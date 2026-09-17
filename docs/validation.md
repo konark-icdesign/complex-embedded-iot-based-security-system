@@ -2,6 +2,8 @@
 
 The continuous incident checks ran on GitHub, not on the HP or physical sensors.
 
+The later [detection-quality change](detection_quality.md) has its own comparison and recorded results. At commit `5bd05078df6b171632d88e8e7efde1f01fbf58a4`, 26 Python tests passed and all four continuous sessions still agreed between Python and C with the new room profile: [integration run 35250249408](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35250249408). The table below records the earlier incident-workflow change.
+
 Python/C integration and the Arduino target build passed at `bf0efac4fcc6e8a6d87d6298108e71cac9674438`: [run 35248260569](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35248260569).
 
 The MATLAB reference passed at `0ce080b1e9eabc30973e463ca1dde53b1ef16e39`: [run 35247858074](https://github.com/konark-icdesign/complex-embedded-iot-based-security-system/actions/runs/35247858074). The MATLAB source is unchanged in the later timestamp commit. Its job ran MATLAB R2026a Update 5; an [execution excerpt](../results/matlab/ci_execution_excerpt.txt) is retained in the repository.
