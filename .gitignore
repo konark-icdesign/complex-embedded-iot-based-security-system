@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+embedded-tests*
+recordings/
+fixtures/esc50/audio/
+fixtures/matlab_reference.mat
+results/*.sqlite
+results/*.png
+results/*.wav
+results/*.mp4
+results/*.npz
+output/
