@@ -1,0 +1,6 @@
+{
+  "frames": 64,
+  "max_feature_error": 5.551115123125783e-15,
+  "fusion_masks": 32,
+  "invalid_window_parity": true
+}
