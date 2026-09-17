@@ -1,35 +1,63 @@
-# Multimodal night security - simulation study
+# Night security project
 
-A college ECE prototype for detecting unusual activity in a quiet restricted room. A PC processes audio and camera frames; an Arduino reads PIR, ultrasonic range and a radar presence output. The decision is automatic. A simulated receiver gets an alert when correlated evidence reaches RED.
+The idea is to monitor a quiet room using sound, a camera and a few sensors. If something unusual happens, the system should compare the evidence before raising an alarm.
 
-**Status: an executed simulation and compiled Arduino sketch, not a physically validated security installation. All modules live in this repository; development and testing are currently simulation-only.**
+This repository is an early simulation of that idea. There is working code and recorded test output, but several parts of the intended system are missing.
 
-## What was measured
+## How this version was made
 
-| Check | Result |
+The project requirements came from the repository owner. AI was used heavily to write the simulation, firmware draft, tests and documentation. The numerical runs and compiler checks recorded here were carried out in the hosted development environment with AI assistance.
+
+This version was uploaded on 17 September 2026. There is no earlier development history established by the files here. The upload should not be presented as evidence of an older, completed college project.
+
+The amount of documentation grew faster than the implementation. Some code is quite compressed and needs cleanup. The notes and test results are useful working material, but they do not mean the project has been built, tested in a room or fully reviewed by its owner.
+
+## What currently works
+
+Python generates the test inputs and runs the audio, camera and sensor calculations. The fusion code combines detections from the last four seconds.
+
+An unusual sound can put the system into YELLOW. It checks camera motion, PIR, radar and ultrasonic evidence alongside it. Audio alone cannot produce RED. For example, audio plus PIR plus radar can meet the current alarm rule.
+
+The camera and sensors are checked continuously. There is no separate audio-triggered investigation that goes back through infrared footage yet. The camera input is generated grayscale imagery; infrared-camera behaviour has not been validated.
+
+Arduino C++ code handles sensor filtering and a local fallback alarm. It has been compiled for the UNO R4 WiFi and its logic has been tested on a computer. It has not been tested on a physical board. The full detection pipeline is still Python, not C.
+
+## Results so far
+
+The full run contains 52 scripted scenarios repeated with 10 noise seeds.
+
+| Check | Recorded result |
 |---|---|
-| Synthetic scenarios | 52 scenarios, repeated with 10 independent noise seeds: 520 trials |
-| Intrusion trials | 160 detected / 190; 30 missed |
-| Non-intrusion trials | 20 false alerts / 330 |
-| Naive any-input alarm | 170 false alerts / 330 on the same generated inputs |
-| Real audio | 40 ESC-50 clips: 6 train, 4 calibration, 30 evaluation |
-| Real footstep clips | All 3 missed by the broad real-background proxy model |
-| Embedded replay | 12,480 sensor ticks; C++ and Python outputs agreed |
-| UNO R4 WiFi build | Compiled using official Renesas UNO core 1.6.0 |
-| MATLAB execution | NOT RUN: MATLAB is unavailable in the execution environment |
-| Physical sensors / HP performance | NOT TESTED |
+| Simulated intrusion trials | 160 detected, 30 missed, out of 190 |
+| Simulated non-intrusion trials | 20 false alerts out of 330 |
+| Alarm on any single input, for comparison | 170 false alerts on those same 330 trials |
+| Public audio recordings | 40 clips: 6 training, 4 calibration, 30 evaluation |
+| Footsteps in the public-audio check | All 3 evaluation clips missed by the broad background model |
+| Quiet-room audio experiment | All 10 soft-footstep trials missed |
+| C++ sensor filtering and fallback replay | Matched Python on 12,480 ticks |
+| MATLAB | Source written; not run |
+| Physical hardware and HP performance | Not tested |
 
-![Outcomes for the 52 distinct synthetic scenarios](docs/figures/scenario_outcomes.png)
+The repeated trials share event templates. These counts describe the generated tests, not accuracy in a real room. The C++ comparison covers sensor filtering and fallback logic, not the whole detection pipeline.
 
-The repeated cases share the same event shapes and schedules; ten noise seeds do not turn them into ten independent real-world trials. These are engineering checks, not a claimed security accuracy.
+Some failures have clear causes. Audio with only PIR or only radar does not meet the current alarm rule. A warm moving object can activate both the camera and PIR. Sensors responding to activity outside the room can also produce a false alarm. Lowering the threshold would change which errors occur; it would not resolve all of these problems.
 
-## Run online
+Details are in [the experiment report](docs/experiment_report.md), [individual scenario results](results/scenario_results.csv) and [the latest run log](results/integrated_run.log).
 
-[Open the project notebook in Google Colab](https://colab.research.google.com/github/konark-icdesign/complex-embedded-iot-based-security-system/blob/main/notebooks/run_project.ipynb). Run its cells in order on a CPU runtime. It downloads the public audio subset, checks the modules, then runs the integrated simulation. The notebook is syntax-checked; a hosted Colab run has not been verified. No MATLAB execution or physical-board validation is implied.
+## What still needs work
 
-## Run the executed reference
+- Implement and test the core detection calculations in C.
+- Add the intended audio-triggered review of buffered, timestamped evidence.
+- Investigate soft-footstep misses and the observed false alarms.
+- Run the MATLAB code and check its outputs.
+- Connect a real microphone, camera and Arduino, including clock synchronization.
+- Test infrared imaging and sensor placement in the actual room.
+- Implement real remote notifications. The current receiver is a local SQLite simulation.
+- Review the code and assumptions module by module before making stronger claims.
 
-Use Python 3.12 or a compatible newer installation. From this directory:
+## Run the simulation
+
+Use Python 3.12 and a virtual environment. On Windows, from the project folder:
 
 ```text
 python -m venv .venv
@@ -40,13 +68,13 @@ python run_simulation.py --seeds 10
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-On Linux/macOS, activate with `source .venv/bin/activate`. Text results are included. The first real-audio download needs a network connection; later runs use the cached clips. Generated plots, media and MATLAB fixtures are rebuilt by the simulation. The command overwrites derived results. One seed is enough for a quick demonstration: `python run_simulation.py --seeds 1`.
+On Linux or macOS, activate the environment with `source .venv/bin/activate`.
 
-## One project, staged validation
+The download step fetches the public audio subset. A quick run can use `--seeds 1`; that runs 52 trials instead of 520. Rerunning overwrites derived results. If the recordings are missing, the real-audio check reports that it was not run. Synthetic results are still separate from that check.
 
-The shared `src/` modules implement audio DSP, camera processing, physical sensor filtering, evidence fusion and the durable mock alert receiver. `run_simulation.py` exercises these together. `firmware/` contains the Arduino C++ implementation, and `matlab/` contains the independent MATLAB reference. This is integrated offline validation, not a finished live hardware installation.
+The [online notebook](https://colab.research.google.com/github/konark-icdesign/complex-embedded-iot-based-security-system/blob/main/notebooks/run_project.ipynb) runs the same stages. Its code was syntax-checked, but the notebook has not been executed on Colab.
 
-The quiet-room assumption (steady PC-like background, possible thunder) also has a focused experiment:
+For the smaller audio experiment:
 
 ```text
 cd experiments/audio_room
@@ -54,26 +82,9 @@ python run_audio.py
 python -m unittest test_audio -v
 ```
 
-It imports the shared DSP implementation. Its results are separate from the broader 52-scenario stress suite: 10/10 soft-footstep trials were missed. Thunder can raise audio suspicion but cannot cause a danger alert alone. Neither background generator is a recording of the user's room.
+It uses the shared DSP code, with synthetic PC-like background noise and disturbances. No recording of the intended room has been supplied.
 
-An invalid-frame persistence bug is corrected in both Python and MATLAB. Python regression coverage checks that invalid audio cannot inherit an anomaly flag; MATLAB remains unexecuted.
-
-## MATLAB
-
-First run the Python simulation above to generate `fixtures/matlab_reference.mat` and the replay traces. Then open the project folder in MATLAB and run:
-
-```matlab
-addpath('matlab');
-run_full_simulation
-```
-
-Base MATLAB code independently computes FFT features, baseline statistics, illumination compensation, plots and central fusion. It checks raw audio/image kernels and replays all 52 fusion traces. It is **not yet executed or certified equivalent**. A successful future MATLAB run writes its own log under `results/matlab/`; do not replace the current NOT RUN label before that happens. No DSP, Computer Vision or Statistics toolbox is required for this offline code.
-
-## Arduino
-
-Open `firmware/night_security/night_security.ino` in Arduino IDE 2. Install **Arduino UNO R4 Boards**, select **Arduino UNO R4 WiFi**, and compile. The board has a 60-second warm-up, bounded sensor polling, input filters, a watchdog, a heartbeat timeout and a latched local alarm. Wiring and limits are in `docs/hardware.md`.
-
-For native logic checks with GCC:
+From the repository root, with GCC and Make installed:
 
 ```text
 make embedded
@@ -81,27 +92,31 @@ make sanitize
 python scripts/verify_embedded_replay.py
 ```
 
-The hosted test environment requires `ASAN_OPTIONS=detect_leaks=0` because LeakSanitizer cannot run under its process tracing. The replay script provides `--no-leak-check` for that environment. AddressSanitizer and UndefinedBehaviorSanitizer were still executed. On an ordinary supported machine, leave leak detection enabled. Vendor core warnings from the board build are retained in its log; our host-side code compiled with `-Wall -Wextra -Werror -Wpedantic`.
+The recorded hosted sanitizer run needed leak checking disabled because of the environment's process tracing. AddressSanitizer and UndefinedBehaviorSanitizer still ran. That exception is described in the logs; it is not required on every machine.
 
-To reproduce the exact numerical package versions, use `requirements-tested.txt` instead of the broader compatible version ranges. To rebuild the PDF from results, install `requirements-report.txt` and run `python scripts/build_report.py`.
+For MATLAB, first generate the fixtures with the Python simulation, then run:
 
-## Read in this order
+```matlab
+addpath('matlab');
+run_full_simulation
+```
 
-1. `docs/architecture.md` - what the system actually decides and changes to the brief.
-2. `docs/dsp_maths.md` - the mathematics and small worked examples.
-3. `docs/hp_setup.md` - software and conservative settings for an 8 GB HP.
-4. `docs/hardware.md` - pin mapping, power and bench procedure.
-5. `docs/learning_and_validation.md` - explain the code, collect real data, and decide the next version.
-6. `docs/experiment_report.md` - generated tables, measured failures and execution boundaries.
+This is a command for a future MATLAB run, not a record of one already completed.
 
-## Limits that matter
+For the Arduino build, open `firmware/night_security/night_security.ino` in Arduino IDE 2 and select UNO R4 WiFi. The recorded build used the official Renesas UNO core 1.6.0. See [hardware notes](docs/hardware.md) before attempting wiring.
 
-This version cannot identify a person, distinguish intent, guarantee detection in darkness, infer real weather, or guarantee zero false alarms. A heated moving object can trigger multiple sensors. Poor placement can make outside activity look like entry. Audio models trained on unrelated rooms or broad sound categories transfer poorly.
+## Where to look
 
-Only a local SQLite notification receiver is implemented and tested. No security team is contacted. Continuous physical acquisition, real notification transport, clock synchronization, power-loss recovery on the board, and room calibration remain integration work. `matlab/serial_bench.m` is an I/O inspection utility, not a finished live server.
+- [Architecture](docs/architecture.md) and [DSP calculations](docs/dsp_maths.md)
+- [HP software setup](docs/hp_setup.md)
+- [Reproduction notes](docs/reproduction.md)
+- [Learning and validation notes](docs/learning_and_validation.md)
+- [Sources](docs/sources.md)
 
-## Data and sources
+The longer documents were prepared with AI assistance too. They describe the current experiment and proposed hardware work; they are not records of physical experiments.
 
-ESC-50: K. J. Piczak, *ESC: Dataset for Environmental Sound Classification*, ACM Multimedia 2015. Official dataset: https://github.com/karolpiczak/ESC-50 . Its CC BY-NC terms and original recording attributions are retained in `fixtures/esc50/LICENSE`. Do not relicense the bundled audio as project code. File hashes, source URLs and selected folds are in `fixtures/esc50/manifest.json`.
+## Dataset and licence
 
-The code and figures are a transparent development artifact. Keep test logs, label simulations, and make your own measured changes before presenting it as work you understand. Full source links are in `docs/sources.md`.
+The audio challenge uses [ESC-50](https://github.com/karolpiczak/ESC-50), by K. J. Piczak. Its licence and recording attributions are retained in [fixtures/esc50/LICENSE](fixtures/esc50/LICENSE), with source URLs and hashes in the manifest. Audio files are downloaded separately.
+
+No project-wide licence has been selected for the original code. The ESC-50 licence applies to that external dataset, not automatically to this whole repository.
