@@ -4,18 +4,18 @@ The selected board is the Made-in-India UNO Ek R4 WiFi. See the [electronics pla
 
 These connections are planned for the UNO R4 WiFi sketch. Check the exact sensor modules and their electrical specifications before wiring. No physical test has been recorded. The host-executed controller stress work and bugs found are recorded in [hardware resilience audit](hardware_resilience_audit.md).
 
-The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-S3 radio. The compiled firmware runs on the RA4M1. The simulation does not put camera or audio processing into its 32 KB SRAM. Source: https://docs.arduino.cc/hardware/uno-r4-wifi .
+The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-S3 radio. The compiled firmware runs on the RA4M1. The simulation does not put camera or audio processing into its 32 KB SRAM. The first datasheet-based electrical interface simulation is documented in [Rev-A electrical hardware simulation](electrical_hardware_simulation.md). Source: https://docs.arduino.cc/hardware/uno-r4-wifi .
 
 | Connection | Sketch pin | Note |
 |---|---:|---|
-| PIR output | D2 | Verify the exact module's guaranteed output-high/output-low levels and warm-up; do not assume a 3.3 V HIGH is valid for this 5 V RA4M1 input; add a proper buffer/translator and defined idle bias if required |
-| LD2410-class presence OUT | D3 | Exact model still unknown. Verify output type/levels and use level translation/buffering where required; a 5 V supply does not imply a 5 V logic output |
-| Ultrasonic trigger | D4 | The sketch assumes an HC-SR04-like trigger/echo interface |
-| Ultrasonic echo | D5 | Verify echo level; the official UNO R4 main GPIO is a 5 V domain |
+| PIR output | D2 | Rev-A electrical design: 0/3.3 V sensor OUT -> 10 kOhm series, 100 kOhm pulldown, 10 nF shunt -> two SN74AHCT14 gates -> D2. Do not connect a 3.3 V HIGH directly and call it guaranteed. |
+| LD2410B/C-class presence OUT | D3 | Same SN74AHCT14 double-inverter conditioner as D2. Exact purchased radar module still has to match the 0/3.3 V OUT assumption. |
+| Ultrasonic trigger | D4 | HC-SR04-like TRIG through 220 Ohm series resistor; firmware pulse is 10 us. |
+| Ultrasonic echo | D5 | HC-SR04 Echo -> 1 kOhm series -> D5, with 100 kOhm pulldown and 100 pF shunt at the MCU side. UNO R4 main GPIO is a 5 V domain. |
 | Green LED | D6 | Series current-limiting resistor |
 | Yellow LED | D7 | Series current-limiting resistor |
 | Red LED | D8 | Series current-limiting resistor |
-| Active buzzer control | D9 | Use a suitable transistor driver and correct supply; do not draw buzzer power directly from GPIO |
+| Alarm control | D9 | Rev-A: D9 -> 1.5 kOhm -> AO3400A gate, 100 kOhm gate pulldown. Low-side switch external alarm load; add fuse and SS34 flyback diode for inductive loads. Do not power the alarm from D9. |
 | Local reset button | D10 to GND | INPUT_PULLUP; clears local alarm latch |
 | PC connection | USB-C | Serial data at 115200 baud |
 | Shared reference | GND | All low-voltage sensor grounds need a common reference |
@@ -24,7 +24,7 @@ Pinout and supply requirements vary across LD2410, LD2410B, LD2410C and clones. 
 
 ## Power arrangement
 
-For first bench work, use USB power and explicitly accept that fallback ends when USB power disappears. For the later PC-failure demonstration, give the Arduino an independent supported power source using the board manufacturer's guidance. Do not connect arbitrary external 5 V and USB supplies together without verifying the board's power-selection arrangement. Use a normal approved low-voltage supply; no mains wiring is part of the project.
+For first bench work, USB power is acceptable if we explicitly accept that fallback ends when USB power disappears. For the actual PC-failure demonstration, the Arduino must remain powered independently of the HP. A practical Rev-A arrangement is a supported external low-voltage supply into VIN/barrel while USB is used for data, following the board power guidance. The high-current alarm load must return directly to the supply/star ground rather than through the sensor/microphone ground path. Do not connect arbitrary external 5 V and USB supplies together.
 
 ## What the sketch actually does
 
@@ -60,6 +60,6 @@ S,sequence,board_millis,pir_filtered,radar_filtered,near_filtered,range_metres,r
 7. Disconnect the PC data link while the board remains powered. Present all three physical stimuli and measure fallback latency.
 8. Test board power loss separately. The RAM latch and history do not survive it; the current design cannot claim otherwise.
 
-The recorded target build used 53,724 bytes of flash and 6,904 bytes of global RAM. Stack usage, electrical behaviour, processing deadlines and watchdog recovery still need board measurements.
+The latest checked target build after the resilience fixes used 53,996 bytes of flash and 6,920 bytes of global RAM. Stack usage, physical electrical behaviour, processing deadlines and watchdog recovery still need board measurements.
 
 Those byte counts belong to the earlier sketch. The Incident pipeline workflow compiles the revised sketch with core 1.6.0 and reports its current size. The continuous host simulation uses a C++ driver around `core.h`; it does not operate physical pins. The physical serial adapter still needs to carry the fallback-latch provenance now exposed by the core, as well as map board time into the host acquisition clock.
