@@ -30,7 +30,7 @@ For first bench work, USB power is acceptable if we explicitly accept that fallb
 
 - It does not block waiting for a PC serial terminal.
 - It polls at a nominal 100 ms cadence.
-- Echo timeout is bounded at 25 ms. A missing echo is invalid, not a valid zero-metre object.
+- Echo timeout is bounded at 30 ms after the electrical timing review. A missing echo is invalid, not a valid zero-metre object.
 - PIR and radar need three consecutive active samples.
 - Range uses a five-sample median plus three consecutive near results.
 - The first 60 seconds inhibit alarms while sensors settle.
