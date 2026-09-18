@@ -26,4 +26,6 @@ run_one sensor_interface
 run_one echo_interface
 run_one alarm_driver
 
+python3 hardware/spice/check_results.py
+
 echo "ALL ELECTRICAL SPICE SIMULATIONS COMPLETED"
