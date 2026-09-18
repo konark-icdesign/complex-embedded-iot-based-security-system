@@ -42,14 +42,35 @@ class Camera:
 
     def update(self, t, frame):
         if frame is None:
+            missing = self.last_t < 0 or t - self.last_t > 0.6
+            if missing:
+                # Do not compare the first recovered frame with a stale image
+                # from before a camera outage.
+                self.previous = None
+                self.last_frame = None
+                self.repeat_since = None
             return dict(
                 motion=False,
                 fraction=0.0,
                 naive=0.0,
-                health=(self.last_t < 0 or t - self.last_t > 0.6),
+                health=missing,
                 reason="missing",
             )
         x = np.asarray(frame)
+        if x.ndim != 2 or x.size == 0 or not np.isfinite(x).all():
+            self.previous = None
+            self.last_frame = None
+            self.repeat_since = None
+            self.last_t = t
+            return dict(motion=False, fraction=0.0, naive=0.0, health=True,
+                        reason="invalid_frame")
+        if self.last_frame is not None and x.shape != self.last_frame.shape:
+            self.previous = None
+            self.last_frame = x.copy()
+            self.repeat_since = None
+            self.last_t = t
+            return dict(motion=False, fraction=0.0, naive=0.0, health=True,
+                        reason="frame_shape_changed")
         health = x.mean() < 4 or x.std() < 1 or np.mean(x >= 254) > 0.85
         reason = "visibility_lost" if health else "ok"
         if self.last_frame is not None and np.array_equal(x, self.last_frame):
