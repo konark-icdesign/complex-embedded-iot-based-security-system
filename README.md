@@ -34,6 +34,8 @@ The [original results](docs/experiment_report.md), [audio comparison](docs/detec
 
 A new [remaining-system resilience simulation](docs/system_resilience_simulation.md) adds 12,000 deterministic synthetic trials for benign multi-sensor activity, sensor dropout/degradation, intrusion during a network/host outage, and buffered event delivery. In that model, 99.09% of intrusion trials reached RED and 99.11% of outage-intrusion trials were detected locally. No benign or sensor-fault trial reached RED. These numbers are not field accuracy: the synthetic benign and intrusion distributions are still intentionally cleaner than a real room, so the next stress test should force much heavier overlap and noise.
 
+A later [hardware-resilience audit](docs/hardware_resilience_audit.md) executed the actual embedded `Core` logic with timing gaps, ultrasonic dropouts and host-health failures. It found and fixed stale range-buffer reuse after sample gaps, over-sensitive ultrasonic history clearing, a heartbeat design that could hide a dead host pipeline, invisible serial sample loss, overly strict audio timestamp continuity, and stale camera-frame comparison after outages. These remain host-executed tests, not electrical or physical validation.
+
 ## Running it
 
 Use Python 3.12. From the project folder on Windows:
@@ -46,6 +48,7 @@ python scripts/fetch_real_audio.py
 python run_simulation.py --seeds 1
 python scripts/system_resilience_sim.py
 python -m unittest discover -s tests -p "test_*.py" -v
+make hardware-stress
 ```
 
 On Linux or macOS, activate with `source .venv/bin/activate`. Use `--seeds 10` for the longer scenario run. The audio download needs internet access.
@@ -78,6 +81,7 @@ The [debugging history](docs/debugging_history.md) records the problems found, f
 - [System design](docs/architecture.md)
 - [DSP calculations](docs/dsp_maths.md)
 - [Hardware and wiring](docs/hardware.md)
+- [Hardware resilience audit](docs/hardware_resilience_audit.md)
 - [HP t640 setup](docs/hp_setup.md)
 - [Learning and validation tasks](docs/learning_and_validation.md)
 
