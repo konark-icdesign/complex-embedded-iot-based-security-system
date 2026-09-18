@@ -32,6 +32,8 @@ Real recordings remain a problem. The earlier broad background model missed all 
 
 The [original results](docs/experiment_report.md), [audio comparison](docs/detection_quality.md) and [validation record](docs/validation.md) contain the details. These measurements do not establish accuracy in a real room.
 
+A new [remaining-system resilience simulation](docs/system_resilience_simulation.md) adds 12,000 deterministic synthetic trials for benign multi-sensor activity, sensor dropout/degradation, intrusion during a network/host outage, and buffered event delivery. In that model, 99.09% of intrusion trials reached RED and 99.11% of outage-intrusion trials were detected locally. No benign or sensor-fault trial reached RED. These numbers are not field accuracy: the synthetic benign and intrusion distributions are still intentionally cleaner than a real room, so the next stress test should force much heavier overlap and noise.
+
 ## Running it
 
 Use Python 3.12. From the project folder on Windows:
@@ -42,6 +44,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 python scripts/fetch_real_audio.py
 python run_simulation.py --seeds 1
+python scripts/system_resilience_sim.py
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
