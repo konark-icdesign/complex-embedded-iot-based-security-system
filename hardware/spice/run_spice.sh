@@ -9,15 +9,17 @@ run_one() {
   local log="results/spice/${name}.log"
 
   echo "=== ${name} ==="
+  set +e
   ngspice -b -o "$log" "$netlist"
-
-  if grep -Eiq '(^|[^[:alpha:]])(fatal|error)([^[:alpha:]]|$)|measure.*failed|no such vector|singular matrix' "$log"; then
-    echo "SPICE failure detected in ${name}"
-    cat "$log"
-    exit 1
-  fi
+  local rc=$?
+  set -e
 
   cat "$log"
+
+  if [ "$rc" -ne 0 ] || grep -Eiq '(^|[^[:alpha:]])(fatal|error)([^[:alpha:]]|$)|measure.*failed|no such vector|singular matrix' "$log"; then
+    echo "SPICE failure detected in ${name} (exit=${rc})"
+    exit 1
+  fi
 }
 
 run_one sensor_interface
