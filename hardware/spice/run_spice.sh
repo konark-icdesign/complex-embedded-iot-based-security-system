@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+mkdir -p results/spice
+
+run_one() {
+  local name="$1"
+  local netlist="hardware/spice/${name}.cir"
+  local log="results/spice/${name}.log"
+
+  echo "=== ${name} ==="
+  ngspice -b -o "$log" "$netlist"
+
+  if grep -Eiq '(^|[^[:alpha:]])(fatal|error)([^[:alpha:]]|$)|measure.*failed|no such vector|singular matrix' "$log"; then
+    echo "SPICE failure detected in ${name}"
+    cat "$log"
+    exit 1
+  fi
+
+  cat "$log"
+}
+
+run_one sensor_interface
+run_one echo_interface
+run_one alarm_driver
+
+echo "ALL ELECTRICAL SPICE SIMULATIONS COMPLETED"
