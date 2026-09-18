@@ -11,7 +11,7 @@ int main() {
     while (std::cin >> now >> p >> m >> distance >> ready >> connected >> reset >> command) {
         if (reset) core.reset(); // Simulated physical button, not a serial command.
         if (connected) {
-            core.heartbeat(now);
+            core.hostHealth(now);
             core.command(command.c_str(), now);
         }
         const auto out = core.tick(now, p != 0, m != 0, distance, ready != 0);

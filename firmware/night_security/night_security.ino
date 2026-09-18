@@ -10,7 +10,7 @@ constexpr uint8_t PIR_PIN = 2, RADAR_PIN = 3, TRIG_PIN = 4, ECHO_PIN = 5;
 constexpr uint8_t GREEN_PIN = 6, YELLOW_PIN = 7, RED_PIN = 8, BUZZER_PIN = 9, RESET_PIN = 10;
 security::Core controller;
 security::LineBuffer commandLine;
-uint32_t startMs = 0, lastSample = 0, sequence = 0;
+uint32_t startMs = 0, lastSample = 0, sequence = 0, serialDrops = 0;
 
 float readDistance() {
     digitalWrite(TRIG_PIN, LOW);
@@ -35,12 +35,15 @@ void updateAlarmOutputs(const security::Output &out, bool armed) {
     digitalWrite(BUZZER_PIN, out.alarm); // Drive a transistor, not a high-current buzzer directly.
 }
 void publishSensorData(uint32_t now, const security::Output &out, bool armed) {
-    // Only send if buffer space exists; disconnected USB must not block fallback.
+    // Sequence advances for every sample, even when USB cannot accept a packet.
+    // The host can therefore detect lost board samples from sequence gaps.
+    const uint32_t currentSequence = sequence++;
     if (Serial.availableForWrite() < 64) {
+        ++serialDrops;
         return;
     }
     Serial.print("S,");
-    Serial.print(sequence++);
+    Serial.print(currentSequence);
     Serial.print(',');
     Serial.print(now);
     Serial.print(',');
@@ -48,13 +51,21 @@ void publishSensorData(uint32_t now, const security::Output &out, bool armed) {
     Serial.print(',');
     Serial.print(out.radar);
     Serial.print(',');
+    Serial.print(out.near);
+    Serial.print(',');
     Serial.print(out.metres, 3);
     Serial.print(',');
     Serial.print(!out.range_fault);
     Serial.print(',');
     Serial.print(out.alarm);
     Serial.print(',');
-    Serial.println(armed);
+    Serial.print(armed);
+    Serial.print(',');
+    Serial.print(out.degraded);
+    Serial.print(',');
+    Serial.print(out.fallback_alarm);
+    Serial.print(',');
+    Serial.println(serialDrops);
 }
 void setup() {
     pinMode(PIR_PIN, INPUT);

@@ -3,7 +3,7 @@ CXX ?= g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -Wpedantic
 CC ?= cc
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
-.PHONY: simulate test embedded sanitize
+.PHONY: simulate test embedded sanitize hardware-stress
 simulate:
 	$(PYTHON) run_simulation.py --seeds 10
 test:
@@ -14,6 +14,9 @@ embedded:
 sanitize:
 	$(CXX) $(CXXFLAGS) -fsanitize=address,undefined -fno-omit-frame-pointer -g tests/embedded_test.cpp -o embedded-tests-sanitized
 	./embedded-tests-sanitized
+hardware-stress:
+	$(CXX) $(CXXFLAGS) tests/hardware_stress.cpp -o hardware-stress
+	./hardware-stress
 
 .PHONY: incident-build c-sanitize incidents
 incident-build:

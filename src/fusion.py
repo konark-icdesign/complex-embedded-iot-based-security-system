@@ -22,14 +22,19 @@ class Sensors:
         self.p = 0
         self.m = 0
         self.u = 0
+        self.invalid_range = 0
 
     def update(self, p, m, d, valid=True):
         self.p = min(self.p + 1, 3) if p and valid else 0
         self.m = min(self.m + 1, 3) if m and valid else 0
-        if not valid or not math.isfinite(d) or not 0.02 <= d <= 4.0:
-            self.distance.clear()
-            self.u = 0
-            return self.p >= 3, self.m >= 3, False, float("nan"), True
+        range_fault = not valid or not math.isfinite(d) or not 0.02 <= d <= 4.0
+        if range_fault:
+            self.invalid_range = min(self.invalid_range + 1, 3)
+            if self.invalid_range >= 3:
+                self.distance.clear()
+                self.u = 0
+            return self.p >= 3, self.m >= 3, self.u >= 3, float("nan"), True
+        self.invalid_range = 0
         self.distance.append(d)
         median = sorted(self.distance)[len(self.distance) // 2]
         near = len(self.distance) == 5 and median < 1.8

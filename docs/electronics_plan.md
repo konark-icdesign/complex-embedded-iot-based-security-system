@@ -1,6 +1,6 @@
 # Electronics plan for the UNO Ek R4 WiFi
 
-Design review: 17 September 2026. This is the next-stage design, not a record of a circuit simulation or physical test.
+Design review: 17 September 2026, with controller-resilience audit updated 19 September 2026. This is a next-stage design and host-executed firmware audit, not a record of a complete electrical circuit simulation or physical test.
 
 ## Board and development order
 
@@ -98,7 +98,7 @@ The following checks define the planned circuit/firmware experiment; they are no
 | Invalid or absent ultrasonic echo | Invalid range, no fictitious zero-distance detection; timeout bounded |
 | Valid range changes | Five-sample median and three near results behave as the shared core specifies |
 | Host investigation and alarm commands | Correct LED states; GREEN does not clear a latched alarm |
-| Lost heartbeat | Degraded state after more than two seconds; fallback requires all three filtered sensor conditions for ten consecutive ticks |
+| Lost host health | Transport-only `HB` must not suppress fallback. Degraded state follows when `HEALTH` is absent for more than two seconds; fallback then requires all three filtered sensor conditions for ten consecutive ticks |
 | Local reset and subsequent stimulus | Alarm clears, but persistent conditions can cause it to latch again |
 | Delayed samples and reconnect | No stale persistence or old-session evidence is reused |
 
@@ -109,12 +109,12 @@ USB reconnect behaviour, watchdog recovery, actual supply margins and physical s
 ## Integration gaps already visible in the code
 
 - The USB bench tool displays readings and sends heartbeats; it is not the complete live acquisition service. It needs connection to the incident pipeline, session handling and board-to-host clock mapping.
-- The shared core distinguishes a fallback alarm, but the current serial packet does not carry that provenance. Define and test the packet update before using live board events in incident records.
+- The serial packet now carries filtered `near`, degraded state, fallback provenance, sequence gaps and a cumulative serial-drop count. The unfinished live acquisition adapter still has to parse and map those fields into incident records.
 - Continuous audio, camera and sensor acquisition needs timestamped buffers so a sound trigger can inspect evidence from the same time. Starting the camera only after the sound would lose earlier evidence.
 - A binary radar OUT cannot report measurement age or distinguish every failed wire from absence. Firmware cannot recover information that the interface does not provide.
 - The local fallback requires PIR, radar and near ultrasonic range together. A person outside the ultrasonic beam can be missed. Placement and the fallback rule must be evaluated before claiming room coverage.
 
-These are specific unfinished pieces. Adding more synthetic scenarios alone will not finish them.
+These are specific unfinished pieces. The [hardware resilience audit](hardware_resilience_audit.md) adds host-executed fault tests and fixes several controller bugs, but adding more synthetic scenarios alone will not finish the electrical or physical validation.
 
 ## Sources
 

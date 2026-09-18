@@ -63,6 +63,28 @@ class Regression(unittest.TestCase):
         self.assertTrue(v["health"])
         self.assertFalse(v["motion"])
 
+    def test_camera_recovery_does_not_compare_against_pre_outage_frame(self):
+        c = Camera()
+        base = room().astype(np.uint8)
+        changed = base.copy()
+        changed[25:75, 45:95] = np.clip(
+            changed[25:75, 45:95].astype(int) + 80, 0, 255
+        ).astype(np.uint8)
+        c.update(0.0, base)
+        missing = c.update(1.0, None)
+        self.assertTrue(missing["health"])
+        recovered = c.update(1.2, changed)
+        self.assertFalse(recovered["motion"])
+
+    def test_camera_shape_change_is_health_fault_not_exception(self):
+        c = Camera()
+        c.update(0.0, room().astype(np.uint8))
+        smaller = room(2)[:60, :80].astype(np.uint8)
+        result = c.update(0.2, smaller)
+        self.assertTrue(result["health"])
+        self.assertEqual(result["reason"], "frame_shape_changed")
+        self.assertFalse(result["motion"])
+
     def test_median_glitch_and_timeout(self):
         s = Sensors()
         for i in range(20):
@@ -70,6 +92,8 @@ class Regression(unittest.TestCase):
         for _ in range(12):
             result = s.update(False, False, 1.2)
         self.assertTrue(result[2])
+        self.assertTrue(s.update(False, False, float("nan"))[2])
+        self.assertTrue(s.update(False, False, float("nan"))[2])
         self.assertFalse(s.update(False, False, float("nan"))[2])
 
     def test_durable_retry_lost_ack(self):

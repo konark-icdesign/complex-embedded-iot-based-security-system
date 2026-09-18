@@ -9,7 +9,9 @@ from .incidents import IncidentJournal, pack_array
 
 
 class AudioStream:
-    def __init__(self, model, feature_fn=features):
+    DEFAULT_CONTINUITY_TOLERANCE = 0.005
+
+    def __init__(self, model, feature_fn=features, continuity_tolerance=None):
         self.model = model
         self.feature_fn = feature_fn
         self.pending = np.empty(0)
@@ -17,13 +19,28 @@ class AudioStream:
         self.valid = deque(maxlen=3)
         self.end = None
         self.frame_end = None
+        self.discontinuities = 0
+        self.continuity_tolerance = (
+            self.DEFAULT_CONTINUITY_TOLERANCE
+            if continuity_tolerance is None
+            else float(continuity_tolerance)
+        )
+        if not np.isfinite(self.continuity_tolerance) or self.continuity_tolerance < 0:
+            raise ValueError("continuity tolerance must be finite and non-negative")
 
     def push(self, samples, captured):
         samples = np.asarray(samples, dtype=float)
         if samples.ndim != 1 or not np.isfinite(samples).all():
             raise ValueError("audio must be finite mono samples")
+        if len(samples) == 0:
+            # Do not silently destroy buffered DSP state. Mark the acquisition
+            # as unhealthy; the next real chunk will decide whether a gap occurred.
+            return [{"t": float(captured), "score": 0.0, "anomaly": False,
+                     "valid": False, "reason": "empty_audio_chunk"}]
         start = captured - len(samples) / FS
-        if self.end is None or abs(start - self.end) > 1e-6:
+        if self.end is None or abs(start - self.end) > self.continuity_tolerance:
+            if self.end is not None:
+                self.discontinuities += 1
             self.pending = np.empty(0)
             self.features.clear()
             self.valid.clear()
@@ -45,13 +62,15 @@ class AudioStream:
 
     def state(self):
         return {"pending": self.pending.tolist(), "features": [x.tolist() for x in self.features],
-                "valid": list(self.valid), "end": self.end, "frame_end": self.frame_end}
+                "valid": list(self.valid), "end": self.end, "frame_end": self.frame_end,
+                "discontinuities": self.discontinuities}
 
     def restore(self, state):
         self.pending = np.asarray(state["pending"])
         self.features = deque((np.asarray(x) for x in state["features"]), maxlen=3)
         self.valid = deque(state["valid"], maxlen=3)
         self.end, self.frame_end = state["end"], state["frame_end"]
+        self.discontinuities = int(state.get("discontinuities", 0))
 
 
 class RoomStream:
