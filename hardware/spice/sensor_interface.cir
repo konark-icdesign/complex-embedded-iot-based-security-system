@@ -1,0 +1,23 @@
+* Rev-A PIR/radar interface: 3.3V sensor -> RC -> double AHCT-like Schmitt -> RA4 input load
+* Behavioral logic uses worst positive threshold 2.1V and 5V output.
+Vsensor src 0 PULSE(0 3.3 1m 1n 1n 1m 2m)
+Rin src filt 10k
+Rpull filt 0 100k
+Cfilter filt 0 10n
+
+* Two inverters preserve polarity. 10ns delay is represented by small RC output stages.
+Blogic1 logic1 0 V=if(V(filt)>2.1,0,5)
+Rout1 logic1 inv1 50
+Cout1 inv1 0 100p
+Blogic2 logic2 0 V=if(V(inv1)>2.1,0,5)
+Rout2 logic2 out 50
+* RA4M1 input capacitance max 15pF, plus 20pF wiring allowance.
+Cload out 0 35p
+Rleak out 0 5Meg
+
+.tran 0.05u 4m
+.meas tran t_filter_cross WHEN v(filt)=2.1 RISE=1
+.meas tran t_out_cross WHEN v(out)=4.0 RISE=1
+.meas tran filtered_high FIND v(filt) AT=1.5m
+.meas tran output_high FIND v(out) AT=1.5m
+.end
