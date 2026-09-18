@@ -171,7 +171,7 @@ Therefore the current hard `1.8 m` near/far decision does **not** represent the 
 
 At -15 C a person at a true 1.8 m can be classified outside the 1.8 m threshold. This needs either temperature compensation, a deliberately conservative threshold, or removal of ultrasonic distance as a hard all-or-nothing security condition.
 
-At 4 m and -15 C the modeled echo is about 24.83 ms, still just below the present 25 ms `pulseIn` timeout. The margin is small enough that we should not reduce the timeout.
+At 4 m and -15 C the modeled echo is about 24.83 ms. The original 25 ms `pulseIn` timeout left only about 0.17 ms of margin, so Rev-A increases the timeout to 30 ms. That remains well below the 100 ms sample period while reducing avoidable cold/clone timeout risk.
 
 ## Alarm driver
 
