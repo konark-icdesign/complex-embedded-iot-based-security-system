@@ -59,7 +59,7 @@ jobs:
       - name: Python regression tests
         run: python -m pytest -q
       - name: Build C and Arduino host logic
-        run: make embedded sanitize incident-build c-sanitize
+        run: make embedded sanitize hardware-stress incident-build c-sanitize
       - name: Check C numerical parity
         run: python scripts/verify_c_core.py | tee c-parity.json
       - name: Continuous incidents with Python DSP
