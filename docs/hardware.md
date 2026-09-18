@@ -2,14 +2,14 @@
 
 The selected board is the Made-in-India UNO Ek R4 WiFi. See the [electronics plan](electronics_plan.md) for the development order and online simulator check. Physical assembly follows circuit and firmware verification.
 
-These connections are planned for the UNO R4 WiFi sketch. Check the exact sensor modules and their electrical specifications before wiring. No physical test has been recorded.
+These connections are planned for the UNO R4 WiFi sketch. Check the exact sensor modules and their electrical specifications before wiring. No physical test has been recorded. The host-executed controller stress work and bugs found are recorded in [hardware resilience audit](hardware_resilience_audit.md).
 
 The official UNO R4 WiFi uses a 5 V RA4M1 host MCU, with a separate 3.3 V ESP32-S3 radio. The compiled firmware runs on the RA4M1. The simulation does not put camera or audio processing into its 32 KB SRAM. Source: https://docs.arduino.cc/hardware/uno-r4-wifi .
 
 | Connection | Sketch pin | Note |
 |---|---:|---|
-| PIR output | D2 | Verify output voltage and module warm-up; use external pulldown if required |
-| LD2410-class presence OUT | D3 | Verify exact module logic level and UNO input-high requirement; use proper 3.3-to-5 V translation where required |
+| PIR output | D2 | Verify the exact module's guaranteed output-high/output-low levels and warm-up; do not assume a 3.3 V HIGH is valid for this 5 V RA4M1 input; add a proper buffer/translator and defined idle bias if required |
+| LD2410-class presence OUT | D3 | Exact model still unknown. Verify output type/levels and use level translation/buffering where required; a 5 V supply does not imply a 5 V logic output |
 | Ultrasonic trigger | D4 | The sketch assumes an HC-SR04-like trigger/echo interface |
 | Ultrasonic echo | D5 | Verify echo level; the official UNO R4 main GPIO is a 5 V domain |
 | Green LED | D6 | Series current-limiting resistor |
@@ -34,19 +34,20 @@ For first bench work, use USB power and explicitly accept that fallback ends whe
 - PIR and radar need three consecutive active samples.
 - Range uses a five-sample median plus three consecutive near results.
 - The first 60 seconds inhibit alarms while sensors settle.
-- `HB` renews the PC heartbeat; `ALARM` latches the local buzzer. `YELLOW` and `GREEN` set the host investigation indication without clearing an alarm. Commands are newline-terminated and length-bounded.
-- Missing heartbeat for more than two seconds enables physical fallback.
-- A sample gap above 250 ms clears accumulated persistence.
+- `HB` now records transport activity only and does not suppress local fallback. `HEALTH` must come from a host pipeline that has checked fresh acquisition/fusion progress; `UNHEALTHY` explicitly drops host health. `ALARM` latches the local buzzer. `YELLOW` and `GREEN` set the host investigation indication without clearing an alarm. Commands are newline-terminated and length-bounded.
+- Missing `HEALTH` for more than two seconds enables physical fallback even if transport-only `HB` messages continue.
+- One or two invalid ultrasonic samples do not erase an already-established near state; three consecutive invalid samples clear the range persistence. Every invalid reading is still reported as a range fault.
+- A sample gap above 250 ms clears accumulated persistence and the range-buffer cursor.
 - The official Renesas watchdog is enabled for four seconds and refreshed by the loop.
 - Local button reset clears the alarm; it is not an authenticated access-control system.
 
 Output line:
 
 ```text
-S,sequence,board_millis,pir_filtered,radar_filtered,range_metres,range_valid,alarm,armed
+S,sequence,board_millis,pir_filtered,radar_filtered,near_filtered,range_metres,range_valid,alarm,armed,degraded,fallback_alarm,serial_drops
 ```
 
-`range_metres` may be `nan`. The PC must honor `range_valid`. Opening a port can reset some boards; after reconnection, flush old bytes, establish a new session and remap the board clock. The supplied serial bench tool only displays these fields and sends heartbeats. It is not the complete continuous acquisition/fusion service.
+`range_metres` may be `nan`. The PC must honor `range_valid`. The sample sequence advances even when a serial write is skipped, so the host must treat sequence gaps and the cumulative `serial_drops` field as evidence of missing board samples. Opening a port can reset some boards; after reconnection, flush old bytes, establish a new session and remap the board clock. The supplied serial bench tool only displays these fields and sends `HEALTH` for bench operation. It is not the complete continuous acquisition/fusion service.
 
 ## Later physical bench sequence
 
