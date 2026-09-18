@@ -1,0 +1,13 @@
+* Rev-A HC-SR04 Echo conditioner into UNO R4 D5
+Vecho src 0 PULSE(0 5 1m 1n 1n 117u 1m)
+Rseries src d5 1k
+Rpull d5 0 100k
+Cshunt d5 0 100p
+* RA4 input capacitance max 15pF.
+Cin d5 0 15p
+Rleak d5 0 5Meg
+
+.tran 0.01u 2m
+.meas tran t_echo_4v WHEN v(d5)=4.0 RISE=1
+.meas tran d5_high FIND v(d5) AT=1.05m
+.end
