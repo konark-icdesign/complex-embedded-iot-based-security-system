@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <initializer_list>
 
 static uint32_t nextRandom(uint32_t &state) {
     state = state * 1664525U + 1013904223U;
