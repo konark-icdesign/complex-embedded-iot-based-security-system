@@ -19,7 +19,7 @@ int main() {
         }
         const uint32_t t = static_cast<uint32_t>(std::stoul(ts));
         if (hs == "1") {
-            core.heartbeat(t);
+            core.hostHealth(t);
         }
         const auto out = core.tick(t, ps == "1", ms == "1", std::stof(ds));
         std::cout << name << ',' << t << ',' << out.pir << ',' << out.radar << ',' << out.near
