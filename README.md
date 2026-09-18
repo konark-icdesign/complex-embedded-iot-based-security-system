@@ -36,6 +36,8 @@ A new [remaining-system resilience simulation](docs/system_resilience_simulation
 
 A later [hardware-resilience audit](docs/hardware_resilience_audit.md) executed the actual embedded `Core` logic with timing gaps, ultrasonic dropouts and host-health failures. It found and fixed stale range-buffer reuse after sample gaps, over-sensitive ultrasonic history clearing, a heartbeat design that could hide a dead host pipeline, invisible serial sample loss, overly strict audio timestamp continuity, and stale camera-frame comparison after outages. These remain host-executed tests, not electrical or physical validation.
 
+The first [datasheet-based electrical hardware simulation](docs/electrical_hardware_simulation.md) now covers the proposed PIR/radar logic conditioning, HC-SR04 trigger/echo interface, AO3400A alarm switch and ultrasonic temperature error. It rejects direct 3.3 V sensor outputs into the 5 V RA4M1 as not guaranteed and replaces them with a SN74AHCT14 Schmitt interface. This is a deterministic lumped-element electrical model; final vendor-SPICE and bench measurements are still pending.
+
 ## Running it
 
 Use Python 3.12. From the project folder on Windows:
@@ -49,6 +51,7 @@ python run_simulation.py --seeds 1
 python scripts/system_resilience_sim.py
 python -m unittest discover -s tests -p "test_*.py" -v
 make hardware-stress
+make electrical-sim
 ```
 
 On Linux or macOS, activate with `source .venv/bin/activate`. Use `--seeds 10` for the longer scenario run. The audio download needs internet access.
@@ -82,6 +85,7 @@ The [debugging history](docs/debugging_history.md) records the problems found, f
 - [DSP calculations](docs/dsp_maths.md)
 - [Hardware and wiring](docs/hardware.md)
 - [Hardware resilience audit](docs/hardware_resilience_audit.md)
+- [Electrical hardware simulation](docs/electrical_hardware_simulation.md)
 - [HP t640 setup](docs/hp_setup.md)
 - [Learning and validation tasks](docs/learning_and_validation.md)
 

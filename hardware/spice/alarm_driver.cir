@@ -1,0 +1,26 @@
+* Rev-A D9 -> AO3400A-like low-side alarm driver
+* AO3400A approximate MOS model is fitted so Rds(on) is about 32mOhm near Vgs=4.5V.
+V12 v12 0 12
+Vgpio gpio 0 PULSE(0 5 1m 1n 1n 20m 40m)
+* Conservative RA4 output source resistance bound from 0.8V droop at 4mA.
+Rgpio gpio g1 200
+Rg g1 gate 1.5k
+Rpd gate 0 100k
+* Effective gate-charge capacitance Qg/Vg ~= 6nC/4.5V.
+Cg gate 0 1.333n
+
+* Representative 0.5A-class inductive alarm stress load.
+Rload v12 nload 24
+Lload nload drain 100m
+M1 drain gate 0 0 AO3400_APPROX
+Dfly drain v12 DFLY
+
+.model AO3400_APPROX NMOS (LEVEL=1 VTO=1.05 KP=9.1 LAMBDA=0.001)
+.model DFLY D (IS=1u N=1.05 RS=0.05 BV=40 IBV=1m)
+
+.tran 1u 35m
+.meas tran gate_4p5 WHEN v(gate)=4.5 RISE=1
+.meas tran load_current_on FIND i(V12) AT=20m
+.meas tran drain_on FIND v(drain) AT=20m
+.meas tran drain_peak MAX v(drain) FROM=21m TO=35m
+.end

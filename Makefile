@@ -3,7 +3,7 @@ CXX ?= g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -Wpedantic
 CC ?= cc
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
-.PHONY: simulate test embedded sanitize hardware-stress
+.PHONY: simulate test embedded sanitize hardware-stress electrical-sim
 simulate:
 	$(PYTHON) run_simulation.py --seeds 10
 test:
@@ -17,6 +17,9 @@ sanitize:
 hardware-stress:
 	$(CXX) $(CXXFLAGS) tests/hardware_stress.cpp -o hardware-stress
 	./hardware-stress
+
+electrical-sim:
+	$(PYTHON) hardware/electrical_interface_sim.py > electrical-sim.json
 
 .PHONY: incident-build c-sanitize incidents
 incident-build:

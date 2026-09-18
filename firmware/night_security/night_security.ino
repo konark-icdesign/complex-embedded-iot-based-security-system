@@ -18,8 +18,9 @@ float readDistance() {
     digitalWrite(TRIG_PIN, HIGH);
     delayMicroseconds(10);
     digitalWrite(TRIG_PIN, LOW);
-    // Bounded blocking, at most 25 ms; acceptable inside a 100 ms prototype loop.
-    const unsigned long width = pulseIn(ECHO_PIN, HIGH, 25000UL);
+    // 30 ms leaves margin above a 4 m echo at the cold end of the HC-SR04 range
+    // while remaining comfortably below the 100 ms sample period.
+    const unsigned long width = pulseIn(ECHO_PIN, HIGH, 30000UL);
     return width == 0UL ? NAN : static_cast<float>(width) * .0001715F;
 }
 void processServerMessage(uint32_t now) {
