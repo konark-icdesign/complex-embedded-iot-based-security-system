@@ -15,6 +15,23 @@ defaults:
     shell: bash
 
 jobs:
+  electrical-spice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ngspice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ngspice
+      - name: Run electrical SPICE simulations
+        run: bash hardware/spice/run_spice.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: electrical-spice-results
+          path: results/spice/
+          retention-days: 14
   matlab-reference:
     needs: integration
     runs-on: ubuntu-latest
