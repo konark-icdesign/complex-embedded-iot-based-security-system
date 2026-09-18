@@ -6,10 +6,10 @@ Rpull filt 0 100k
 Cfilter filt 0 10n
 
 * Two inverters preserve polarity. 10ns delay is represented by small RC output stages.
-Blogic1 logic1 0 V=if(V(filt)>2.1,0,5)
+Blogic1 logic1 0 V={V(filt)>2.1 ? 0 : 5}
 Rout1 logic1 inv1 50
 Cout1 inv1 0 100p
-Blogic2 logic2 0 V=if(V(inv1)>2.1,0,5)
+Blogic2 logic2 0 V={V(inv1)>2.1 ? 0 : 5}
 Rout2 logic2 out 50
 * RA4M1 input capacitance max 15pF, plus 20pF wiring allowance.
 Cload out 0 35p
