@@ -253,6 +253,35 @@ D9 -> 1.5k -> AO3400A -> external alarm load
 
 Place a 100 nF ceramic decoupling capacitor directly at the SN74AHCT14 VCC/GND pins.
 
+## ngspice circuit execution
+
+The three Rev-A netlists are also executed by **ngspice 42** in GitHub Actions:
+
+- `hardware/spice/sensor_interface.cir`
+- `hardware/spice/echo_interface.cir`
+- `hardware/spice/alarm_driver.cir`
+
+The CI run performs transient circuit analysis and then checks the measured values against explicit acceptance bounds. The recorded passing run produced:
+
+| SPICE measurement | Result |
+|---|---:|
+| Sensor RC delay to 2.1 V | 109.450 us |
+| Conditioned output delay to 4.0 V | 109.490 us |
+| Filtered 3.3 V sensor HIGH | 2.9877 V |
+| Conditioned logic HIGH | 5.0000 V |
+| HC-SR04 D5 delay to 4.0 V | 190 ns |
+| HC-SR04 conditioned HIGH | 4.9495 V |
+| Alarm gate delay to 4.5 V | 5.490 us |
+| Representative alarm current | 0.4942 A |
+| MOSFET drain voltage while ON | 14.07 mV |
+| Drain peak during inductive turn-off | 12.393 V |
+
+All ten electrical acceptance checks passed.
+
+This is a real SPICE transient solve, but model fidelity still matters. The AHCT gates are represented as datasheet-threshold behavioral Schmitt stages rather than TI transistor-level silicon models. The AO3400A is an approximate MOS model fitted to the relevant 4.5 V on-resistance region rather than the AOS proprietary device model. The resistor/capacitor networks and transient load are directly solved by ngspice.
+
+Therefore these results validate the **Rev-A circuit topology and first-order electrical margins**, not final production behavior under every process, temperature, wiring-parasitic or EMC condition.
+
 ## What this simulation proves
 
 It is enough to reject the old direct 3.3 V -> 5 V RA4M1 input design and to define a defensible first electrical interface.
